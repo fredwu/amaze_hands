@@ -1,3 +1,5 @@
+require_relative '../base_parser'
+
 module Rules
   module LeanKit
     class Parser < Rules::BaseParser
