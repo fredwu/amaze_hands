@@ -1,4 +1,4 @@
-# Amaze Hands [![Travis CI](https://travis-ci.org/fredwu/amaze_hands.svg?branch=master)](https://travis-ci.org/fredwu/amaze_hands) [![Code Climate](https://codeclimate.com/github/fredwu/amaze_hands/badges/gpa.svg)](https://codeclimate.com/github/fredwu/amaze_hands)
+# Amaze Hands [![Code Climate](https://codeclimate.com/github/fredwu/amaze_hands/badges/gpa.svg)](https://codeclimate.com/github/fredwu/amaze_hands) [![Travis CI](https://travis-ci.org/fredwu/amaze_hands.svg?branch=master)](https://travis-ci.org/fredwu/amaze_hands) [![Test Coverage](https://codeclimate.com/github/fredwu/amaze_hands/badges/coverage.svg)](https://codeclimate.com/github/fredwu/amaze_hands)
 
 Amaze Hands is an amazing tool developed for analysing Kanban board cards, in a similar fashion to poker [hands](http://en.wikipedia.org/wiki/Glossary_of_poker_terms#hand) analysis.
 
