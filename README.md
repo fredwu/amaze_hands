@@ -4,11 +4,13 @@ Amaze Hands is an amazing tool developed for analysing Kanban board cards, in a 
 
 Developed exclusively for the amazing Pricing squad in Group Platform at [REA](http://www.rea-group.com/).
 
-![](http://i.imgur.com/uhoCs1U.jpg)
+![](doc/images/wow_amaze_hands.jpg)
 
 ## Why?
 
 _Lorem ipsum spreadsheet amaze._
+
+![](doc/images/spreadsheet.png)
 
 ## How?
 
