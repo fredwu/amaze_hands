@@ -1,0 +1,294 @@
+02/10/2015 at 01:34:57 PM
+Fred Wu moved this Card from BAT to Done
+02/10/2015 at 01:34:50 PM
+Fred Wu moved this Card from Deploying to BAT
+02/10/2015 at 01:34:48 PM
+Fred Wu moved this Card from QA to Deploying
+02/10/2015 at 01:34:39 PM
+Fred Wu changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+02/09/2015 at 06:32:25 PM
+Xi Chen changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+02/09/2015 at 06:32:16 PM
+Yaowei Du was Unassigned from this Card by Xi Chen
+02/09/2015 at 06:32:16 PM
+Xi Chen was Unassigned from this Card by Xi Chen
+02/09/2015 at 02:43:42 PM
+Yaowei Du was Assigned to this Card by Xi Chen
+02/09/2015 at 02:43:28 PM
+Xi Chen changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+02/09/2015 at 02:42:11 PM
+Xi Chen was Assigned to this Card by Xi Chen
+02/09/2015 at 02:41:28 PM
+Xi Chen moved this Card from Doing: Capability to QA
+02/09/2015 at 02:41:11 PM
+Yaowei Du changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+02/09/2015 at 02:41:06 PM
+Yaowei Du was Unassigned from this Card by Yaowei Du
+02/09/2015 at 02:41:06 PM
+Wen Luo was Unassigned from this Card by Yaowei Du
+02/05/2015 at 04:17:35 PM
+Yaowei Du was Assigned to this Card by Wen Luo
+02/05/2015 at 04:17:34 PM
+Wen Luo changed this Card:
+
+    Description: from
+
+    During the "draft" state, random selections of prices should be displayed to help assist determining the correctness of the price upload.
+
+    Information to be displayed:
+    - Current price
+    - New price
+
+
+
+
+
+    to
+
+    During the "draft" state, random selections of prices should be displayed to help assist determining the correctness of the price upload.
+
+    Information to be displayed:
+    - Current price
+    - New price
+
+
+
+
+
+
+
+02/05/2015 at 12:56:39 PM
+Yaowei Du was Unassigned from this Card by Yaowei Du
+02/05/2015 at 02:10:19 AM
+Yaowei Du was Assigned to this Card by Yaowei Du
+02/04/2015 at 01:54:48 PM
+Yongmin Xia was Unassigned from this Card by Wen Luo
+02/04/2015 at 01:54:47 PM
+Wen Luo changed this Card:
+
+    Description: from
+
+    During the "draft" state, random selections of prices should be displayed to help assist determining the correctness of the price upload.
+
+    Information to be displayed:
+    - Current price
+    - New price
+
+
+
+
+    to
+
+    During the "draft" state, random selections of prices should be displayed to help assist determining the correctness of the price upload.
+
+    Information to be displayed:
+    - Current price
+    - New price
+
+
+
+
+
+
+02/03/2015 at 08:53:41 PM
+Yongmin Xia was Assigned to this Card by Wen Luo
+02/03/2015 at 08:53:40 PM
+Wen Luo changed this Card:
+
+    Description: from
+
+    During the "draft" state, random selections of prices should be displayed to help assist determining the correctness of the price upload.
+
+    Information to be displayed:
+    - Current price
+    - New price
+
+
+
+    to
+
+    During the "draft" state, random selections of prices should be displayed to help assist determining the correctness of the price upload.
+
+    Information to be displayed:
+    - Current price
+    - New price
+
+
+
+
+
+02/03/2015 at 02:45:28 PM
+Aaron Wolski changed this Card:
+
+    Tags: from "draft-summary" to "draft-summary,capability"
+
+02/03/2015 at 01:41:40 PM
+Wen Luo was Assigned to this Card by Wen Luo
+02/03/2015 at 01:41:39 PM
+Wen Luo set the status of this Card to Unblocked
+Comment:
+None
+02/03/2015 at 01:41:39 PM
+Wen Luo changed this Card:
+
+    Description: from
+
+    During the "draft" state, random selections of prices should be displayed to help assist determining the correctness of the price upload.
+
+    Information to be displayed:
+    - Current price
+    - New price
+
+
+    to
+
+    During the "draft" state, random selections of prices should be displayed to help assist determining the correctness of the price upload.
+
+    Information to be displayed:
+    - Current price
+    - New price
+
+
+
+
+02/03/2015 at 01:41:11 PM
+Wen Luo overrode the WIP Limit for Doing: Capability
+Reason:
+have done a half
+02/03/2015 at 01:41:11 PM
+Wen Luo moved this Card from Prioritised Backlog: Capability to Doing: Capability
+02/03/2015 at 01:04:31 PM
+Fred Wu moved this Card from Doing: Capability to Prioritised Backlog: Capability
+02/02/2015 at 04:32:25 PM
+Aaron Wolski changed this Card:
+
+    Title: from "[C] Draft summary, output 5 random prices for verification" to "[C] Draft summary: output 5 random prices for verification"
+
+02/02/2015 at 04:29:43 PM
+Aaron Wolski changed this Card:
+
+    Title: from "[C] During "draft" state, output 5 random prices for verification" to "[C] Draft summary, output 5 random prices for verification"
+    Tags: from <no value> to "draft-summary"
+
+02/02/2015 at 12:53:53 PM
+Yaowei Du was Unassigned from this Card by Yaowei Du
+02/02/2015 at 12:53:53 PM
+Tong Zhang was Unassigned from this Card by Yaowei Du
+02/02/2015 at 12:53:46 PM
+Yaowei Du set the status of this Card to Blocked
+Comment:
+story dependence
+02/02/2015 at 12:42:22 PM
+Tong Zhang was Assigned to this Card by Tong Zhang
+02/02/2015 at 12:41:39 PM
+Yaowei Du was Assigned to this Card by Yaowei Du
+02/02/2015 at 12:39:59 PM
+Wen Luo was Unassigned from this Card by Wen Luo
+02/02/2015 at 12:39:58 PM
+Wen Luo set the status of this Card to Unblocked
+Comment:
+None
+02/02/2015 at 12:39:58 PM
+Wen Luo changed this Card:
+
+    Description: from
+
+    During the "draft" state, random selections of prices should be displayed to help assist determining the correctness of the price upload.
+
+    Information to be displayed:
+    - Current price
+    - New price
+
+    to
+
+    During the "draft" state, random selections of prices should be displayed to help assist determining the correctness of the price upload.
+
+    Information to be displayed:
+    - Current price
+    - New price
+
+
+
+01/29/2015 at 04:29:28 PM
+Xi Chen set the status of this Card to Blocked
+Comment:
+Waiting for P-231
+01/28/2015 at 07:49:30 PM
+Wen Luo overrode the WIP Limit for Doing: Capability
+Reason:
+Have to do it
+01/28/2015 at 07:49:30 PM
+Wen Luo moved this Card from In Analysis to Doing: Capability
+01/27/2015 at 05:44:02 PM
+Wen Luo moved this Card from Prioritised Backlog: Capability to In Analysis
+01/27/2015 at 05:43:52 PM
+Wen Luo was Assigned to this Card by Wen Luo
+01/27/2015 at 05:43:51 PM
+Wen Luo changed this Card:
+
+    Description: from
+
+    During the "draft" state, random selections of prices should be displayed to help assist determining the correctness of the price upload.
+
+    Information to be displayed:
+    - Current price
+    - New price
+    to
+
+    During the "draft" state, random selections of prices should be displayed to help assist determining the correctness of the price upload.
+
+    Information to be displayed:
+    - Current price
+    - New price
+
+
+01/27/2015 at 05:43:51 PM
+Wen Luo moved this Card from In Analysis to Prioritised Backlog: Capability
+01/27/2015 at 05:43:42 PM
+Wen Luo moved this Card from Prioritised Backlog: Capability to In Analysis
+01/21/2015 at 02:05:17 PM
+Fred Wu moved this Card from Prioritised Backlog: Capability to Prioritised Backlog: Capability
+01/09/2015 at 02:59:00 PM
+Fred Wu changed this Card:
+
+    Description: from
+
+    During the "draft" state, random selections of prices should be displayed to help assist determining the correctness of the price upload.
+    to
+
+    During the "draft" state, random selections of prices should be displayed to help assist determining the correctness of the price upload.
+
+    Information to be displayed:
+    - Current price
+    - New price
+
+01/09/2015 at 02:58:10 PM
+Fred Wu changed this Card:
+
+    Title: from "[C] Output 5 random prices for verification" to "[C] During "draft" state, output 5 random prices for verification"
+
+01/09/2015 at 02:57:54 PM
+Fred Wu moved this Card from Prioritised Backlog: Capability to Prioritised Backlog: Capability
+01/09/2015 at 02:57:54 PM
+Fred Wu changed this Card:
+
+    Title: from "[C] Output 10 random prices for verification" to "[C] Output 5 random prices for verification"
+
+01/09/2015 at 02:53:03 PM
+Fred Wu moved this Card from In Analysis to Prioritised Backlog: Capability
+01/09/2015 at 02:53:01 PM
+Fred Wu moved this Card from Prioritised Backlog: Capability to In Analysis
+01/09/2015 at 02:52:51 PM
+Fred Wu created this Card within the Prioritised Backlog: Capability Lane.
