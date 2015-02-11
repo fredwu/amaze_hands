@@ -1,3 +1,5 @@
+P-217 [C] Discard 'draft' prices
+
 02/10/2015 at 01:34:57 PM
 Fred Wu moved this Card from BAT to Done
 02/10/2015 at 01:34:50 PM

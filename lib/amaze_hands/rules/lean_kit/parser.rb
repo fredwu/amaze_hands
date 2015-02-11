@@ -3,6 +3,7 @@ require_relative '../base_parser'
 module Rules
   module LeanKit
     class Parser < Rules::BaseParser
+      rule(:card_number)  { (str('P-') >> digit.repeat(3)).as(:card_number) }
       rule(:no_value)     { str('<no value>') }
 
       rule(:created_by)   { ((created_text | newline).absent? >> any).repeat(1) }
@@ -23,11 +24,12 @@ module Rules
       rule(:moved)        { moved_by >> moved_text >> moved_from >> to >> moved_to }
       rule(:service)      { indentation? >> service_text >> service_from >> to >> service_to }
 
+      rule(:title)        { card_number >> space >> line_text.as(:title) >> newline }
       rule(:timestamp)    { date.as(:date) >> at >> time.as(:time) >> newline }
       rule(:description)  { ((created | moved | service | line_text) >> newline) | empty_line }
 
       rule(:action)       { timestamp.as(:timestamp) >> (timestamp.absent? >> description).repeat.as(:description) }
-      rule(:actions)      { action.as(:action).repeat }
+      rule(:actions)      { title >> empty_line >> action.as(:action).repeat }
 
       root(:actions)
     end
