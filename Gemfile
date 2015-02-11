@@ -14,4 +14,5 @@ group :test do
   gem 'rspec'
   gem 'rspec-its'
   gem 'capybara'
+  gem 'codeclimate-test-reporter', require: nil
 end

@@ -2,7 +2,11 @@ language: ruby
 cache: bundler
 rvm:
   - 2.0.0
-  - 2.1.0
+  - 2.1.5
   - 2.2.0
+addons:
+  code_climate:
+    repo_token:
+      secure: XZJog4Pt4oGOv7IE30RXGn/yHeIRLHyUrPuP9NOnyJklxBSTd0jcnrvsggLMBsz4g40BDFmW0H70LoO3kavjEVWdP8zEq/H+OHn0qOF8lq0MmeuKZgCc2i4S3m54HyVtqLSYmzgisxjjPSl2/ysGcKcP1JXq1qWc5pT6INfSc+8=
 script:
   - bundle exec rake --trace
