@@ -1,4 +1,4 @@
-# Amaze Hands
+# Amaze Hands ![](https://travis-ci.org/fredwu/amaze_hands.svg?branch=master)
 
 Amaze Hands is an amazing tool developed for analysing Kanban board cards, in a similar fashion to poker [hands](http://en.wikipedia.org/wiki/Glossary_of_poker_terms#hand) analysis.
 
