@@ -1,5 +1,3 @@
-require_relative '../base_parser'
-
 module Rules::LeanKit
   class Parser < Rules::BaseParser
     rule(:no_value)     { str('<no value>') }
