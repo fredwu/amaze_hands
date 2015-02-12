@@ -13,7 +13,7 @@ module Strategies
       def build
         build_foundation
 
-        card
+        CardRepository.create(card)
       end
 
       private
