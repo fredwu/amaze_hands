@@ -10,8 +10,10 @@ require 'pry'
 
 Lotus::Application.preload!
 
+Dir[Pathname.new(Dir.pwd).join('spec/support/**/*.rb')].each { |f| require f }
+
 module Fixture
   def self.read(filename)
-    Pathname.new(Dir.pwd).join('spec', 'fixtures', filename).read
+    Pathname.new(Dir.pwd).join('spec/fixtures', filename).read
   end
 end

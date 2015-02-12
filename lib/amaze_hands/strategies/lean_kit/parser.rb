@@ -33,7 +33,7 @@ module Strategies
       rule(:description)    { ((created | moved | service | blocked | line_text) >> newline) | empty_line }
 
       rule(:action)         { timestamp.as(:timestamp) >> (timestamp.absent? >> description).repeat.as(:description) }
-      rule(:actions)        { title >> empty_line >> action.as(:action).repeat }
+      rule(:actions)        { title >> empty_line >> action.repeat.as(:actions) }
 
       root(:actions)
     end
