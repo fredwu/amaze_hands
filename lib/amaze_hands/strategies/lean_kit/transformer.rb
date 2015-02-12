@@ -3,11 +3,17 @@ Dir[File.expand_path(File.join('transformers/**/*.rb'))].each { |f| require f }
 module Strategies
   module LeanKit
     class Transformer < Parslet::Transform
-      rule(date: simple(:date), time: simple(:time)) do
+      rule(
+        date: simple(:date),
+        time: simple(:time)
+      ) do
         Transformers::DateTime.new(date, time).transformed
       end
 
-      rule(timestamp: simple(:date_time), description: subtree(:description)) do
+      rule(
+        timestamp:   simple(:date_time),
+        description: subtree(:description)
+      ) do
         {
           date_time:   date_time,
           description: Transformers::Description.new(description).transformed
