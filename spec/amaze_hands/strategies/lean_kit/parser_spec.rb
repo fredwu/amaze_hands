@@ -2,11 +2,12 @@ RSpec.describe Strategies::LeanKit::Parser do
   include_context 'LeanKit P-217'
 
   its([:card_number]) { is_expected.to eq('P-217') }
-  its([:title])       { is_expected.to eq(%q{[C] Discard 'draft' prices}) }
+  its([:title])       { is_expected.to eq("[C] Discard 'draft' prices") }
 
   describe 'actions' do
     shared_context 'action' do |time_string|
       let(:action_ast) { actions_ast.detect { |node| node[:timestamp][:time] == time_string } }
+
       subject { action_ast[:description][0] }
     end
 
