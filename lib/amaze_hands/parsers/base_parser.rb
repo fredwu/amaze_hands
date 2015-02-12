@@ -1,7 +1,7 @@
 require 'parslet'
 require 'parslet/convenience'
 
-module Rules
+module Parsers
   class BaseParser < Parslet::Parser
     rule(:digit)        { match('\\d') }
     rule(:fs)           { str('/') }
