@@ -1,8 +1,8 @@
 require_relative '../base_parser'
 
-module Parsers
+module Strategies
   module LeanKit
-    class Parser < Parsers::BaseParser
+    class Parser < Strategies::BaseParser
       rule(:card_number)    { (str('P-') >> digit.repeat(3)).as(:card_number) }
       rule(:no_value)       { str('<no value>') }
 

@@ -1,6 +1,6 @@
-describe Parsers::LeanKit::Parser do
+describe Strategies::LeanKit::Parser do
   let(:fixture) { Fixture.read('lean_kit/P-217.txt') }
-  let(:ast)     { Parsers::LeanKit::Parser.new.parse(fixture) }
+  let(:ast)     { Strategies::LeanKit::Parser.new.parse(fixture) }
 
   subject(:actions_ast) { ast.select { |node| node[:action] } }
 
