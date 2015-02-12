@@ -10,7 +10,7 @@ require 'pry'
 
 Lotus::Application.preload!
 
-Dir[File.expand_path(File.join('spec/support/**/*.rb'))].each { |f| require f }
+Dir[File.expand_path(File.join('spec/{support,factories}/**/*.rb'))].each { |f| require f }
 
 module Fixture
   def self.read(filename)

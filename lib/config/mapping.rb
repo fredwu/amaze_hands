@@ -1,7 +1,7 @@
-# collection :users do
-#   entity     User
-#   repository UserRepository
-#
-#   attribute :id,   Integer
-#   attribute :name, String
-# end
+collection :cards do
+  entity Card
+
+  attribute :number, String
+  attribute :type,   Symbol
+  attribute :title,  String
+end

@@ -1,6 +1,8 @@
 RSpec.describe Strategies::LeanKit::Parser do
   include_context 'LeanKit P-217'
 
+  subject { ast }
+
   its([:card_number]) { is_expected.to eq('P-217') }
   its([:title])       { is_expected.to eq("[C] Discard 'draft' prices") }
 

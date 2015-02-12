@@ -1,7 +1,7 @@
 RSpec.describe Strategies::LeanKit::Transformer do
   include_context 'LeanKit P-217'
 
-  subject(:transformed_ast) { described_class.new.apply(ast) }
+  subject { transformed_ast }
 
   its([:card_number]) { is_expected.to eq('P-217') }
   its([:card_type])   { is_expected.to eq(:capability) }
