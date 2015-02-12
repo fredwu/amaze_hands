@@ -6,13 +6,20 @@ gem 'rake'
 gem 'lotusrb',     '0.2.1'
 gem 'lotus-model', '~> 0.2.2'
 
-gem 'awesome_print'
 gem 'parslet'
-gem 'pry'
+
+group :development do
+  gem 'rubocop', require: false
+end
+
+group :development, :test do
+  gem 'awesome_print'
+  gem 'pry'
+end
 
 group :test do
   gem 'rspec'
   gem 'rspec-its'
   gem 'capybara'
-  gem 'codeclimate-test-reporter', require: nil
+  gem 'codeclimate-test-reporter', require: false
 end

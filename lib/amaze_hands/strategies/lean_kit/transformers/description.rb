@@ -5,10 +5,10 @@ module Strategies
         attr_reader :transformed
 
         def initialize(input)
-          @transformed = if input.is_a?(Array)
-            input.first
+          if input.is_a?(Array)
+            @transformed = input.first
           else
-            input
+            @transformed = input
           end
         end
       end

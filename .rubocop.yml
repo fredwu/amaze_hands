@@ -1,0 +1,132 @@
+inherit_from: .rubocop_todo.yml
+
+AbcSize:
+  Enabled: false
+
+AccessorMethodName:
+  Enabled: false
+
+AlignHash:
+  Enabled: false
+
+AlignParameters:
+  Enabled: false
+
+AssignmentInCondition:
+  Enabled: false
+
+CaseIndentation:
+  Enabled: false
+
+ClassAndModuleChildren:
+  Enabled: false
+
+CollectionMethods:
+  PreferredMethods:
+    inject: 'inject'
+    detect: 'detect'
+
+CyclomaticComplexity:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+DoubleNegation:
+  Enabled: false
+
+EmptyLinesAroundBlockBody:
+  Exclude:
+    - 'db/schema.rb'
+
+EmptyLineBetweenDefs:
+  Enabled: false
+
+EndAlignment:
+  Enabled: false
+
+FormatString:
+  Enabled: false
+
+GuardClause:
+  Enabled: false
+
+HasAndBelongsToMany:
+  Enabled: false
+
+IfUnlessModifier:
+  Enabled: false
+
+IndentationWidth:
+  Enabled: false
+
+Lambda:
+  Enabled: false
+
+LineLength:
+  Max: 120
+  Exclude:
+    - 'spec/**/*'
+    - 'config/initializers/*'
+    - 'db/migrate/*'
+    - 'db/schema.rb'
+
+MethodLength:
+  Max: 20
+  Exclude:
+    - 'db/migrate/*'
+    - 'app/models/ability.rb'
+
+Metrics/ClassLength:
+  Max: 105
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+MultilineBlockChain:
+  Enabled: false
+
+Next:
+  Enabled: false
+
+NumericLiterals:
+  Enabled: false
+
+RescueModifier:
+  Enabled: false
+
+ShadowingOuterLocalVariable:
+  Enabled: false
+
+SignalException:
+  EnforcedStyle: only_raise
+
+SingleLineBlockParams:
+  Enabled: false
+
+SingleSpaceBeforeFirstArg:
+  Enabled: false
+
+SpaceInsideBrackets:
+  Enabled: false
+
+SpaceInsideParens:
+  Enabled: false
+
+SpaceInsideRangeLiteral:
+  Enabled: false
+
+StringLiterals:
+  Enabled: false
+
+TrivialAccessors:
+  ExactNameMatch: true
+
+UnusedBlockArgument:
+  Enabled: false
+
+UnusedMethodArgument:
+  Enabled: false
+
+WordArray:
+  MinSize: 2
