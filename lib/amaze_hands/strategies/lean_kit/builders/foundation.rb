@@ -1,3 +1,5 @@
+require_relative 'base'
+
 module Strategies
   module LeanKit
     module Builders
