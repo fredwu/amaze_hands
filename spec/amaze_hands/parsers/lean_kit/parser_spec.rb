@@ -69,5 +69,21 @@ describe Parsers::LeanKit::Parser do
         expect(subject[:action][:description][0][:created_in]).to eq('Prioritised Backlog: Capability')
       end
     end
+
+    describe '02/02/2015 at 12:53:46 PM - Yaowei Du set the status of this Card to Blocked' do
+      subject { actions_ast.detect { |node| node[:action][:timestamp][:time] == '12:53:46 PM' } }
+
+      it 'created_in' do
+        expect(subject[:action][:description][0][:blocked_status]).to eq('Blocked')
+      end
+    end
+
+    describe '02/03/2015 at 01:41:39 PM - Wen Luo set the status of this Card to Unblocked' do
+      subject { actions_ast.detect { |node| node[:action][:timestamp][:time] == '01:41:39 PM' } }
+
+      it 'created_in' do
+        expect(subject[:action][:description][0][:blocked_status]).to eq('Unblocked')
+      end
+    end
   end
 end
