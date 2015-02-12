@@ -1,4 +1,8 @@
+require 'parslet'
+require 'parslet/convenience'
+
 require 'lotus/model'
+
 Dir["#{ __dir__ }/amaze_hands/**/*.rb"].each { |file| require_relative file }
 
 Lotus::Model.configure do

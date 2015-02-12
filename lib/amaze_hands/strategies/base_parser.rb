@@ -1,6 +1,3 @@
-require 'parslet'
-require 'parslet/convenience'
-
 module Strategies
   class BaseParser < Parslet::Parser
     rule(:digit)        { match('\\d') }
