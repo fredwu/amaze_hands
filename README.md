@@ -22,7 +22,7 @@ _Lorem ipsum copy paste amaze._
 
 ## Stack
 
-- Ruby 2+
+- Ruby 2.1+
 - [Lotus Framework](http://lotusrb.org/)
 - [Parslet](http://kschiess.github.io/parslet/) for [PEG](http://en.wikipedia.org/wiki/Parsing_expression_grammar)
 
