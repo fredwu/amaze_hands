@@ -44,5 +44,34 @@ RSpec.describe Strategies::LeanKit::Transformer do
         its([:to])   { is_expected.to eq('Done') }
       end
     end
+
+    describe 'other actions' do
+      shared_context 'action' do |time_string|
+        let(:action_ast) { actions_ast.detect { |node| node[:time] == time_string } }
+
+        subject { action_ast[:description] }
+      end
+
+      describe 'Class of Service: from "Expedite" to <no value>' do
+        include_context 'action', '02:43:28 PM'
+
+        its([:service_from]) { is_expected.to eq('Expedite') }
+        its([:service_to])   { is_expected.to eq('') }
+      end
+
+      describe 'Class of Service: from <no value> to "Expedite"' do
+        include_context 'action', '06:32:25 PM'
+
+        its([:service_from]) { is_expected.to eq('') }
+        its([:service_to])   { is_expected.to eq('Expedite') }
+      end
+
+      describe 'Class of Service: from "Expedite" to ""' do
+        include_context 'action', '01:34:39 PM'
+
+        its([:service_from]) { is_expected.to eq('Expedite') }
+        its([:service_to])   { is_expected.to eq('') }
+      end
+    end
   end
 end

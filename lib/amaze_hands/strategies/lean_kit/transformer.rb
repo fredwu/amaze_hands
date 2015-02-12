@@ -7,15 +7,29 @@ module Strategies
         date: simple(:date),
         time: simple(:time)
       ) do
-        Transformers::DateTime.new(date, time).transformed
+        {
+          date: date,
+          time: time,
+          date_time: Transformers::DateTime.new(date, time).transformed
+        }
       end
 
       rule(
-        timestamp:   simple(:date_time),
+        service_from: simple(:service_from),
+        service_to:   simple(:service_to)
+      ) do
+        {
+          service_from: Transformers::ServiceLabel.new(service_from).transformed,
+          service_to:   Transformers::ServiceLabel.new(service_to).transformed
+        }
+      end
+
+      rule(
+        timestamp:   subtree(:date_time),
         description: subtree(:description)
       ) do
         {
-          date_time:   date_time,
+          **date_time,
           description: Transformers::Description.new(description).transformed
         }
       end

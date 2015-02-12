@@ -17,3 +17,10 @@ module Fixture
     Pathname.new(Dir.pwd).join('spec/fixtures', filename).read
   end
 end
+
+RSpec.configure do |config|
+  config.before do
+    CardRepository.clear
+    CardActionRepository.clear
+  end
+end
