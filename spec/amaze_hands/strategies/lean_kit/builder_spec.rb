@@ -9,7 +9,7 @@ RSpec.describe Strategies::LeanKit::Builder do
     its(:title)  { is_expected.to eq("Discard 'draft' prices") }
 
     describe 'actions' do
-      subject(:actions) { CardActionRepository.filter_by_card(target_card) }
+      subject(:actions) { CardActionRepository.all_by_card(target_card) }
 
       its(:count) { is_expected.to eq(55) }
 

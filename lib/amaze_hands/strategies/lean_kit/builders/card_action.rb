@@ -4,17 +4,26 @@ module Strategies
   module LeanKit
     module Builders
       class CardAction < Base
-        LANES = [
+        LANES_NON_ANALYSABLE_INITIAL = [
           'Triage: Triage',
           'Prioritised Backlog: Capability',
           'Prioritised Backlog: BAU',
-          'In Analysis',
+          'In Analysis'
+        ]
+
+        LANES_NON_ANALYSABLE_FINAL = [
+          'Archive: Pricing'
+        ]
+
+        LANES = [
+          *LANES_NON_ANALYSABLE_INITIAL,
           'Doing: Capability',
           'Doing: BAU',
           'QA',
           'BAT',
           'Deploying',
-          'Done'
+          'Done',
+          *LANES_NON_ANALYSABLE_FINAL
         ]
 
         SERVICES = ['', 'Expedite']

@@ -1,3 +1,4 @@
+require 'active_support/all'
 require 'parslet'
 require 'parslet/convenience'
 
