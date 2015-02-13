@@ -17,16 +17,16 @@ RSpec.describe Strategies::LeanKit::Reducers::ServiceLabelChange do
 
         it_behaves_like 'a match'
       end
+    end
 
+    describe 'non-match' do
       describe 'ready -> start' do
         let(:from) { ready_label }
         let(:to)   { start_label }
 
-        it_behaves_like 'a match'
+        it_behaves_like 'a non-match'
       end
-    end
 
-    describe 'non-match' do
       describe 'start -> other' do
         let(:from) { start_label }
         let(:to)   { other_label }
