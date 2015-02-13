@@ -16,6 +16,34 @@ _Lorem ipsum spreadsheet amaze._
 
 _Lorem ipsum copy paste amaze._
 
+    +---------------------+
+    |        Text         | <- Raw text input.
+    +----------+----------+
+               |
+    +----------v----------+
+    |       Parser        | <- Parses text into an AST.
+    +----------+----------+
+               |
+    +----------v----------+
+    |     Transformer     | <- Transforms the AST into a more useful state.
+    +----------+----------+
+               |
+    +----------v----------+
+    |       Builder       | <- Builds the dataset from the AST.
+    +----------+----------+
+               |
+    +----------v----------+
+    |       Reducer       | <- Filters the dataset.
+    +----------+----------+
+               |
+    +----------v----------+
+    |      Analyser       | <- Analyses the dataset for metrics.
+    +----------+----------+
+               |
+    +----------v----------+
+    |      Producer       | <- Produces metrics.
+    +---------------------+
+
 ## Supported Kanban Boards
 
 - [LeanKit](http://leankit.com/)
