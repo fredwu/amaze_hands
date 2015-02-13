@@ -26,8 +26,6 @@ module Strategies
           *LANES_NON_ANALYSABLE_FINAL
         ]
 
-        SERVICES = ['', 'Expedite']
-
         def build_with(attributes)
           card_action             = ::CardAction.new
           card_action.date_time   = attributes[:date_time]

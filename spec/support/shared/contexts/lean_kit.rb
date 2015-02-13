@@ -12,5 +12,5 @@ end
 RSpec.shared_context 'LeanKit card actions reducer' do
   let(:reducer) { described_class.new(card_actions) }
 
-  subject { CardActionRepository.analysable_by_card(card) }
+  subject { reducer.send(reducer_method, card_action) }
 end

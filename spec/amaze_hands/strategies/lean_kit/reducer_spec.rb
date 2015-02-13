@@ -14,5 +14,5 @@ RSpec.describe Strategies::LeanKit::Reducer do
     its(:count) { is_expected.to eq(55) }
   end
 
-  its(:count) { is_expected.to eq(5) }
+  its(:count) { is_expected.to eq(9) }
 end

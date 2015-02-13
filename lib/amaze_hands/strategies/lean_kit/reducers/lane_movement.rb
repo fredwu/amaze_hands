@@ -28,19 +28,10 @@ module Strategies
         LANES_NON_ANALYSABLE_INITIAL = Builders::CardAction::LANES_NON_ANALYSABLE_INITIAL
         LANES_NON_ANALYSABLE_FINAL   = Builders::CardAction::LANES_NON_ANALYSABLE_FINAL
 
-        def tag
-          card_actions_to_tag.each do |card_action|
-            card_action.analysable = true
-            CardActionRepository.update(card_action)
-          end
-        end
-
         private
 
-        def card_actions_to_tag
-          card_actions.all.select do |card_action|
-            tag_created_in(card_action) || tag_moved(card_action)
-          end
+        def tag_card_action(card_action)
+          tag_created_in(card_action) || tag_moved(card_action)
         end
 
         def tag_created_in(card_action)
@@ -73,10 +64,7 @@ module Strategies
         #
         def tag_moved(card_action)
           card_action.description.key?(:from) &&
-            (
-              moved_into_analysable_initials(card_action) ||
-                analysable_movements(card_action)
-            )
+            (moved_into_analysable_initials(card_action) || analysable_movements(card_action))
         end
 
         def analysable_movements(card_action)

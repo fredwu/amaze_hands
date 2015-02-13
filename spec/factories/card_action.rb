@@ -1,6 +1,6 @@
 FactoryGirl.define do
-  lanes    = Strategies::LeanKit::Builders::CardAction::LANES
-  services = Strategies::LeanKit::Builders::CardAction::SERVICES
+  lanes    = Strategies::LeanKit::Reducers::LaneMovement::LANES_ANALYSABLE
+  services = Strategies::LeanKit::Reducers::ServiceLabelChange::SERVICE_LABELS
 
   factory :card_action do
     date_time   { DateTime.now + rand }
@@ -11,15 +11,11 @@ FactoryGirl.define do
       description { { created_in: lanes.sample } }
     end
 
-    trait :analysable_created_in do
-      description { { created_in: Strategies::LeanKit::Reducers::LaneMovement::LANES_ANALYSABLE.sample } }
-    end
-
     trait :moved do
       description { { from: lanes.sample, to: lanes.sample } }
     end
 
-    trait :service do
+    trait :service_label do
       description { { service_from: services.sample, service_to: services.sample } }
     end
   end

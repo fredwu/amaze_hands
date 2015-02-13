@@ -12,12 +12,17 @@ module Strategies
 
       def tag
         tag_lane_movement_actions(card_actions)
+        tag_service_label_change_actions(card_actions)
       end
 
       private
 
       def tag_lane_movement_actions(card_actions)
         Reducers::LaneMovement.new(card_actions).tag
+      end
+
+      def tag_service_label_change_actions(card_actions)
+        Reducers::ServiceLabelChange.new(card_actions).tag
       end
     end
   end
