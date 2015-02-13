@@ -42,6 +42,10 @@ _Lorem ipsum copy paste amaze._
                |
     +----------v----------+
     |      Producer       | <- Produces metrics.
+    +----------+----------+
+               |
+    +----------v----------+
+    |      Presenter      | <- Presents metrics.
     +---------------------+
 
 ## Supported Kanban Boards
