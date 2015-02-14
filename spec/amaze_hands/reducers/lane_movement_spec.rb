@@ -3,6 +3,8 @@ RSpec.describe Reducers::LaneMovement do
   include_context 'LeanKit P-217 actions'
   include_context 'LeanKit card actions reducer'
 
+  let(:reducer) { described_class.new(card_actions, lanes: Strategies::LeanKit::Lanes) }
+
   describe '#tag_created_in' do
     let(:reducer_method) { :tag_created_in }
 

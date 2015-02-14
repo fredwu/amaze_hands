@@ -1,30 +1,14 @@
 require_relative 'base'
-require_relative '../builders/card_action'
 
 module Reducers
   class LaneMovement < Base
-    LANES_ANALYSABLE_INITIAL = [
-      'Doing: Capability',
-      'Doing: BAU'
-    ]
+    attr_reader :lanes
 
-    LANES_ANALYSABLE_IN_PROGRESS = [
-      'QA',
-      'BAT'
-    ]
+    def initialize(card_actions, lanes:)
+      super(card_actions)
 
-    LANES_ANALYSABLE_FINAL = [
-      'Done'
-    ]
-
-    LANES_ANALYSABLE = [
-      *LANES_ANALYSABLE_INITIAL,
-      *LANES_ANALYSABLE_IN_PROGRESS,
-      *LANES_ANALYSABLE_FINAL
-    ]
-
-    LANES_NON_ANALYSABLE_INITIAL = Builders::CardAction::LANES_NON_ANALYSABLE_INITIAL
-    LANES_NON_ANALYSABLE_FINAL   = Builders::CardAction::LANES_NON_ANALYSABLE_FINAL
+      @lanes = lanes
+    end
 
     private
 
@@ -34,12 +18,12 @@ module Reducers
 
     def tag_created_in(card_action)
       card_action.description.key?(:created_in) &&
-        card_action.description[:created_in].in?(LANES_ANALYSABLE)
+        card_action.description[:created_in].in?(lanes.with_traits(:analysable))
     end
 
     # the only non-analysable actions are the ones moved
-    # from NON_ANALYSABLE_INITIAL to LANES_ANALYSABLE_INITIAL
-    # and from LANES_ANALYSABLE_FINAL to LANES_NON_ANALYSABLE_FINAL
+    # from "non-analysable initial" to "analysable initial"
+    # and from "analysable final" to "non-analysable final"
     #
     # as seen in the graph below:
     #
@@ -66,24 +50,24 @@ module Reducers
     end
 
     def analysable_movements(card_action)
-      card_action.description[:from].in?(LANES_ANALYSABLE) &&
+      card_action.description[:from].in?(lanes.with_traits(:analysable)) &&
         !moved_out_of_analysable_initials(card_action) &&
         !moved_out_of_analysable_finals(card_action)
     end
 
     def moved_into_analysable_initials(card_action)
-      card_action.description[:from].in?(LANES_NON_ANALYSABLE_INITIAL) &&
-        card_action.description[:to].in?(LANES_ANALYSABLE_INITIAL)
+      card_action.description[:from].in?(lanes.with_traits(:non_analysable, :initial)) &&
+        card_action.description[:to].in?(lanes.with_traits(:analysable, :initial))
     end
 
     def moved_out_of_analysable_initials(card_action)
-      card_action.description[:from].in?(LANES_ANALYSABLE_INITIAL) &&
-        card_action.description[:to].in?(LANES_NON_ANALYSABLE_INITIAL)
+      card_action.description[:from].in?(lanes.with_traits(:analysable, :initial)) &&
+        card_action.description[:to].in?(lanes.with_traits(:non_analysable, :initial))
     end
 
     def moved_out_of_analysable_finals(card_action)
-      card_action.description[:from].in?(LANES_ANALYSABLE_FINAL) &&
-        card_action.description[:to].in?(LANES_NON_ANALYSABLE_FINAL)
+      card_action.description[:from].in?(lanes.with_traits(:analysable, :final)) &&
+        card_action.description[:to].in?(lanes.with_traits(:non_analysable, :final))
     end
   end
 end

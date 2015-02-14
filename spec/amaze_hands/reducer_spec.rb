@@ -5,7 +5,7 @@ RSpec.describe Reducer do
   subject { CardActionRepository.analysable_by_card(card) }
 
   before do
-    described_class.new(card).tag
+    described_class.new(card, lanes: Strategies::LeanKit::Lanes).tag
   end
 
   describe 'does not create extra records' do
