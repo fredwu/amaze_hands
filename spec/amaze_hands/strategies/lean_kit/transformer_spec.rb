@@ -55,22 +55,19 @@ RSpec.describe Strategies::LeanKit::Transformer do
       describe 'Class of Service: from "Expedite" to <no value>' do
         include_context 'action', '02:43:28 PM'
 
-        its([:service_from]) { is_expected.to eq('Expedite') }
-        its([:service_to])   { is_expected.to eq('') }
+        its([:ready]) { is_expected.to be(false) }
       end
 
       describe 'Class of Service: from <no value> to "Expedite"' do
         include_context 'action', '06:32:25 PM'
 
-        its([:service_from]) { is_expected.to eq('') }
-        its([:service_to])   { is_expected.to eq('Expedite') }
+        its([:ready]) { is_expected.to be(true) }
       end
 
       describe 'Class of Service: from "Expedite" to ""' do
         include_context 'action', '01:34:39 PM'
 
-        its([:service_from]) { is_expected.to eq('Expedite') }
-        its([:service_to])   { is_expected.to eq('') }
+        its([:ready]) { is_expected.to be(false) }
       end
     end
   end

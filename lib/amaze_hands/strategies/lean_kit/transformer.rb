@@ -19,8 +19,10 @@ module Strategies
         service_to:   simple(:service_to)
       ) do
         {
-          service_from: Transformers::ServiceLabel.new(service_from).transformed,
-          service_to:   Transformers::ServiceLabel.new(service_to).transformed
+          ready: Transformers::Readiness.new(
+            Transformers::ServiceLabel.new(service_from).transformed,
+            Transformers::ServiceLabel.new(service_to).transformed
+          ).transformed
         }
       end
 

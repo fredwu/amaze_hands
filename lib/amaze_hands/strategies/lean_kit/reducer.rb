@@ -12,7 +12,7 @@ module Strategies
 
       def tag
         Reducers::LaneMovement.new(card_actions).tag
-        Reducers::ServiceLabelChange.new(card_actions).tag
+        Reducers::Readiness.new(card_actions).tag
       end
     end
   end
