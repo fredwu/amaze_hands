@@ -1,11 +1,11 @@
-RSpec.describe Strategies::LeanKit::Reducer do
+RSpec.describe Reducer do
   include_context 'LeanKit P-217'
   include_context 'LeanKit P-217 actions'
 
   subject { CardActionRepository.analysable_by_card(card) }
 
   before do
-    Strategies::LeanKit::Reducer.new(card).tag
+    described_class.new(card).tag
   end
 
   describe 'does not create extra records' do

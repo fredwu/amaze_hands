@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  lanes = Strategies::LeanKit::Reducers::LaneMovement::LANES_ANALYSABLE
+  lanes = Reducers::LaneMovement::LANES_ANALYSABLE
 
   factory :card_action do
     date_time   { DateTime.now + rand }

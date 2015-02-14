@@ -1,4 +1,4 @@
-RSpec.describe Strategies::LeanKit::Builder do
+RSpec.describe Builder do
   include_context 'LeanKit P-217'
 
   shared_examples 'P-217' do

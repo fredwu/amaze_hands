@@ -1,4 +1,4 @@
-RSpec.describe Strategies::LeanKit::Reducers::LaneMovement do
+RSpec.describe Reducers::LaneMovement do
   include_context 'LeanKit P-217'
   include_context 'LeanKit P-217 actions'
   include_context 'LeanKit card actions reducer'
