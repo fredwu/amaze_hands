@@ -1,4 +1,4 @@
-Dir[File.expand_path(File.join('reducers/**/*.rb'))].each { |f| require f }
+Dir["#{__dir__}/reducers/**/*.rb"].each { |f| require f }
 
 class Reducer
   attr_reader :card, :card_actions

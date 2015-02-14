@@ -1,4 +1,4 @@
-Dir[File.expand_path(File.join('transformers/**/*.rb'))].each { |f| require f }
+Dir["#{__dir__}/transformers/**/*.rb"].each { |f| require f }
 
 module Strategies
   module LeanKit

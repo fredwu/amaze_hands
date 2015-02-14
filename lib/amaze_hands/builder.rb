@@ -1,4 +1,4 @@
-Dir[File.expand_path(File.join('builders/**/*.rb'))].each { |f| require f }
+Dir["#{__dir__}/builders/**/*.rb"].each { |f| require f }
 
 class Builder
   attr_reader :ast, :card
