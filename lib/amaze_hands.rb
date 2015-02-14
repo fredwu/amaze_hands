@@ -10,3 +10,5 @@ Lotus::Model.configure do
   adapter type: :memory, uri: 'memory://localhost/amaze_hands'
   mapping "#{__dir__}/config/mapping"
 end.load!
+
+Dir["#{__dir__}/monkey_patches/**/*.rb"].each { |f| require f }

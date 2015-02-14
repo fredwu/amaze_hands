@@ -8,4 +8,8 @@ class CardActionRepository
   def self.analysable_by_card(card)
     all_by_card(card).where(analysable: true)
   end
+
+  def self.ready_for_pulling
+    query { where(description: { ready: true }) }
+  end
 end

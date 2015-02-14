@@ -5,6 +5,7 @@ RSpec.describe CardActionRepository do
   before do
     CardActionRepository.create(card_action)
     CardActionRepository.create(FactoryGirl.build(:card_action, card_number: card.number, analysable: true))
+    CardActionRepository.create(FactoryGirl.build(:card_action, card_number: card.number, analysable: true, description: { ready: true }))
     CardActionRepository.create(FactoryGirl.build(:card_action, card_number: 'P-243'))
     CardActionRepository.create(FactoryGirl.build(:card_action, card_number: 'P-243', analysable: true))
   end
@@ -12,7 +13,7 @@ RSpec.describe CardActionRepository do
   describe '.all_by_card' do
     subject(:results) { CardActionRepository.all_by_card(card) }
 
-    its(:count) { is_expected.to eq(2) }
+    its(:count) { is_expected.to eq(3) }
 
     describe 'filtered card' do
       subject { results.first }
@@ -26,12 +27,24 @@ RSpec.describe CardActionRepository do
   describe '.analysable_by_card' do
     subject(:results) { CardActionRepository.analysable_by_card(card) }
 
-    its(:count) { is_expected.to eq(1) }
+    its(:count) { is_expected.to eq(2) }
 
     describe 'filtered card' do
       subject { results.first }
 
       its(:analysable) { is_expected.to be(true) }
+    end
+  end
+
+  describe '.ready_for_pulling' do
+    subject(:results) { CardActionRepository.analysable_by_card(card).ready_for_pulling }
+
+    its(:count) { is_expected.to eq(1) }
+
+    describe 'filtered card' do
+      subject { results.first }
+
+      its(:description) { is_expected.to eq(ready: true) }
     end
   end
 end

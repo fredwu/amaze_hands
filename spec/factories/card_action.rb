@@ -10,7 +10,7 @@ FactoryGirl.define do
       description { { created_in: lanes.sample } }
     end
 
-    trait :moved do
+    trait :movement do
       description { { from: lanes.sample, to: lanes.sample } }
     end
   end

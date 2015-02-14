@@ -16,6 +16,6 @@ RSpec.describe Strategies::LeanKit::Transformers::Description do
   describe 'in an array with text and other nodes' do
     let(:input) { [{ text: 'wow' }, { text: 'amaze_hands' }, { wow: 'amaze_hands' }] }
 
-    its(:transformed) { is_expected.to eq(text: ['wow', 'amaze_hands'], wow: 'amaze_hands') }
+    its(:transformed) { is_expected.to eq(wow: 'amaze_hands') }
   end
 end

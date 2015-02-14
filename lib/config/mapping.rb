@@ -16,3 +16,12 @@ collection :card_actions do
   attribute :analysable,  Boolean
   attribute :card_number, String
 end
+
+collection :card_lanes do
+  entity CardLane
+
+  attribute :id,          Integer
+  attribute :card_number, String
+  attribute :lane,        String
+  attribute :wait_days,   Integer
+end

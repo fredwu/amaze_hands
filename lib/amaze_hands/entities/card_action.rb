@@ -5,4 +5,8 @@ class CardAction
              :description,
              :analysable,
              :card_number
+
+  def lane_movement?
+    description.key?(:from)
+  end
 end

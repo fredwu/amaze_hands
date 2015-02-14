@@ -22,5 +22,6 @@ RSpec.configure do |config|
   config.before do
     CardRepository.clear
     CardActionRepository.clear
+    CardLaneRepository.clear
   end
 end

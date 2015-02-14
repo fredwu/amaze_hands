@@ -4,18 +4,6 @@ module Strategies
   module LeanKit
     class Transformer < Parslet::Transform
       rule(
-        service_from: simple(:service_from),
-        service_to:   simple(:service_to)
-      ) do
-        {
-          ready: Transformers::Readiness.new(
-            Transformers::ServiceLabel.new(service_from).transformed,
-            Transformers::ServiceLabel.new(service_to).transformed
-          ).transformed
-        }
-      end
-
-      rule(
         timestamp: {
           date: simple(:date),
           time: simple(:time)
@@ -27,6 +15,18 @@ module Strategies
           time:        time,
           date_time:   Transformers::DateTime.new(date, time).transformed,
           description: Transformers::Description.new(description).transformed
+        }
+      end
+
+      rule(
+        service_from: simple(:service_from),
+        service_to:   simple(:service_to)
+      ) do
+        {
+          ready: Transformers::Readiness.new(
+            Transformers::ServiceLabel.new(service_from).transformed,
+            Transformers::ServiceLabel.new(service_to).transformed
+          ).transformed
         }
       end
 

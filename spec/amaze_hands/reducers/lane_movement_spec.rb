@@ -1,12 +1,12 @@
 RSpec.describe Reducers::LaneMovement do
   include_context 'LeanKit P-217'
   include_context 'LeanKit P-217 actions'
-  include_context 'LeanKit card actions reducer'
+  include_context 'Card actions service class'
 
-  let(:reducer) { described_class.new(card_actions, lanes: Strategies::LeanKit::Lanes) }
+  let(:service_class) { described_class.new(card_actions, lanes: Strategies::LeanKit::Lanes) }
 
   describe '#tag_created_in' do
-    let(:reducer_method) { :tag_created_in }
+    let(:method_name) { :tag_created_in }
 
     describe 'match' do
       let(:card_action) { FactoryGirl.build(:card_action, :created_in) }
@@ -30,8 +30,8 @@ RSpec.describe Reducers::LaneMovement do
   end
 
   describe '#tag_moved' do
-    let(:reducer_method) { :tag_moved }
-    let(:card_action)    { FactoryGirl.build(:card_action, description: { from: from, to: to }) }
+    let(:method_name) { :tag_moved }
+    let(:card_action) { FactoryGirl.build(:card_action, description: { from: from, to: to }) }
 
     describe 'match' do
       describe 'into initial' do

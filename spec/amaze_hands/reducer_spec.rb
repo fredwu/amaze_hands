@@ -1,18 +1,14 @@
 RSpec.describe Reducer do
   include_context 'LeanKit P-217'
-  include_context 'LeanKit P-217 actions'
+  include_context 'LeanKit P-217 analysable actions'
 
-  subject { CardActionRepository.analysable_by_card(card) }
+  subject { card_actions }
 
-  before do
-    described_class.new(card, lanes: Strategies::LeanKit::Lanes).tag
-  end
+  its(:count) { is_expected.to eq(7) }
 
   describe 'does not create extra records' do
-    subject { card_actions }
+    subject { CardActionRepository.all_by_card(card) }
 
     its(:count) { is_expected.to eq(55) }
   end
-
-  its(:count) { is_expected.to eq(7) }
 end

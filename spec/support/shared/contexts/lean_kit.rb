@@ -9,8 +9,10 @@ RSpec.shared_context 'LeanKit P-217 actions' do
   let(:card_actions) { CardActionRepository.all_by_card(card) }
 end
 
-RSpec.shared_context 'LeanKit card actions reducer' do
-  let(:reducer) { described_class.new(card_actions) }
+RSpec.shared_context 'LeanKit P-217 analysable actions' do
+  let(:card_actions) { CardActionRepository.analysable_by_card(card) }
 
-  subject { reducer.send(reducer_method, card_action) }
+  before do
+    Reducer.new(card, lanes: Strategies::LeanKit::Lanes).tag
+  end
 end
