@@ -49,18 +49,18 @@ module Strategies
         # O = analysable lane
         # X = non-analysable lane
         #
-        # | X  O  O  O  X  | action analysable?
-        # | -------------- |
-        # | C-->           | yes
-        # | <--C           | no
-        # |          C-->  | no
-        # |          <--C  | no
-        # |    <--C        | yes
-        # |       C-->     | yes
-        # | <-----C        | yes
-        # |       C----->  | yes
-        # | <--------C     | yes
-        # |    C-------->  | yes
+        # | X  O  O  O  X | action analysable?
+        # | ------------- |
+        # | C-->          | yes
+        # | <--C          | no
+        # |          C--> | no
+        # |          <--C | no
+        # |    <--C       | yes
+        # |       C-->    | yes
+        # | <-----C       | yes
+        # |       C-----> | yes
+        # | <--------C    | yes
+        # |    C--------> | yes
         #
         def tag_moved(card_action)
           card_action.description.key?(:from) &&
