@@ -4,17 +4,6 @@ module Strategies
   module LeanKit
     class Transformer < Parslet::Transform
       rule(
-        date: simple(:date),
-        time: simple(:time)
-      ) do
-        {
-          date: date,
-          time: time,
-          date_time: Transformers::DateTime.new(date, time).transformed
-        }
-      end
-
-      rule(
         service_from: simple(:service_from),
         service_to:   simple(:service_to)
       ) do
@@ -27,11 +16,16 @@ module Strategies
       end
 
       rule(
-        timestamp:   subtree(:date_time),
+        timestamp: {
+          date: simple(:date),
+          time: simple(:time)
+        },
         description: subtree(:description)
       ) do
         {
-          **date_time,
+          date:        date,
+          time:        time,
+          date_time:   Transformers::DateTime.new(date, time).transformed,
           description: Transformers::Description.new(description).transformed
         }
       end
