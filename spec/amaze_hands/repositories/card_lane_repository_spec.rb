@@ -5,14 +5,15 @@ RSpec.describe CardLaneRepository do
       its(:card_number) { is_expected.to eq('P-217') }
       its(:lane)        { is_expected.to eq('QA') }
 
-      context 'card lane collection' do
+      before do
+        CardLaneRepository.create(FactoryGirl.build(:card_lane, card_number: 'P-217', lane: 'Wow'))
+        find_or_create_card_lane_entity
+      end
+
+      context 'the whole collection' do
         subject { CardLaneRepository.all }
 
-        before do
-          find_or_create_card_lane_entity
-        end
-
-        its(:count) { is_expected.to eq(1) }
+        its(:count) { is_expected.to eq(2) }
       end
     end
 

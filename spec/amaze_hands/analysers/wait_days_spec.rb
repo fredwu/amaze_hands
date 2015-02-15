@@ -10,7 +10,7 @@ RSpec.describe Analysers::WaitDays do
       Analysers::WaitDays.new(card_actions).analyse
     end
 
-    its(:count) { is_expected.to eq(1) }
+    its(:count) { is_expected.to eq(2) }
   end
 
   describe 'private methods' do
