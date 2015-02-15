@@ -34,7 +34,7 @@ RSpec.describe Analysers::WaitDays do
     describe '#ready_for_pulling_card_actions' do
       subject { service_class.send(:ready_for_pulling_card_actions) }
 
-      its(:length) { is_expected.to eq(2)}
+      its(:length) { is_expected.to eq(2) }
     end
 
     describe '#record_wait_days' do
