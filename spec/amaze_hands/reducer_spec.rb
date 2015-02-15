@@ -4,7 +4,7 @@ RSpec.describe Reducer do
 
   subject { card_actions }
 
-  its(:count) { is_expected.to eq(7) }
+  its(:count) { is_expected.to eq(4) }
 
   describe 'does not create extra records' do
     subject { CardActionRepository.all_by_card(card) }

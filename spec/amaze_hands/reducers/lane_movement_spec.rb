@@ -34,13 +34,6 @@ RSpec.describe Reducers::LaneMovement do
     let(:card_action) { FactoryGirl.build(:card_action, description: { from: from, to: to }) }
 
     describe 'match' do
-      describe 'into initial' do
-        let(:from) { 'Prioritised Backlog: Capability' }
-        let(:to)   { 'Doing: Capability' }
-
-        it_behaves_like 'a match'
-      end
-
       describe 'initial to in-progress' do
         let(:from) { 'Doing: Capability' }
         let(:to)   { 'QA' }
@@ -62,6 +55,13 @@ RSpec.describe Reducers::LaneMovement do
     end
 
     describe 'non-match' do
+      describe 'into initial' do
+        let(:from) { 'Prioritised Backlog: Capability' }
+        let(:to)   { 'Doing: Capability' }
+
+        it_behaves_like 'a non-match'
+      end
+
       describe 'out of initial' do
         let(:from) { 'Doing: Capability' }
         let(:to)   { 'Prioritised Backlog: Capability' }
