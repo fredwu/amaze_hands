@@ -35,16 +35,4 @@ RSpec.describe CardActionRepository do
       its(:analysable) { is_expected.to be(true) }
     end
   end
-
-  describe '.ready_for_pulling' do
-    subject(:results) { CardActionRepository.analysable_by_card(card).ready_for_pulling }
-
-    its(:count) { is_expected.to eq(1) }
-
-    describe 'filtered card' do
-      subject { results.first }
-
-      its(:description) { is_expected.to eq(ready: true) }
-    end
-  end
 end

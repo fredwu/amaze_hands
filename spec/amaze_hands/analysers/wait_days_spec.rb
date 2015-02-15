@@ -31,6 +31,12 @@ RSpec.describe Analysers::WaitDays do
 
     let(:card_action) { card_actions.detect { |card_action| card_action.description[:ready] == true } }
 
+    describe '#ready_for_pulling_card_actions' do
+      subject { service_class.send(:ready_for_pulling_card_actions) }
+
+      its(:length) { is_expected.to eq(2)}
+    end
+
     describe '#record_wait_days' do
       let(:method_name) { :record_wait_days }
 

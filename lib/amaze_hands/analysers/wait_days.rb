@@ -3,12 +3,16 @@ require_relative 'base'
 module Analysers
   class WaitDays < Base
     def analyse
-      card_actions.ready_for_pulling.each do |card_action|
+      ready_for_pulling_card_actions.each do |card_action|
         record_wait_days(card_action)
       end
     end
 
     private
+
+    def ready_for_pulling_card_actions
+      card_actions.to_a.select { |action| action.description[:ready] == true }
+    end
 
     def record_wait_days(card_action)
       lane      = next_movement_card_action(card_action).description[:from]
