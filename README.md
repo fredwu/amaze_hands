@@ -28,12 +28,12 @@ _Lorem ipsum copy paste amaze._
     |   +----------+----------+   |
     |              |              |
     |   +----------v----------+   |
-    |   |     Transformer     |   | <- Transforms the AST into a common format.
+    |   |     Transformer     |   | <- Transforms the AST into a common AST.
     |   +---------------------+   |
     +--------------+--------------+
                    |
         +----------v----------+
-        |       Builder       | <- Builds the dataset from the AST.
+        |       Builder       | <- Builds the dataset from the common AST.
         +----------+----------+
                    |
         +----------v----------+
