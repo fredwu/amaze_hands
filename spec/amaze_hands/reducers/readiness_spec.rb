@@ -27,7 +27,7 @@ RSpec.describe Reducers::Readiness do
     end
 
     context 'after the first analysable movement action' do
-      let(:card_action) { FactoryGirl.build(:card_action, date_time: DateTime.parse('03-03-2015'), description: { ready: ready }) }
+      let(:card_action) { FactoryGirl.build(:card_action, date_time: DateTime.parse('01-03-2015'), description: { ready: ready }) }
 
       describe 'match' do
         let(:ready) { true }

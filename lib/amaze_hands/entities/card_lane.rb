@@ -2,6 +2,8 @@ class CardLane
   include Lotus::Entity
 
   attributes :card_number,
+             :year,
+             :week,
              :lane,
              :wait_days
 

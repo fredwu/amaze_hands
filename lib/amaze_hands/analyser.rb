@@ -10,5 +10,6 @@ class Analyser
 
   def analyse
     Analysers::WaitDays.new(card_actions).analyse
+    Analysers::CalendarYearWeek.new(card_actions).analyse
   end
 end

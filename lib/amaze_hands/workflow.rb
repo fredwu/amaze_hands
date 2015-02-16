@@ -17,7 +17,10 @@ class Workflow
     end
   end
 
-  def metrics
-    Producer.new.metrics
+  def metrics(measure_every: 2.weeks, start_date: DateTime.parse('01-01-2015'))
+    Producer.new(
+      measure_every: measure_every,
+      start_date:    start_date
+    ).metrics
   end
 end
