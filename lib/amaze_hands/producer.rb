@@ -1,6 +1,8 @@
 Dir["#{__dir__}/producers/**/*.rb"].each { |f| require f }
 
 class Producer
+  AVAILABLE_METRICS = [:cycle_time, :wait_time]
+
   attr_reader :intel, :from_year, :from_week
 
   def initialize(measure_every:, start_date:)
@@ -10,14 +12,10 @@ class Producer
   end
 
   def metrics
-    card_lanes_to_produce.each_with_object({}) do |card_lane, card_lanes_by_year_week|
-      card_lanes_by_year_week[card_lane.year] ||= {}
-      card_lanes_by_year_week[card_lane.year][card_lane.week] ||= []
-      card_lanes_by_year_week[card_lane.year][card_lane.week] << card_lane
-    end.each do |year, card_lanes_by_week|
-      card_lanes_by_week.each do |week, card_lanes_of_the_week|
-        do_wait_days(card_lanes_of_the_week)
-      end
+    card_lanes_to_produce.each_with_object({}) do |card_lane, catalog|
+      catalog_card_lanes_by_year_and_week(catalog, card_lane)
+    end.each do |year, card_lanes_by_year|
+      produce_metrics_for(year, card_lanes_by_year)
     end
 
     intel
@@ -27,19 +25,29 @@ class Producer
 
   def card_lanes_to_produce
     @card_lanes_to_produce ||= CardLaneRepository.all.select do |card_lane|
-      (card_lane.year >= from_year) && (card_lane.week >= from_week)
+      card_lane.year > from_year || (card_lane.year == from_year && card_lane.week >= from_week)
     end
   end
 
-  def do_wait_days(card_lanes)
-    card_lane = card_lanes.first
+  def catalog_card_lanes_by_year_and_week(catalog, card_lane)
+    catalog[card_lane.year] ||= {}
+    catalog[card_lane.year][card_lane.week] ||= []
+    catalog[card_lane.year][card_lane.week] << card_lane
+  end
 
-    year = card_lane.year
-    week = card_lane.week
-    lane = card_lane.lane
+  def produce_metrics_for(year, card_lanes_by_year)
+    card_lanes_by_year.each do |week, card_lanes_by_week|
+      AVAILABLE_METRICS.each do |metric_name|
+        produce_metric(metric_name, card_lanes: card_lanes_by_week, year: year, week: week)
+      end
+    end
+  end
 
-    intel.wait_days[year] ||= {}
-    intel.wait_days[year][week] ||= {}
-    intel.wait_days[year][week][lane] = card_lanes.sum(&:wait_days)
+  def produce_metric(metric_name, card_lanes:, year:, week:)
+    card_lanes.each do |card_lane|
+      metric = intel.send("#{metric_name}")
+      metric.deep_merge!(year => { week => { card_lane.lane => card_lane.send(metric_name) } })
+      intel.send("#{metric_name}=", metric)
+    end
   end
 end

@@ -3,12 +3,9 @@ require_relative 'base'
 module Analysers
   class CalendarYearWeek < Base
     def analyse
-      year = first_card_action_date_time.year
-      week = first_card_action_date_time.cweek
-
-      CardLaneRepository.all.each do |card_lane|
-        card_lane.year = year
-        card_lane.week = week
+      CardLaneRepository.all_by_card_number(card_number).each do |card_lane|
+        card_lane.year = date_time.year
+        card_lane.week = date_time.cweek
 
         CardLaneRepository.update(card_lane)
       end
@@ -16,8 +13,12 @@ module Analysers
 
     private
 
-    def first_card_action_date_time
-      @first_card_action_date_time ||= card_actions.first.date_time
+    def card_number
+      @card_number ||= card_actions.first.card_number
+    end
+
+    def date_time
+      @date_time ||= card_actions.first.date_time
     end
   end
 end

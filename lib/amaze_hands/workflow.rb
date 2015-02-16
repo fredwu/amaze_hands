@@ -6,7 +6,7 @@ require_relative 'analyser'
 require_relative 'producer'
 
 class Workflow
-  def initialize(strategy:, files: Dir["#{__dir__}/../../db/cards/*.txt"])
+  def initialize(strategy:, files:)
     files.each do |file|
       ast        = strategy::Parser.new.parse(File.new(file).read)
       common_ast = strategy::Transformer.new.apply(ast)

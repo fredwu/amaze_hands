@@ -6,4 +6,8 @@ class CardLaneRepository
       chain.where(condition)
     end.first || create(CardLane.new(conditions))
   end
+
+  def self.all_by_card_number(card_number)
+    query { where(card_number: card_number) }
+  end
 end

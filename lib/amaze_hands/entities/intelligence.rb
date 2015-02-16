@@ -1,7 +1,9 @@
 class Intelligence
-  attr_accessor :wait_days
+  attr_accessor :cycle_time,
+                :wait_time
 
   def initialize
-    @wait_days = {}
+    @cycle_time = {}
+    @wait_time  = {}
   end
 end

@@ -1,13 +1,23 @@
-RSpec.describe Analysers::WaitDays do
+RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
   include_context 'LeanKit P-217'
   include_context 'LeanKit P-217 analysable actions'
-  include_context 'Card actions service class'
 
-  describe '#analyse' do
+  let(:service_class) { described_class.new(:wait_time, card_actions) }
+
+  subject(:result) { service_class.send(method_name, card_action) }
+
+  describe '#apply_on' do
+    let(:ready_for_pulling_card_actions) { card_actions.to_a.select { |card_action| card_action.description[:ready] == true } }
+
     subject { CardLaneRepository.all }
 
     before do
-      Analysers::WaitDays.new(card_actions).analyse
+      Analysers::Strategies::TimeUntilNextMovement.new(
+        :wait_time, card_actions
+      ).apply_on(
+        ready_for_pulling_card_actions,
+        apply_against_next_lane: true, time_maths: Analysers::WaitTime::TimeMaths.new
+      )
     end
 
     its(:count) { is_expected.to eq(1) }
@@ -31,18 +41,16 @@ RSpec.describe Analysers::WaitDays do
 
     let(:card_action) { card_actions.detect { |card_action| card_action.description[:ready] == true } }
 
-    describe '#ready_for_pulling_card_actions' do
-      subject { service_class.send(:ready_for_pulling_card_actions) }
-
-      its(:length) { is_expected.to eq(1) }
-    end
-
-    describe '#record_wait_days' do
-      let(:method_name) { :record_wait_days }
+    describe '#record_time_until_next_movement' do
+      subject(:result) do
+        service_class.send(:record_time_until_next_movement,
+          card_action, apply_against_next_lane: true, time_maths: Analysers::WaitTime::TimeMaths.new
+        )
+      end
 
       its(:card_number) { is_expected.to eq(card_action.card_number) }
       its(:lane)        { is_expected.to eq('QA') }
-      its(:wait_days)   { is_expected.to eq(0) }
+      its(:wait_time)   { is_expected.to eq(0) }
 
       it 'records only once' do
         result
@@ -52,19 +60,7 @@ RSpec.describe Analysers::WaitDays do
       context 'with wait days' do
         include_context 'with 1 wait day'
 
-        its(:wait_days) { is_expected.to eq(1) }
-      end
-    end
-
-    describe '#calculate_wait_days' do
-      let(:method_name) { :calculate_wait_days }
-
-      it { is_expected.to eq(0) }
-
-      context 'with wait days' do
-        include_context 'with 1 wait day'
-
-        it { is_expected.to eq(1) }
+        its(:wait_time) { is_expected.to eq(1) }
       end
     end
 
@@ -77,7 +73,7 @@ RSpec.describe Analysers::WaitDays do
     describe '#card_actions_in_future' do
       let(:method_name) { :card_actions_in_future }
 
-      its(:length) { is_expected.to eq(2) }
+      its(:length) { is_expected.to eq(3) }
 
       describe 'first future card action' do
         subject { result.first }

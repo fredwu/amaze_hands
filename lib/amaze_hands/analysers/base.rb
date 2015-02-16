@@ -1,3 +1,5 @@
+Dir["#{__dir__}/strategies/**/*.rb"].each { |f| require f }
+
 module Analysers
   class Base
     attr_reader :card_actions

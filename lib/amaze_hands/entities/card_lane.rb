@@ -5,9 +5,14 @@ class CardLane
              :year,
              :week,
              :lane,
-             :wait_days
+             :wait_time,
+             :cycle_time
 
-  def wait_days
-    @wait_days || 0
+  def wait_time
+    @wait_time || 0
+  end
+
+  def cycle_time
+    @cycle_time || 0
   end
 end

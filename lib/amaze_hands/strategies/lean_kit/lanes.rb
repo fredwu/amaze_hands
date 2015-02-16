@@ -11,8 +11,8 @@ module Strategies
           'Doing: BAU'                      => [:initial, :analysable],
           'QA'                              => [:analysable],
           'BAT'                             => [:analysable],
-          'Deploying'                       => [:non_analysable],
-          'Done'                            => [:final, :analysable],
+          'Deploying'                       => [:analysable],
+          'Done'                            => [:non_analysable],
           'Archive: Pricing'                => [:final, :non_analysable]
         }
       end
