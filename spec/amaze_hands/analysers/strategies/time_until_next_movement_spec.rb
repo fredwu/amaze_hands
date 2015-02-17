@@ -2,7 +2,14 @@ RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
   include_context 'LeanKit P-217'
   include_context 'LeanKit P-217 analysable actions'
 
-  let(:service_class) { described_class.new(:wait_time, card_actions) }
+  let(:service_class) do
+    Analysers::Strategies::TimeUntilNextMovement.new(
+      type:                    :wait_time,
+      card_actions:            card_actions,
+      apply_against_next_lane: true,
+      time_maths:              Analysers::WaitTime::TimeMaths.new
+    )
+  end
 
   subject(:result) { service_class.send(method_name, card_action) }
 
@@ -12,12 +19,7 @@ RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
     subject { CardLaneRepository.all }
 
     before do
-      Analysers::Strategies::TimeUntilNextMovement.new(
-        :wait_time, card_actions
-      ).apply_on(
-        ready_for_pulling_card_actions,
-        apply_against_next_lane: true, time_maths: Analysers::WaitTime::TimeMaths.new
-      )
+      service_class.apply_on(ready_for_pulling_card_actions)
     end
 
     its(:count) { is_expected.to eq(1) }
@@ -43,9 +45,7 @@ RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
 
     describe '#record_time_until_next_movement' do
       subject(:result) do
-        service_class.send(:record_time_until_next_movement,
-          card_action, apply_against_next_lane: true, time_maths: Analysers::WaitTime::TimeMaths.new
-        )
+        service_class.send(:record_time_until_next_movement, card_action)
       end
 
       its(:card_number) { is_expected.to eq(card_action.card_number) }

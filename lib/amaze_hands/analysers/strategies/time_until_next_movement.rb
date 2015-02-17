@@ -1,24 +1,24 @@
 module Analysers
   module Strategies
     class TimeUntilNextMovement
-      attr_reader :apply_to, :card_actions
+      attr_reader :type, :card_actions, :apply_against_next_lane, :time_maths
 
-      def initialize(apply_to, card_actions)
-        @apply_to     = apply_to
-        @card_actions = card_actions
+      def initialize(type:, card_actions:, apply_against_next_lane: false, time_maths:)
+        @type                    = type
+        @card_actions            = card_actions
+        @apply_against_next_lane = apply_against_next_lane
+        @time_maths              = time_maths
       end
 
-      def apply_on(card_actions, apply_against_next_lane: false, time_maths:)
+      def apply_on(card_actions)
         card_actions.each do |card_action|
-          record_time_until_next_movement(
-            card_action, apply_against_next_lane: apply_against_next_lane, time_maths: time_maths
-          )
+          record_time_until_next_movement(card_action)
         end
       end
 
       private
 
-      def record_time_until_next_movement(card_action, apply_against_next_lane:, time_maths:)
+      def record_time_until_next_movement(card_action)
         if apply_against_next_lane
           applied_card_action = next_movement_card_action(card_action)
         else
@@ -30,7 +30,7 @@ module Analysers
           lane:        applied_card_action.description[:from]
         )
 
-        entity.send("#{apply_to}=", entity.send(apply_to) + instance_exec(&time_maths.formula(card_action)))
+        entity.send("#{type}=", entity.send(type) + instance_exec(&time_maths.formula(card_action)))
 
         CardLaneRepository.update(entity)
       end

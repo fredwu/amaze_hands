@@ -4,9 +4,11 @@ module Analysers
   class CycleTime < Base
     def analyse
       Strategies::TimeUntilNextMovement.new(
-        :cycle_time, card_actions
+        type:         :cycle_time,
+        card_actions: card_actions,
+        time_maths:   TimeMaths.new
       ).apply_on(
-        movement_card_actions, time_maths: TimeMaths.new
+        movement_card_actions
       )
     end
 
