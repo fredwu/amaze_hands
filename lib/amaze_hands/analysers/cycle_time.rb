@@ -1,7 +1,7 @@
 require_relative 'base'
 
 module Analysers
-  class CycleTime < Base
+  class CycleTimePerLane < Base
     def analyse
       Strategies::TimeUntilNextMovement.new(
         type:         :cycle_time,

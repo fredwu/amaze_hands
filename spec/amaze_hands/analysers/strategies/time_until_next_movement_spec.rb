@@ -7,7 +7,7 @@ RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
       type:                    :wait_time,
       card_actions:            card_actions,
       apply_against_next_lane: true,
-      time_maths:              Analysers::WaitTime::TimeMaths.new
+      time_maths:              Analysers::WaitTimePerLane::TimeMaths.new
     )
   end
 

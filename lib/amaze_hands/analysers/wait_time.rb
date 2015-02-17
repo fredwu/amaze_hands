@@ -1,7 +1,7 @@
 require_relative 'base'
 
 module Analysers
-  class WaitTime < Base
+  class WaitTimePerLane < Base
     def analyse
       Strategies::TimeUntilNextMovement.new(
         type:                    :wait_time,

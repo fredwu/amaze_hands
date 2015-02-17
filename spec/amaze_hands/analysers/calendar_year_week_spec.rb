@@ -9,7 +9,7 @@ RSpec.describe Analysers::CalendarYearWeek do
     before do
       CardLaneRepository.create(CardLane.new(card_number: 'P-999', year: 1999, week: 19))
 
-      Analysers::WaitTime.new(card_actions).analyse
+      Analysers::WaitTimePerLane.new(card_actions).analyse
       Analysers::CalendarYearWeek.new(card_actions).analyse
     end
 
