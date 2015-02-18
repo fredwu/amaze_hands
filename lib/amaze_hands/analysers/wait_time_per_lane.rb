@@ -22,7 +22,7 @@ module Analysers
     class TimeMaths
       def formula(card_action)
         -> do
-          ((next_movement_card_action(card_action).date_time - card_action.date_time) * 1.second).to_i
+          ((next_movement_card_action(card_action).date_time - card_action.date_time) * 1.second).round(1)
         end
       end
     end

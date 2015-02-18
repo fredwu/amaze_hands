@@ -46,7 +46,12 @@ class Producer
   def produce_metric(metric_name, card_lanes:, year:, week:)
     card_lanes.each do |card_lane|
       metric = intel.send("#{metric_name}")
-      metric.deep_merge!(year => { week => { card_lane.lane => card_lane.send(metric_name) } })
+
+      existing_metric_value = metric.fetch(year, {}).fetch(week, {}).fetch(card_lane.lane, 0.0)
+      metric_value          = existing_metric_value + card_lane.send(metric_name)
+
+      metric.deep_merge!(year => { week => { card_lane.lane => metric_value } })
+
       intel.send("#{metric_name}=", metric)
     end
   end

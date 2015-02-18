@@ -12,8 +12,8 @@ RSpec.describe Producer do
     )
   end
 
-  its(:cycle_time) { is_expected.to eq(2015 => { 7 => { 'Doing: Capability' => 1, 'QA' => 1, 'Deploying' => 1, 'BAT' => 0 }, 5 => { 'Doing: Capability' => 1, 'QA' => 0 } }) }
-  its(:wait_time)  { is_expected.to eq(2015 => { 7 => { 'Doing: Capability' => 0, 'QA' => 0, 'Deploying' => 0, 'BAT' => 0 }, 5 => { 'Doing: Capability' => 0, 'QA' => 0 } }) }
+  its(:cycle_time) { is_expected.to eq(2015 => { 7 => { 'Doing: Capability' => 2.0, 'QA' => 0.0, 'Deploying' => 0.0, 'BAT' => 0.0 }, 5 => { 'Doing: Capability' => 0.0, 'QA' => 0.0 } }) }
+  its(:wait_time)  { is_expected.to eq(2015 => { 7 => { 'Doing: Capability' => 0.0, 'QA' => 0.0, 'Deploying' => 0.0, 'BAT' => 0.0 }, 5 => { 'Doing: Capability' => 0.0, 'QA' => 0.0 } }) }
 
   describe 'methods' do
     let(:producer) { Producer.new(measure_every: measure_every, start_date: start_date) }
@@ -58,7 +58,7 @@ RSpec.describe Producer do
       subject { producer.send(:card_lanes_to_produce) }
 
       context 'with card lanes to produce' do
-        its(:length) { is_expected.to eq(6) }
+        its(:length) { is_expected.to eq(9) }
       end
 
       context 'without card lanes to produce' do
