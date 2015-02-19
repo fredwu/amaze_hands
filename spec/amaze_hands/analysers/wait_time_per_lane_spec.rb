@@ -15,14 +15,10 @@ RSpec.describe Analysers::WaitTimePerLane do
 end
 
 RSpec.describe Analysers::WaitTimePerLane::TimeMaths do
-  class DummyAnalyser
-    def next_movement_card_action(card_action)
-      CardAction.new(date_time: DateTime.parse('2015-01-02 04:00:00 PM'))
-    end
-  end
+  let(:next_card_action) { CardAction.new(date_time: DateTime.parse('2015-01-02 04:00:00 PM')) }
 
   describe '#formula' do
-    subject { DummyAnalyser.new.instance_exec(&described_class.new.formula(card_action)) }
+    subject { described_class.new.formula(card_action, next_card_action) }
 
     context '0.5 day' do
       let(:card_action) { CardAction.new(date_time: DateTime.parse('2015-01-02 01:00:00 PM')) }

@@ -19,24 +19,32 @@ module Analysers
     end
 
     class TimeMaths
-      def formula(card_action)
-        -> do
-          return 0 unless next_movement = next_movement_card_action(card_action)
+      def formula(card_action, next_card_action)
+        return 0 unless next_card_action
 
-          full_days = next_movement.date_time.to_date - card_action.date_time.to_date
+        full_days = next_card_action.date_time.to_date - card_action.date_time.to_date
 
-          if full_days.zero?
-            if card_action.date_time.strftime('%p') == 'AM' && next_movement.date_time.strftime('%p') == 'PM'
-              1.0
-            else
-              0.5
-            end
-          else
-            partial_day_head = card_action.date_time.strftime('%p')   == 'AM' ? 1.0 : 0.5
-            partial_day_tail = next_movement.date_time.strftime('%p') == 'PM' ? 1.0 : 0.5
+        if full_days.zero?
+          duration_same_day(card_action, next_card_action)
+        else
+          duration_multi_day(card_action, next_card_action, full_days)
+        end
+      end
 
-            partial_day_head + (full_days - 1.0) + partial_day_tail
-          end
+      private
+
+      def duration_multi_day(card_action, next_card_action, full_days)
+        partial_day_head = card_action.date_time.strftime('%p')      == 'AM' ? 1.0 : 0.5
+        partial_day_tail = next_card_action.date_time.strftime('%p') == 'PM' ? 1.0 : 0.5
+
+        partial_day_head + (full_days - 1.0) + partial_day_tail
+      end
+
+      def duration_same_day(card_action, next_card_action)
+        if card_action.date_time.strftime('%p') == 'AM' && next_card_action.date_time.strftime('%p') == 'PM'
+          1.0
+        else
+          0.5
         end
       end
     end

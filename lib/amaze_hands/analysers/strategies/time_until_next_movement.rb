@@ -30,7 +30,9 @@ module Analysers
           lane:        applied_card_action.description[:from]
         )
 
-        entity.send("#{type}=", entity.send(type) + instance_exec(&time_maths.formula(card_action)))
+        time = time_maths.formula(card_action, next_movement_card_action(card_action))
+
+        entity.send("#{type}=", entity.send(type) + time)
 
         CardLaneRepository.update(entity)
       end
