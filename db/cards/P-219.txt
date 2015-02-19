@@ -1,0 +1,78 @@
+P-219 [C] Draft summary: lookup suburb price
+
+02/17/2015 at 11:05:25 AM
+wang lei moved this Card from BAT to Done
+02/17/2015 at 11:05:14 AM
+wang lei changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+02/17/2015 at 11:04:38 AM
+wang lei moved this Card from QA to BAT
+02/15/2015 at 05:53:01 PM
+Xi Chen was Unassigned from this Card by Xi Chen
+02/15/2015 at 05:53:00 PM
+Xi Chen changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+02/15/2015 at 01:38:09 PM
+Xi Chen changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+02/15/2015 at 01:38:02 PM
+Xi Chen was Assigned to this Card by Xi Chen
+02/15/2015 at 01:37:56 PM
+Xi Chen moved this Card from Doing: Capability to QA
+02/13/2015 at 12:44:57 PM
+Xi Chen was Unassigned from this Card by Xi Chen
+02/13/2015 at 12:36:18 PM
+Xi Chen changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+02/11/2015 at 01:06:36 PM
+Tong Zhang was Unassigned from this Card by wang lei
+02/11/2015 at 01:06:36 PM
+Xi Chen was Assigned to this Card by wang lei
+02/10/2015 at 06:05:47 PM
+Yongmin Xia was Unassigned from this Card by Tong Zhang
+02/06/2015 at 01:34:02 PM
+Tong Zhang moved this Card from In Analysis to Doing: Capability
+02/06/2015 at 01:33:53 PM
+Tong Zhang was Assigned to this Card by Tong Zhang
+02/06/2015 at 01:33:53 PM
+Yongmin Xia was Assigned to this Card by Tong Zhang
+02/06/2015 at 01:33:39 PM
+wang lei was Unassigned from this Card by Tong Zhang
+02/06/2015 at 01:33:39 PM
+jiaji wang was Unassigned from this Card by Tong Zhang
+02/06/2015 at 01:11:31 PM
+Fred Wu moved this Card from In Analysis to In Analysis
+02/06/2015 at 10:42:54 AM
+wang lei was Assigned to this Card by jiaji wang
+02/06/2015 at 10:42:39 AM
+jiaji wang was Assigned to this Card by jiaji wang
+02/06/2015 at 10:42:35 AM
+jiaji wang moved this Card from Prioritised Backlog: Capability to In Analysis
+02/03/2015 at 02:46:51 PM
+Aaron Wolski changed this Card:
+
+    Tags: from "draft-summary" to "draft-summary,capability"
+
+02/02/2015 at 04:32:31 PM
+Aaron Wolski changed this Card:
+
+    Title: from "[C] Draft summary, lookup suburb price" to "[C] Draft summary: lookup suburb price"
+
+02/02/2015 at 04:30:41 PM
+Aaron Wolski changed this Card:
+
+    Title: from "[C] During "draft" state, the ability to specify a suburb to verify its new price" to "[C] Draft summary, lookup suburb price"
+    Tags: from <no value> to "draft-summary"
+
+01/09/2015 at 02:57:59 PM
+Fred Wu moved this Card from In Analysis to Prioritised Backlog: Capability
+01/09/2015 at 02:57:47 PM
+Fred Wu created this Card within the In Analysis Lane.
