@@ -23,8 +23,20 @@ module Analysers
         -> do
           return 0 unless next_movement = next_movement_card_action(card_action)
 
-          cycle_time = ((next_movement.date_time - card_action.date_time) * 1.second).round(1)
-          cycle_time.zero? ? 0.1 : cycle_time
+          full_days = next_movement.date_time.to_date - card_action.date_time.to_date
+
+          if full_days.zero?
+            if card_action.date_time.strftime('%p') == 'AM' && next_movement.date_time.strftime('%p') == 'PM'
+              1.0
+            else
+              0.5
+            end
+          else
+            partial_day_head = card_action.date_time.strftime('%p')   == 'AM' ? 1.0 : 0.5
+            partial_day_tail = next_movement.date_time.strftime('%p') == 'PM' ? 1.0 : 0.5
+
+            partial_day_head + (full_days - 1.0) + partial_day_tail
+          end
         end
       end
     end
