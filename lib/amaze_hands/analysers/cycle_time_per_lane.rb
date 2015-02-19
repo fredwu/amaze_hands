@@ -23,7 +23,8 @@ module Analysers
         -> do
           return 0 unless next_movement = next_movement_card_action(card_action)
 
-          ((next_movement.date_time - card_action.date_time) * 1.second).round(1)
+          cycle_time = ((next_movement.date_time - card_action.date_time) * 1.second).round(1)
+          cycle_time.zero? ? 0.1 : cycle_time
         end
       end
     end

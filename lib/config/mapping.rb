@@ -25,6 +25,6 @@ collection :card_lanes do
   attribute :year,        Integer
   attribute :week,        Integer
   attribute :lane,        String
-  attribute :cycle_time,  Integer
-  attribute :wait_time,   Integer
+  attribute :cycle_time,  Float
+  attribute :wait_time,   Float
 end
