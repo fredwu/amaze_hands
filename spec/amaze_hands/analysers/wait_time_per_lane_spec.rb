@@ -20,28 +20,16 @@ RSpec.describe Analysers::WaitTimePerLane::TimeMaths do
   describe '#formula' do
     subject { described_class.new.formula(card_action, next_card_action) }
 
-    context '0.5 day' do
+    context 'no wait time' do
       let(:card_action) { CardAction.new(date_time: DateTime.parse('2015-01-02 01:00:00 PM')) }
 
-      it { is_expected.to eq(0.1) }
+      it { is_expected.to eq(0) }
     end
 
-    context '1 day' do
-      let(:card_action) { CardAction.new(date_time: DateTime.parse('2015-01-02 11:00:00 AM')) }
-
-      it { is_expected.to eq(0.2) }
-    end
-
-    context '1.5 days' do
-      let(:card_action) { CardAction.new(date_time: DateTime.parse('2015-01-01 01:00:00 PM')) }
-
-      it { is_expected.to eq(1.1) }
-    end
-
-    context '2 days' do
+    context 'one day wait time' do
       let(:card_action) { CardAction.new(date_time: DateTime.parse('2015-01-01 11:00:00 AM')) }
 
-      it { is_expected.to eq(1.2) }
+      it { is_expected.to eq(1.0) }
     end
   end
 end

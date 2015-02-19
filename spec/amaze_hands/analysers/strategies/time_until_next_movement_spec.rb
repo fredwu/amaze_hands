@@ -50,7 +50,7 @@ RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
 
       its(:card_number) { is_expected.to eq(card_action.card_number) }
       its(:lane)        { is_expected.to eq('QA') }
-      its(:wait_time)   { is_expected.to eq(0.8) }
+      its(:wait_time)   { is_expected.to eq(1.0) }
 
       it 'records only once' do
         result
@@ -60,7 +60,7 @@ RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
       context 'with wait days' do
         include_context 'with 1 wait day'
 
-        its(:wait_time) { is_expected.to eq(1.8) }
+        its(:wait_time) { is_expected.to eq(2.0) }
       end
     end
 
