@@ -32,25 +32,25 @@ RSpec.describe Producer do
       context 'cycle times' do
         let(:card_lanes) do
           [
-            CardLane.new(cycle_time: 1, year: 2015, week: 4, lane: 'Doing: Capability'),
-            CardLane.new(cycle_time: 2, year: 2015, week: 5, lane: 'QA'),
-            CardLane.new(cycle_time: 3, year: 2015, week: 5, lane: 'BAT')
+            CardLane.new(cycle_time: 1.0, year: 2015, week: 4, lane: 'Doing: Capability'),
+            CardLane.new(cycle_time: 2.0, year: 2015, week: 5, lane: 'QA'),
+            CardLane.new(cycle_time: 3.0, year: 2015, week: 5, lane: 'BAT')
           ]
         end
 
-        its(:cycle_time) { is_expected.to eq(2015 => { 4 => { 'Doing: Capability' => 1 }, 5 => { 'QA' => 2, 'BAT' => 3 } }) }
+        its(:cycle_time) { is_expected.to eq(2015 => { 4 => { 'Doing: Capability' => 1.0 }, 5 => { 'QA' => 2.0, 'BAT' => 3.0 } }) }
       end
 
       context 'wait times' do
         let(:card_lanes) do
           [
-            CardLane.new(wait_time: 1, year: 2015, week: 4, lane: 'Doing: Capability'),
-            CardLane.new(wait_time: 2, year: 2015, week: 5, lane: 'QA'),
-            CardLane.new(wait_time: 3, year: 2015, week: 5, lane: 'BAT')
+            CardLane.new(wait_time: 1.0, year: 2015, week: 4, lane: 'Doing: Capability'),
+            CardLane.new(wait_time: 2.0, year: 2015, week: 5, lane: 'QA'),
+            CardLane.new(wait_time: 3.0, year: 2015, week: 5, lane: 'BAT')
           ]
         end
 
-        its(:wait_time) { is_expected.to eq(2015 => { 4 => { 'Doing: Capability' => 1 }, 5 => { 'QA' => 2, 'BAT' => 3 } }) }
+        its(:wait_time) { is_expected.to eq(2015 => { 4 => { 'Doing: Capability' => 1.0 }, 5 => { 'QA' => 2.0, 'BAT' => 3.0 } }) }
       end
     end
 

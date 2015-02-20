@@ -3,7 +3,7 @@ RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
   include_context 'LeanKit P-217 analysable actions'
 
   let(:service_class) do
-    Analysers::Strategies::TimeUntilNextMovement.new(
+    described_class.new(
       type:                    :wait_time,
       card_actions:            card_actions,
       apply_against_next_lane: true,

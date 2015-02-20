@@ -11,6 +11,7 @@ class Analyser
   def analyse
     Analysers::CycleTimePerLane.new(card_actions).analyse
     Analysers::WaitTimePerLane.new(card_actions).analyse
+    Analysers::WaitTime.new.analyse
     Analysers::CalendarYearWeek.new(card_actions).analyse
   end
 end
