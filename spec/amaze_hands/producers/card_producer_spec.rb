@@ -1,4 +1,4 @@
-RSpec.describe Producers::CardLaneProducer do
+RSpec.describe Producers::CardProducer do
   let(:measure_every) { 2.weeks }
   let(:start_date)    { DateTime.parse('19-01-2015') }
   let(:producer)      { described_class.new(intel, measure_every: measure_every, start_date: start_date) }
@@ -7,20 +7,20 @@ RSpec.describe Producers::CardLaneProducer do
 
   describe '#apply' do
     before do
-      allow(producer).to receive(:collection).and_return(card_lanes)
+      allow(producer).to receive(:collection).and_return(cards)
       producer.apply
     end
 
     context 'wait times' do
-      let(:card_lanes) do
+      let(:cards) do
         [
-          CardLane.new(wait_time: 1.0, year: 2015, week: 4, lane: 'Doing: Capability'),
-          CardLane.new(wait_time: 2.0, year: 2015, week: 5, lane: 'QA'),
-          CardLane.new(wait_time: 3.0, year: 2015, week: 5, lane: 'BAT')
+          Card.new(wait_time: 1.0, year: 2015, week: 4),
+          Card.new(wait_time: 2.0, year: 2015, week: 5),
+          Card.new(wait_time: 3.0, year: 2015, week: 5)
         ]
       end
 
-      its(:wait_time) { is_expected.to eq(2015 => { 4 => { 'Doing: Capability' => 1.0 }, 5 => { 'QA' => 2.0, 'BAT' => 3.0 } }) }
+      its(:wait_time) { is_expected.to eq(2015 => { 4 => { total: 1.0 }, 5 => { total: 5.0 } }) }
     end
   end
 
@@ -38,7 +38,7 @@ RSpec.describe Producers::CardLaneProducer do
     end
 
     context 'with card lanes to produce' do
-      its(:length) { is_expected.to eq(9) }
+      its(:length) { is_expected.to eq(3) }
     end
 
     context 'without card lanes to produce' do
