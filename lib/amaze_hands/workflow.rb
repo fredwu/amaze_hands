@@ -7,6 +7,8 @@ require_relative 'producer'
 
 class Workflow
   def initialize(strategy:, files:)
+    clean_up_db
+
     files.each do |file|
       ast        = strategy::Parser.new.parse(File.new(file).read)
       common_ast = strategy::Transformer.new.apply(ast)
@@ -22,5 +24,13 @@ class Workflow
       measure_every: measure_every,
       start_date:    start_date
     ).metrics
+  end
+
+  private
+
+  def clean_up_db
+    CardRepository.clear
+    CardActionRepository.clear
+    CardLaneRepository.clear
   end
 end
