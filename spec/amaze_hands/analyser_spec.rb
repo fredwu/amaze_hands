@@ -8,5 +8,5 @@ RSpec.describe Analyser do
     Analyser.new(card).analyse
   end
 
-  its(:count) { is_expected.to eq(4) }
+  its(:count) { is_expected.to eq(6) }
 end

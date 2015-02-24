@@ -13,7 +13,7 @@ RSpec.describe Analysers::CalendarYearWeek::ForCardLane do
       Analysers::CalendarYearWeek::ForCardLane.new(card_actions).analyse
     end
 
-    its(:count) { is_expected.to eq(2) }
+    its(:count) { is_expected.to eq(3) }
 
     describe 'existing card lane item' do
       subject { all.first }
@@ -26,7 +26,7 @@ RSpec.describe Analysers::CalendarYearWeek::ForCardLane do
       subject { all.last }
 
       its(:year) { is_expected.to eq(2015) }
-      its(:week) { is_expected.to eq(7) }
+      its(:week) { is_expected.to eq(5) }
     end
   end
 
@@ -40,7 +40,7 @@ RSpec.describe Analysers::CalendarYearWeek::ForCardLane do
     describe '#date_time' do
       subject { service_class.send(:date_time) }
 
-      its(:to_s) { is_expected.to eq('2015-02-09T14:41:28+10:00') }
+      its(:to_s) { is_expected.to eq('2015-01-28T19:49:30+10:00') }
     end
   end
 end
@@ -68,7 +68,7 @@ RSpec.describe Analysers::CalendarYearWeek::ForCard do
       subject { all.first }
 
       its(:year) { is_expected.to eq(2015) }
-      its(:week) { is_expected.to eq(7) }
+      its(:week) { is_expected.to eq(5) }
     end
 
     describe 'P-999' do

@@ -22,7 +22,7 @@ RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
       service_class.apply_on(ready_for_pulling_card_actions)
     end
 
-    its(:count) { is_expected.to eq(1) }
+    its(:count) { is_expected.to eq(2) }
   end
 
   describe 'private methods' do
@@ -37,8 +37,8 @@ RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
     end
 
     shared_examples 'the next ready for pulling card action' do
-      its(:date_time)   { is_expected.to eq(DateTime.parse('Tue, 10 Feb 2015 13:34:48 +1000')) }
-      its(:description) { is_expected.to eq(from: 'QA', to: 'Deploying') }
+      its(:date_time)   { is_expected.to eq(DateTime.parse('Mon, 09 Feb 2015 14:41:28 +1000')) }
+      its(:description) { is_expected.to eq(from: 'Doing: Capability', to: 'QA') }
     end
 
     let(:card_action) { card_actions.detect { |card_action| card_action.description[:ready] == true } }
@@ -49,8 +49,8 @@ RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
       end
 
       its(:card_number) { is_expected.to eq(card_action.card_number) }
-      its(:lane)        { is_expected.to eq('QA') }
-      its(:wait_time)   { is_expected.to eq(1.0) }
+      its(:lane)        { is_expected.to eq('Doing: Capability') }
+      its(:wait_time)   { is_expected.to eq(0.0) }
 
       it 'records only once' do
         result
@@ -73,7 +73,7 @@ RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
     describe '#card_actions_in_future' do
       let(:method_name) { :card_actions_in_future }
 
-      its(:length) { is_expected.to eq(3) }
+      its(:length) { is_expected.to eq(5) }
 
       describe 'first future card action' do
         subject { result.first }

@@ -12,6 +12,6 @@ RSpec.describe Producer do
     )
   end
 
-  its(:cycle_time) { is_expected.to eq(2015 => { 7 => { 'Doing: Capability' => 3.0, 'QA' => 1.0, 'Deploying' => 0.5, 'BAT' => 0 }, 5 => { 'Doing: Capability' => 0.5, 'QA' => 0 } }) }
-  its(:wait_time)  { is_expected.to eq(2015 => { 7 => { 'Doing: Capability' => 0, 'QA' => 2.0, 'Deploying' => 0, 'BAT' => 0, total: 2.0 }, 5 => { 'Doing: Capability' => 0, 'QA' => 0, total: 0 } }) }
+  its(:cycle_time) { is_expected.to eq(2015 => { 5 => { 'In Analysis' => 6.5, 'Prioritised Backlog: Capability' => 6.5, 'Doing: Capability' => 1.5, 'QA' => 0.5, 'Deploying' => 0.5, 'BAT' => 0.0 }, 4 => { 'In Analysis' => 8.0, 'Doing: Capability' => 0.5, 'QA' => 0.0 }, 6 => { 'In Analysis' => 4.5, 'Doing: Capability' => 1.5, 'QA' => 0.5, 'BAT' => 0.0 } }) }
+  its(:wait_time)  { is_expected.to eq(2015 => { 5 => { 'In Analysis' => 0.0, 'Prioritised Backlog: Capability' => 0.0, 'Doing: Capability' => 0.0, 'QA' => 1.0, 'Deploying' => 0.0, 'BAT' => 0.0, total: 1.0 }, 4 => { 'In Analysis' => 0.0, 'Doing: Capability' => 1.0, 'QA' => 0.0, total: 1.0 }, 6 => { 'In Analysis' => 0.0, 'Doing: Capability' => 3.0, 'QA' => 1.0, 'BAT' => 0.0, total: 4.0 } }) }
 end

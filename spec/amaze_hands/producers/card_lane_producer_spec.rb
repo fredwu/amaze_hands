@@ -38,7 +38,7 @@ RSpec.describe Producers::CardLaneProducer do
     end
 
     context 'with card lanes to produce' do
-      its(:length) { is_expected.to eq(9) }
+      its(:length) { is_expected.to eq(13) }
     end
 
     context 'without card lanes to produce' do

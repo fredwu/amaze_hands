@@ -33,7 +33,7 @@ module Reducers
     #
     # | X  O  O  O  X | action analysable?
     # | ------------- |
-    # | C-->          | no
+    # | C-->          | yes
     # | <--C          | no
     # |          C--> | no
     # |          <--C | no
@@ -51,7 +51,13 @@ module Reducers
     def analysable_movements(card_action)
       card_action.description[:from].in?(lanes.with_traits(:analysable)) &&
         !moved_out_of_analysable_initials(card_action) &&
-        !moved_out_of_analysable_finals(card_action)
+        !moved_out_of_analysable_finals(card_action) ||
+        moved_into_analysable_initials(card_action)
+    end
+
+    def moved_into_analysable_initials(card_action)
+      card_action.description[:from].in?(lanes.with_traits(:non_analysable, :initial)) &&
+        card_action.description[:to].in?(lanes.with_traits(:analysable, :initial))
     end
 
     def moved_out_of_analysable_initials(card_action)
