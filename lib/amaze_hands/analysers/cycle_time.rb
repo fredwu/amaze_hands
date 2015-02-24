@@ -22,11 +22,5 @@ module Analysers
     def movement_card_actions(card)
       card_actions.to_a.select { |action| action.description.key?(:from) }
     end
-
-    class TimeMaths
-      def formula(card_action, next_card_action)
-        ((next_card_action.date_time - card_action.date_time) * 2).round / 2.0
-      end
-    end
   end
 end
