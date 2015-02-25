@@ -4,10 +4,9 @@ RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
 
   let(:service_class) do
     described_class.new(
-      type:                    :wait_time,
-      card_actions:            card_actions,
-      apply_against_next_lane: true,
-      time_maths:              Analysers::WaitTimePerLane::TimeMaths.new
+      type:         :wait_time,
+      card_actions: card_actions,
+      time_maths:   Analysers::WaitTimePerLane::TimeMaths.new
     )
   end
 
@@ -26,16 +25,6 @@ RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
   end
 
   describe 'private methods' do
-    shared_context 'with 1 wait day' do
-      let :next_movement_card_action do
-        FactoryGirl.build(:card_action, :movement, date_time: (42.hours.since(card_action.date_time)))
-      end
-
-      before do
-        allow(service_class).to receive(:next_movement_card_action).and_return(next_movement_card_action)
-      end
-    end
-
     shared_examples 'the next ready for pulling card action' do
       its(:date_time)   { is_expected.to eq(DateTime.parse('Mon, 09 Feb 2015 14:41:28 +1000')) }
       its(:description) { is_expected.to eq(from: 'Doing: Capability', to: 'QA') }
@@ -58,9 +47,39 @@ RSpec.describe Analysers::Strategies::TimeUntilNextMovement do
       end
 
       context 'with wait days' do
-        include_context 'with 1 wait day'
+        shared_examples 'wait days analysis' do
+          let(:next_non_analysable_movement_card_action) { FactoryGirl.build(:card_action, :movement, date_time: (22.hours.since(card_action.date_time)), description: { from: 'Prioritised Backlog: Capability', to: 'Doing: Capability' }) }
+          let(:next_analysable_movement_card_action)     { FactoryGirl.build(:card_action, :movement, date_time: (42.hours.since(card_action.date_time)), description: { from: 'Doing: Capability', to: 'QA' }) }
 
-        its(:wait_time) { is_expected.to eq(2.0) }
+          context 'without non-analysable actions' do
+            before do
+              allow(service_class).to receive(:card_actions_in_future).and_return([next_analysable_movement_card_action])
+            end
+
+            its(:wait_time) { is_expected.to eq(2.0) }
+          end
+
+          context 'with non-analysable actions' do
+            before do
+              allow(service_class).to receive(:card_actions_in_future).and_return([next_non_analysable_movement_card_action, next_analysable_movement_card_action])
+            end
+
+            its(:wait_time) { is_expected.to eq(wait_days) }
+          end
+        end
+
+        describe 'from initial into movement' do
+          let(:wait_days) { 1.0 }
+
+          it_behaves_like 'wait days analysis'
+        end
+
+        describe 'from movement to movement' do
+          let(:card_action) { card_actions.detect { |card_action| card_action.description[:to] == 'Doing: Capability' } }
+          let(:wait_days)   { 2.0 }
+
+          it_behaves_like 'wait days analysis'
+        end
       end
     end
 

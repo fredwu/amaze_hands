@@ -10,7 +10,7 @@ RSpec.describe Analysers::CycleTimePerLane do
       described_class.new(card_actions).analyse
     end
 
-    its(:count) { is_expected.to eq(6) }
+    its(:count) { is_expected.to eq(4) }
   end
 end
 

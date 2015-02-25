@@ -4,10 +4,9 @@ module Analysers
   class WaitTimePerLane < Base
     def analyse
       Strategies::TimeUntilNextMovement.new(
-        type:                    :wait_time,
-        card_actions:            card_actions,
-        apply_against_next_lane: true,
-        time_maths:              TimeMaths.new
+        type:         :wait_time,
+        card_actions: card_actions,
+        time_maths:   TimeMaths.new
       ).apply_on(
         ready_for_pulling_card_actions
       )
