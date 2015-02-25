@@ -12,6 +12,21 @@ RSpec.describe Analysers::CycleTimePerLane do
 
     its(:count) { is_expected.to eq(4) }
   end
+
+  describe '#movement_card_actions' do
+    subject do
+      described_class.new(
+        [
+          FactoryGirl.build(:card_action, description: { created_in: 'Doing: Capability' }),
+          FactoryGirl.build(:card_action, description: { from: 'Doing: Capability', to: 'QA' }),
+          FactoryGirl.build(:card_action, description: { from: 'QA', to: 'BAT' }),
+          FactoryGirl.build(:card_action, description: { from: 'BAT', to: 'Done' })
+        ]
+      ).send(:movement_card_actions)
+    end
+
+    its(:length) { is_expected.to eq(4) }
+  end
 end
 
 RSpec.describe Analysers::CycleTimePerLane::TimeMaths do

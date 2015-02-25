@@ -15,7 +15,7 @@ module Analysers
     private
 
     def movement_card_actions
-      card_actions.to_a.select { |action| action.description.key?(:from) }
+      card_actions.to_a.select { |action| action.description.key?(:from) || action.description.key?(:created_in) }
     end
 
     class TimeMaths
