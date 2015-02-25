@@ -34,8 +34,11 @@ module Analysers
 
       def next_movement_card_action(card_action)
         card_actions_in_future(card_action).detect do |action|
-          !card_action.description.key?(:to) ||
-            card_action.description[:to] == action.description[:from]
+          action.description.key?(:from) &&
+            (
+              !card_action.description.key?(:to) ||
+                card_action.description[:to] == action.description[:from]
+            )
         end
       end
 
