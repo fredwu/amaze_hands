@@ -12,10 +12,10 @@ module Producers
       items.each do |item|
         metric = intel.send("#{metric_name}")
 
-        existing_metric_value = metric.fetch(year, {}).fetch(week, {}).fetch(:total, 0.0)
+        existing_metric_value = metric.fetch(year, {}).fetch(week, {}).fetch(:combined, 0.0)
         metric_value          = existing_metric_value + item.send(metric_name)
 
-        metric.deep_merge!(year => { week => { total: metric_value } })
+        metric.deep_merge!(year => { week => { combined: metric_value } })
 
         intel.send("#{metric_name}=", metric)
       end

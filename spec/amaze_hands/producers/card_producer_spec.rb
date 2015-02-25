@@ -20,7 +20,7 @@ RSpec.describe Producers::CardProducer do
         ]
       end
 
-      its(:wait_time) { is_expected.to eq(2015 => { 4 => { total: 1.0 }, 5 => { total: 5.0 } }) }
+      its(:wait_time) { is_expected.to eq(2015 => { 4 => { combined: 1.0 }, 5 => { combined: 5.0 } }) }
     end
   end
 
