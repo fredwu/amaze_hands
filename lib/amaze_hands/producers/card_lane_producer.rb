@@ -1,15 +1,20 @@
+require_relative 'metrics_producer'
+
 module Producers
-  class CardLaneProducer < BaseProducer
-    AVAILABLE_METRICS = [:cycle_time, :wait_time]
+  class CardLaneProducer
+    attr_reader :producer
 
-    private
-
-    def repository
-      CardLaneRepository
+    def initialize(intel, **args)
+      @producer = MetricsProducer.new(intel, **args)
+      @producer.configure do |producer|
+        producer.metrics    = [:cycle_time, :wait_time]
+        producer.repository = CardLaneRepository
+        producer.metric_key = -> (item) { item.lane }
+      end
     end
 
-    def metric_key(item)
-      item.lane
+    def apply
+      producer.apply
     end
   end
 end

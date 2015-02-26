@@ -1,11 +1,16 @@
 module Producers
-  class BaseProducer
+  class MetricsProducer
     attr_reader :intel, :from_year, :from_week
+    attr_accessor :repository, :metric_key, :metrics
 
     def initialize(intel, measure_every:, start_date:)
-      @intel     = intel
-      @from_year = start_date.year
-      @from_week = start_date.cweek
+      @intel      = intel
+      @from_year  = start_date.year
+      @from_week  = start_date.cweek
+    end
+
+    def configure(&block)
+      instance_eval(&block)
     end
 
     def apply
@@ -32,7 +37,7 @@ module Producers
 
     def produce_metrics_for(year, items_by_year)
       items_by_year.each do |week, items_by_week|
-        self.class::AVAILABLE_METRICS.each do |metric_name|
+        metrics.each do |metric_name|
           items_by_week.each do |item|
             produce_item_metric_for(metric_name, item: item, year: year, week: week)
           end
@@ -43,10 +48,12 @@ module Producers
     def produce_item_metric_for(metric_name, item:, year:, week:)
       metric = intel.send("#{metric_name}")
 
-      existing_metric_value = metric.fetch(year, {}).fetch(week, {}).fetch(metric_key(item), 0.0)
+      key = instance_exec(item, &metric_key)
+
+      existing_metric_value = metric.fetch(year, {}).fetch(week, {}).fetch(key, 0.0)
       metric_value          = existing_metric_value + item.send(metric_name)
 
-      metric.deep_merge!(year => { week => { metric_key(item) => metric_value } })
+      metric.deep_merge!(year => { week => { key => metric_value } })
 
       intel.send("#{metric_name}=", metric)
     end

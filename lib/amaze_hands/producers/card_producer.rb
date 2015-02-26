@@ -1,15 +1,20 @@
+require_relative 'metrics_producer'
+
 module Producers
-  class CardProducer < BaseProducer
-    AVAILABLE_METRICS = [:wait_time]
+  class CardProducer
+    attr_reader :producer
 
-    private
-
-    def repository
-      CardRepository
+    def initialize(intel, **args)
+      @producer = MetricsProducer.new(intel, **args)
+      @producer.configure do |producer|
+        producer.metrics    = [:wait_time]
+        producer.repository = CardRepository
+        producer.metric_key = -> (_) { :combined }
+      end
     end
 
-    def metric_key(_)
-      :combined
+    def apply
+      producer.apply
     end
   end
 end

@@ -7,7 +7,7 @@ RSpec.describe Producers::CardProducer do
 
   describe '#apply' do
     before do
-      allow(producer).to receive(:collection).and_return(cards)
+      allow_any_instance_of(Producers::MetricsProducer).to receive(:collection).and_return(cards)
       producer.apply
     end
 
@@ -25,7 +25,7 @@ RSpec.describe Producers::CardProducer do
   end
 
   describe '#collection' do
-    subject { producer.send(:collection) }
+    subject { producer.send(:producer).send(:collection) }
 
     before do
       Workflow.new(
