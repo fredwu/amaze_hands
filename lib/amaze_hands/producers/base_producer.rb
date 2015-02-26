@@ -33,18 +33,20 @@ module Producers
     def produce_metrics_for(year, items_by_year)
       items_by_year.each do |week, items_by_week|
         self.class::AVAILABLE_METRICS.each do |metric_name|
-          produce_metric(metric_name, items: items_by_week, year: year, week: week)
+          items_by_week.each do |item|
+            produce_item_metric_for(metric_name, item: item, year: year, week: week)
+          end
         end
       end
     end
 
-    def produce_item_metric_for(label, metric_name:, item:, year:, week:)
+    def produce_item_metric_for(metric_name, item:, year:, week:)
       metric = intel.send("#{metric_name}")
 
-      existing_metric_value = metric.fetch(year, {}).fetch(week, {}).fetch(label, 0.0)
+      existing_metric_value = metric.fetch(year, {}).fetch(week, {}).fetch(metric_key(item), 0.0)
       metric_value          = existing_metric_value + item.send(metric_name)
 
-      metric.deep_merge!(year => { week => { label => metric_value } })
+      metric.deep_merge!(year => { week => { metric_key(item) => metric_value } })
 
       intel.send("#{metric_name}=", metric)
     end

@@ -8,10 +8,8 @@ module Producers
       CardLaneRepository
     end
 
-    def produce_metric(metric_name, items:, year:, week:)
-      items.each do |item|
-        produce_item_metric_for(item.lane, metric_name: metric_name, item: item, year: year, week: week)
-      end
+    def metric_key(item)
+      item.lane
     end
   end
 end

@@ -8,17 +8,8 @@ module Producers
       CardRepository
     end
 
-    def produce_metric(metric_name, items:, year:, week:)
-      items.each do |item|
-        metric = intel.send("#{metric_name}")
-
-        existing_metric_value = metric.fetch(year, {}).fetch(week, {}).fetch(:combined, 0.0)
-        metric_value          = existing_metric_value + item.send(metric_name)
-
-        metric.deep_merge!(year => { week => { combined: metric_value } })
-
-        intel.send("#{metric_name}=", metric)
-      end
+    def metric_key(_)
+      :combined
     end
   end
 end
