@@ -24,11 +24,11 @@ RSpec.describe Producers::CardLaneProducer do
         is_expected.to eq(
           2015 => {
             4 => {
-              'Doing: Capability' => { total: 1.0 }
+              'Doing: Capability' => { sum: 1.0 }
             },
             5 => {
-              'QA'  => { total: 2.0 },
-              'BAT' => { total: 3.0 }
+              'QA'  => { sum: 2.0 },
+              'BAT' => { sum: 3.0 }
             }
           }
         )

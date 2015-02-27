@@ -16,19 +16,19 @@ RSpec.describe Producer do
     is_expected.to eq(
       2015 => {
         5 => {
-          'Doing: Capability' => { total: 19.0 },
-          'QA'                => { total: 1.5 },
-          'Deploying'         => { total: 0.5 },
-          'BAT'               => { total: 0.5 }
+          'Doing: Capability' => { sum: 19.0 },
+          'QA'                => { sum: 1.5 },
+          'Deploying'         => { sum: 0.5 },
+          'BAT'               => { sum: 0.5 }
         },
         4 => {
-          'Doing: Capability' => { total: 8.0 },
-          'QA'                => { total: 0.5 }
+          'Doing: Capability' => { sum: 8.0 },
+          'QA'                => { sum: 0.5 }
         },
         6 => {
-          'Doing: Capability' => { total: 4.5 },
-          'QA'                => { total: 1.5 },
-          'BAT'               => { total: 0.5 }
+          'Doing: Capability' => { sum: 4.5 },
+          'QA'                => { sum: 1.5 },
+          'BAT'               => { sum: 0.5 }
         }
       }
     )
@@ -38,22 +38,22 @@ RSpec.describe Producer do
     is_expected.to eq(
       2015 => {
         5 => {
-          'Doing: Capability' => { total: 0.0 },
-          'QA'                => { total: 1.0 },
-          'Deploying'         => { total: 0.0 },
-          'BAT'               => { total: 0.0 },
-          :combined           => { total: 1.0 }
+          'Doing: Capability' => { sum: 0.0 },
+          'QA'                => { sum: 1.0 },
+          'Deploying'         => { sum: 0.0 },
+          'BAT'               => { sum: 0.0 },
+          :combined           => { sum: 1.0 }
         },
         4 => {
-          'Doing: Capability' => { total: 1.0 },
-          'QA'                => { total: 0.0 },
-          :combined           => { total: 1.0 }
+          'Doing: Capability' => { sum: 1.0 },
+          'QA'                => { sum: 0.0 },
+          :combined           => { sum: 1.0 }
         },
         6 => {
-          'Doing: Capability' => { total: 3.0 },
-          'QA'                => { total: 1.0 },
-          'BAT'               => { total: 0.0 },
-          :combined           => { total: 4.0 }
+          'Doing: Capability' => { sum: 3.0 },
+          'QA'                => { sum: 1.0 },
+          'BAT'               => { sum: 0.0 },
+          :combined           => { sum: 4.0 }
         }
       }
     )
