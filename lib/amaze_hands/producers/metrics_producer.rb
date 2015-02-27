@@ -50,10 +50,10 @@ module Producers
 
       key = instance_exec(item, &metric_key)
 
-      existing_metric_value = metric.fetch(year, {}).fetch(week, {}).fetch(key, 0.0)
+      existing_metric_value = metric.fetch(year, {}).fetch(week, {}).fetch(key, {}).fetch(:total, 0)
       metric_value          = existing_metric_value + item.send(metric_name)
 
-      metric.deep_merge!(year => { week => { key => metric_value } })
+      metric.deep_merge!(year => { week => { key => { total: metric_value } } })
 
       intel.send("#{metric_name}=", metric)
     end

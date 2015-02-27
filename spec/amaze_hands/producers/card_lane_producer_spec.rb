@@ -20,7 +20,19 @@ RSpec.describe Producers::CardLaneProducer do
         ]
       end
 
-      its(:wait_time) { is_expected.to eq(2015 => { 4 => { 'Doing: Capability' => 1.0 }, 5 => { 'QA' => 2.0, 'BAT' => 3.0 } }) }
+      its(:wait_time) do
+        is_expected.to eq(
+          2015 => {
+            4 => {
+              'Doing: Capability' => { total: 1.0 }
+            },
+            5 => {
+              'QA'  => { total: 2.0 },
+              'BAT' => { total: 3.0 }
+            }
+          }
+        )
+      end
     end
   end
 
