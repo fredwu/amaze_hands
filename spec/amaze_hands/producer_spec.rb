@@ -19,16 +19,19 @@ RSpec.describe Producer do
           'Doing: Capability' => { sum: 19.0, count: 1, average: 19.0 },
           'QA'                => { sum: 1.5, count: 1, average: 1.5 },
           'Deploying'         => { sum: 0.5, count: 1, average: 0.5 },
-          'BAT'               => { sum: 0.5, count: 1, average: 0.5 }
+          'BAT'               => { sum: 0.5, count: 1, average: 0.5 },
+          :combined           => { sum: 5.5, count: 1, average: 5.5 }
         },
         4 => {
           'Doing: Capability' => { sum: 8.0, count: 1, average: 8.0 },
-          'QA'                => { sum: 0.5, count: 1, average: 0.5 }
+          'QA'                => { sum: 0.5, count: 1, average: 0.5 },
+          :combined           => { sum: 5.5, count: 1, average: 5.5 }
         },
         6 => {
           'Doing: Capability' => { sum: 4.5, count: 1, average: 4.5 },
           'QA'                => { sum: 1.5, count: 1, average: 1.5 },
-          'BAT'               => { sum: 0.5, count: 1, average: 0.5 }
+          'BAT'               => { sum: 0.5, count: 1, average: 0.5 },
+          :combined           => { sum: 5.5, count: 1, average: 5.5 }
         }
       }
     )

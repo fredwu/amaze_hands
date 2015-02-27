@@ -7,7 +7,7 @@ module Producers
     def initialize(intel, **args)
       @producer = MetricsProducer.new(intel, **args)
       @producer.configure do |producer|
-        producer.metrics    = [:wait_time]
+        producer.metrics    = [:cycle_time, :wait_time]
         producer.repository = CardRepository
         producer.metric_key = -> (_) { :combined }
       end
