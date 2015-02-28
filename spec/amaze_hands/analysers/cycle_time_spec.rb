@@ -20,7 +20,7 @@ RSpec.describe Analysers::CycleTime do
       end
 
       describe 'records cycle time' do
-        its(:cycle_time) { is_expected.to eq(13.5) }
+        its(:cycle_time) { is_expected.to eq(9.5) }
       end
     end
   end

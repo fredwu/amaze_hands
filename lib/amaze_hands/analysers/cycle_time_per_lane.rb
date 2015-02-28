@@ -19,6 +19,8 @@ module Analysers
     end
 
     class TimeMaths
+      prepend Strategies::WorkDays
+
       def formula(card_action, next_card_action)
         return 0 unless next_card_action
 

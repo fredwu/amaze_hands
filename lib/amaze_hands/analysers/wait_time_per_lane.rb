@@ -19,6 +19,8 @@ module Analysers
     end
 
     class TimeMaths
+      prepend Strategies::WorkDays
+
       def formula(card_action, next_card_action)
         (next_card_action.date_time.to_date - card_action.date_time.to_date).to_f
       end
