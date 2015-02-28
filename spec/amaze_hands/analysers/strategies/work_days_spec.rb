@@ -21,7 +21,7 @@ RSpec.describe Analysers::Strategies::WorkDays do
     it { is_expected.to eq(3.0) }
   end
 
-  describe 'with a holiday' do
+  describe 'with holiday days' do
     let(:from) { '2015-02-17' }
     let(:to)   { '2015-02-20' }
 
