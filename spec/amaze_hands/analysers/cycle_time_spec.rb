@@ -7,6 +7,7 @@ RSpec.describe Analysers::CycleTime do
     subject(:cards) { CardRepository.all }
 
     before do
+      Analysers::CycleTimePerLane.new(card_actions).analyse
       described_class.new(card_actions).analyse
     end
 
@@ -20,7 +21,7 @@ RSpec.describe Analysers::CycleTime do
       end
 
       describe 'records cycle time' do
-        its(:cycle_time) { is_expected.to eq(9.5) }
+        its(:cycle_time) { is_expected.to eq(15.5) }
       end
     end
   end
