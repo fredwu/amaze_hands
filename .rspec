@@ -1,2 +1,3 @@
 --color
+--order random
 --require app_helper spec_helper
