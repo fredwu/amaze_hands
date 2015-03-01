@@ -8,7 +8,9 @@ module Web::Views::Home
           strategy: Strategies::LeanKit,
           files: Dir["#{Web::Application.configuration.root}/../../db/cards/*.txt"]
         )
-      ).metrics
+      ).metrics(
+        measure_every: 2.weeks
+      )
     end
   end
 end
