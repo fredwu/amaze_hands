@@ -5,18 +5,18 @@ module Web::Presenters
     end
 
     def metrics(*args)
-      _metrics = @intel.metrics(*args)
+      original_metrics = @intel.metrics(*args)
 
       {
-        labels: _metrics.cycle_time.keys,
+        labels: original_metrics.cycle_time.keys,
         series: [
           {
             name: 'Cycle Time',
-            data: _metrics.cycle_time.map { |_, stats| stats[:combined][:average] }
+            data: original_metrics.cycle_time.map { |_, stats| stats[:combined][:average] }
           },
           {
             name: 'Wait Time',
-            data: _metrics.wait_time.map { |_, stats| stats[:combined][:average] }
+            data: original_metrics.wait_time.map { |_, stats| stats[:combined][:average] }
           }
         ]
       }.to_json
