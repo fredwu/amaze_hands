@@ -1,5 +1,5 @@
 RSpec.describe Producers::CardProducer do
-  let(:measure_every) { 2.weeks }
+  let(:measure_every) { 1.week }
   let(:start_date)    { DateTime.parse('19-01-2015') }
   let(:producer)      { described_class.new(intel, measure_every: measure_every, start_date: start_date) }
 

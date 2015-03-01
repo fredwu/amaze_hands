@@ -14,17 +14,12 @@ RSpec.describe Producer do
 
   its(:cycle_time) do
     is_expected.to eq(
-      '2015-5' => {
-        'Doing: Capability' => { sum: 13.0, count: 1, average: 13.0 },
-        'QA'                => { sum: 1.5, count: 1, average: 1.5 },
+      '2015-4' => {
+        'Doing: Capability' => { sum: 19.0, count: 2, average: 9.5 },
+        'QA'                => { sum: 2.0, count: 2, average: 1.0 },
         'Deploying'         => { sum: 0.5, count: 1, average: 0.5 },
         'BAT'               => { sum: 0.5, count: 1, average: 0.5 },
-        :combined           => { sum: 3.5, count: 1, average: 3.5 }
-      },
-      '2015-4' => {
-        'Doing: Capability' => { sum: 6.0, count: 1, average: 6.0 },
-        'QA'                => { sum: 0.5, count: 1, average: 0.5 },
-        :combined           => { sum: 3.5, count: 1, average: 3.5 }
+        :combined           => { sum: 7.0, count: 2, average: 3.5 }
       },
       '2015-6' => {
         'Doing: Capability' => { sum: 2.5, count: 1, average: 2.5 },
@@ -37,17 +32,12 @@ RSpec.describe Producer do
 
   its(:wait_time) do
     is_expected.to eq(
-      '2015-5' => {
-        'Doing: Capability' => { sum: 0.0, count: 1, average: 0.0 },
-        'QA'                => { sum: 1.0, count: 1, average: 1.0 },
+      '2015-4' => {
+        'Doing: Capability' => { sum: 1.0, count: 2, average: 0.5 },
+        'QA'                => { sum: 1.0, count: 2, average: 0.5 },
         'Deploying'         => { sum: 0.0, count: 1, average: 0.0 },
         'BAT'               => { sum: 0.0, count: 1, average: 0.0 },
-        :combined           => { sum: 1.0, count: 1, average: 1.0 }
-      },
-      '2015-4' => {
-        'Doing: Capability' => { sum: 1.0, count: 1, average: 1.0 },
-        'QA'                => { sum: 0.0, count: 1, average: 0.0 },
-        :combined           => { sum: 1.0, count: 1, average: 1.0 }
+        :combined           => { sum: 2.0, count: 2, average: 1.0 }
       },
       '2015-6' => {
         'Doing: Capability' => { sum: 1.0, count: 1, average: 1.0 },

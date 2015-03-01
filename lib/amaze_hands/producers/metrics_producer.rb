@@ -6,7 +6,7 @@ module Producers
 
     def initialize(intel, measure_every:, start_date:)
       @intel      = intel
-      @frequency  = measure_every
+      @frequency  = measure_every / 1.week
       @start_date = start_date
       @from_year  = start_date.year
       @from_week  = start_date.cweek
@@ -25,6 +25,17 @@ module Producers
     private
 
     def catalog
+      array_catalog = catalog_pre_frequency.each_slice(frequency).map do |slice|
+        key    = slice[0][0]
+        values = slice.map { |s| s[1] }.flatten
+
+        [key, values]
+      end
+
+      Hash[array_catalog]
+    end
+
+    def catalog_pre_frequency
       prefill_catalog_keys(collection).merge(
         collection.group_by { |item| "#{item.year}-#{item.week}" }
       )
