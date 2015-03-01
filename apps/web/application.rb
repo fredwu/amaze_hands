@@ -1,3 +1,5 @@
+require 'slim'
+
 module Web
   class Application < Lotus::Application
     configure do
@@ -14,6 +16,7 @@ module Web
       # Remember to add directories here when you create new.
       #
       load_paths << [
+        'presenters',
         'controllers',
         'views'
       ]
@@ -157,6 +160,8 @@ module Web
 
       # Serve static assets during development
       serve_assets      true
+
+      Slim::Engine.set_options pretty: true
     end
 
     ##

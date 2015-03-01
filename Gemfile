@@ -10,6 +10,7 @@ gem 'activesupport'
 gem 'parslet'
 gem 'biz'
 gem 'slim'
+gem 'coffee-script'
 
 group :development do
   gem 'rubocop', require: false
@@ -17,6 +18,7 @@ end
 
 group :development, :test do
   gem 'awesome_print'
+  gem 'byebug'
   gem 'pry'
   gem 'factory_girl'
 end

@@ -1,0 +1,17 @@
+#chart.ct-chart
+
+coffee:
+  $ ->
+    $('#chart').spin()
+
+    $.get '/metrics', (metrics) ->
+
+      chartOptions =
+        width:  600
+        height: 400
+
+      data = metrics
+
+      $('#chart').spin(false)
+
+      new Chartist.Bar '#chart', data, chartOptions
