@@ -4,9 +4,10 @@ module Producers
     attr_accessor :repository, :metric_key, :metrics
 
     def initialize(intel, measure_every:, start_date:)
-      @intel      = intel
-      @from_year  = start_date.year
-      @from_week  = start_date.cweek
+      @intel     = intel
+      @frequency = measure_every
+      @from_year = start_date.year
+      @from_week = start_date.cweek
     end
 
     def configure(&block)
@@ -16,8 +17,8 @@ module Producers
     def apply
       collection.each_with_object({}) do |item, catalog|
         catalog_by_year_and_week(catalog, item)
-      end.each do |year, items_by_year|
-        produce_metrics_for(year, items_by_year)
+      end.each do |year_and_week, items|
+        produce_metrics_for(year_and_week, items)
       end
     end
 
@@ -30,20 +31,19 @@ module Producers
     end
 
     def catalog_by_year_and_week(catalog, item)
-      catalog[item.year] ||= {}
-      catalog[item.year][item.week] ||= []
-      catalog[item.year][item.week] << item
+      key = "#{item.year}-#{item.week}"
+
+      catalog[key] ||= []
+      catalog[key] << item
     end
 
-    def produce_metrics_for(year, items_by_year)
-      items_by_year.each do |week, items_by_week|
-        metrics.each do |metric_name|
-          produce_items_metric_for(metric_name, items: items_by_week, year: year, week: week)
-        end
+    def produce_metrics_for(year_and_week, items)
+      metrics.each do |metric_name|
+        produce_metric_for(metric_name, items: items, year_and_week: year_and_week)
       end
     end
 
-    def produce_items_metric_for(metric_name, **args)
+    def produce_metric_for(metric_name, **args)
       metric = intel.send(metric_name)
 
       producer = MetricProducer.new(metric_name, metric_key: metric_key, **args)
@@ -54,34 +54,31 @@ module Producers
     end
 
     class MetricProducer
-      attr_reader :metric_name, :metric_key, :items, :year, :week
+      attr_reader :metric_name, :metric_key, :items, :year_and_week
 
-      def initialize(metric_name, metric_key:, items:, year:, week:)
-        @metric_name = metric_name
-        @metric_key  = metric_key
-        @items       = items
-        @year        = year
-        @week        = week
+      def initialize(metric_name, metric_key:, items:, year_and_week:)
+        @metric_name   = metric_name
+        @metric_key    = metric_key
+        @items         = items
+        @year_and_week = year_and_week
       end
 
       def apply_sum!(metric)
         items.each do |item|
           key            = instance_exec(item, &metric_key)
-          existing_value = metric.fetch(year, {}).fetch(week, {}).fetch(key, {}).fetch(:sum, 0)
+          existing_value = metric.fetch(year_and_week, {}).fetch(key, {}).fetch(:sum, 0)
           value          = item.send(metric_name) + existing_value
 
-          metric.deep_merge!(year => { week => { key => { sum: value } } })
+          metric.deep_merge!(year_and_week => { key => { sum: value } })
 
-          increase_counter!(metric[year][week][key])
+          increase_counter!(metric[year_and_week][key])
         end
       end
 
       def apply_average!(metric)
-        metric.each do |year, metric_by_year|
-          metric_by_year.each do |week, metric_by_week|
-            metric_by_week.each do |key, calculated_metric|
-              calculated_metric[:average] = (calculated_metric[:sum] / calculated_metric[:count]).round(1)
-            end
+        metric.each do |year_and_week, metric|
+          metric.each do |_, calculated_metric|
+            calculated_metric[:average] = (calculated_metric[:sum] / calculated_metric[:count]).round(1)
           end
         end
       end

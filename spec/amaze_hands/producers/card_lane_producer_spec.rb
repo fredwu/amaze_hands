@@ -22,14 +22,12 @@ RSpec.describe Producers::CardLaneProducer do
 
       its(:wait_time) do
         is_expected.to eq(
-          2015 => {
-            4 => {
-              'Doing: Capability' => { sum: 1.0, count: 1, average: 1.0 }
-            },
-            5 => {
-              'QA'  => { sum: 2.0, count: 1, average: 2.0 },
-              'BAT' => { sum: 3.0, count: 1, average: 3.0 }
-            }
+          '2015-4' => {
+            'Doing: Capability' => { sum: 1.0, count: 1, average: 1.0 }
+          },
+          '2015-5' => {
+            'QA'  => { sum: 2.0, count: 1, average: 2.0 },
+            'BAT' => { sum: 3.0, count: 1, average: 3.0 }
           }
         )
       end
