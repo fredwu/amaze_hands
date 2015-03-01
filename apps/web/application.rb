@@ -15,11 +15,11 @@ module Web
       # Relative load paths where this application will recursively load the code.
       # Remember to add directories here when you create new.
       #
-      load_paths << [
-        'presenters',
-        'controllers',
-        'views'
-      ]
+      load_paths << %w(
+        presenters
+        controllers
+        views
+      )
 
       # Handle exceptions with HTTP statuses (true) or don't catch them (false).
       # Defaults to true.
