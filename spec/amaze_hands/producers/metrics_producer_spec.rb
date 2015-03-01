@@ -1,3 +1,30 @@
+RSpec.describe Producers::MetricsProducer do
+  subject(:producer) do
+    described_class.new(
+      Intelligence.new,
+      measure_every: 1.week,
+      start_date:    DateTime.parse('19-01-2015')
+    )
+  end
+
+  before do
+    producer.configure do |config|
+      config.metrics    = [:wait_time]
+      config.repository = CardRepository
+      config.metric_key = -> (_) { :combined }
+    end
+
+    CardRepository.create(FactoryGirl.build(:card, year: 2015, week: 3))
+    CardRepository.create(FactoryGirl.build(:card, year: 2015, week: 4))
+    CardRepository.create(FactoryGirl.build(:card, year: 2015, week: 6))
+
+    producer.apply
+  end
+
+  its(:catalog) { is_expected.to_not have_key('2015-3') }
+  its(:catalog) { is_expected.to     have_key('2015-5') }
+end
+
 RSpec.describe Producers::MetricsProducer::MetricProducer do
   let(:metric) { {} }
 

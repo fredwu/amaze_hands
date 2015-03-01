@@ -1,13 +1,15 @@
 module Producers
   class MetricsProducer
-    attr_reader :intel, :from_year, :from_week
+    attr_reader :intel, :frequency, :start_date, :from_year, :from_week
+
     attr_accessor :repository, :metric_key, :metrics
 
     def initialize(intel, measure_every:, start_date:)
-      @intel     = intel
-      @frequency = measure_every
-      @from_year = start_date.year
-      @from_week = start_date.cweek
+      @intel      = intel
+      @frequency  = measure_every
+      @start_date = start_date
+      @from_year  = start_date.year
+      @from_week  = start_date.cweek
     end
 
     def configure(&block)
@@ -15,26 +17,34 @@ module Producers
     end
 
     def apply
-      collection.each_with_object({}) do |item, catalog|
-        catalog_by_year_and_week(catalog, item)
-      end.each do |year_and_week, items|
+      catalog.each do |year_and_week, items|
         produce_metrics_for(year_and_week, items)
       end
     end
 
     private
 
+    def catalog
+      prefill_catalog_keys(collection).merge(
+        collection.group_by { |item| "#{item.year}-#{item.week}" }
+      )
+    end
+
+    def prefill_catalog_keys(collection)
+      return {} if collection.empty?
+
+      last_item = collection.last
+      end_date  = Date.commercial(last_item.year, last_item.week, 7)
+
+      keys = (start_date...end_date).map { |date| "#{date.year}-#{date.cweek}" }.uniq
+
+      Hash[keys.product([[]])]
+    end
+
     def collection
       @collection ||= repository.all.select do |item|
         item.year > from_year || (item.year == from_year && item.week >= from_week)
       end
-    end
-
-    def catalog_by_year_and_week(catalog, item)
-      key = "#{item.year}-#{item.week}"
-
-      catalog[key] ||= []
-      catalog[key] << item
     end
 
     def produce_metrics_for(year_and_week, items)
