@@ -16,12 +16,12 @@ RSpec.describe Analysers::CycleTime do
     describe 'P-217' do
       subject { CardRepository.all.first }
 
-      describe 'does not record wait time' do
-        its(:wait_time) { is_expected.to eq(0) }
-      end
-
       describe 'records cycle time' do
         its(:cycle_time) { is_expected.to eq(15.5) }
+      end
+
+      describe 'does not record wait time' do
+        its(:wait_time) { is_expected.to eq(0) }
       end
     end
   end
