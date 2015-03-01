@@ -9,6 +9,7 @@ gem 'lotus-model', '~> 0.2.2'
 gem 'activesupport'
 gem 'parslet'
 gem 'biz'
+gem 'slim'
 
 group :development do
   gem 'rubocop', require: false
