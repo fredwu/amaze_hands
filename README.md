@@ -87,7 +87,7 @@ Amaze Hands out of the box has parser and transformer strategies for the followi
 Amaze Hands is proudly built with:
 
 - Ruby 2.1+
-- [Lotus Framework](http://lotusrb.org/)
+- [Lotus](http://lotusrb.org/)
 - [Parslet](http://kschiess.github.io/parslet/) for [PEG](http://en.wikipedia.org/wiki/Parsing_expression_grammar)
 - [C3.js](http://c3js.org/)
 - [Bootstrap](http://getbootstrap.com/)
