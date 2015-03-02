@@ -4,8 +4,6 @@ Amaze Hands is an amazing tool developed for analysing Kanban board cards, in a 
 
 Developed exclusively for the amazing Pricing squad in Group Platform at [REA](http://www.rea-group.com/).
 
-![](doc/images/web_app.png)
-
 ## Why?
 
 _Lorem ipsum spreadsheet amaze._
@@ -15,6 +13,24 @@ Previously, as a [Delivery Lead](https://www.google.com.au/search?tbm=isch&q=spr
 Below is the spreadsheet I used - Excel formulas are helpful, but punching in dates is an extremely tedious process.
 
 ![](doc/images/spreadsheet.png)
+
+## Amaze Hands to the Rescue
+
+__The goal of Amaze Hands is to incrementally add intelligence to our agile process.__
+
+By incrementally adding areas and/or data points for analysis, we will be able to zero in on problematic areas of our agile process. The following is a list of possible areas we can analyse on:
+
+- cycle time per lane
+- cycle time
+- wait time per lane
+- wait time
+- blocked time
+- knocked-back time
+- context switch (between different streams of work)
+- other factors such as meetings, etc
+- etc, etc
+
+![](doc/images/web_app.png)
 
 ## How?
 
