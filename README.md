@@ -90,6 +90,8 @@ Amaze Hands is proudly built with:
 - [Lotus Framework](http://lotusrb.org/)
 - [Parslet](http://kschiess.github.io/parslet/) for [PEG](http://en.wikipedia.org/wiki/Parsing_expression_grammar)
 - [C3.js](http://c3js.org/)
+- [Bootstrap](http://getbootstrap.com/)
+- [RUI](http://rea.to/rui)
 
 ## How to Use
 
