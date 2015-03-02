@@ -4,6 +4,7 @@ module Web::Presenters
       @intel = intel
     end
 
+    # rubocop:disable MethodLength
     def metrics(*args)
       original_metrics = @intel.metrics(*args)
 
@@ -35,5 +36,6 @@ module Web::Presenters
         ]
       }.to_json
     end
+    # rubocop:enable MethodLength
   end
 end
