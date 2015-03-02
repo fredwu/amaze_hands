@@ -4,7 +4,7 @@ Amaze Hands is an amazing tool developed for analysing Kanban board cards, in a 
 
 Developed exclusively for the amazing Pricing squad in Group Platform at [REA](http://www.rea-group.com/).
 
-![](doc/images/wow_amaze_hands.jpg)
+![](doc/images/web_app.png)
 
 ## Why?
 
@@ -52,12 +52,6 @@ _Lorem ipsum copy paste amaze._
         |      Presenter      | <- Presents metrics.
         +---------------------+
 
-## Look!
-
-_Lorem ipsum web app amaze._
-
-![](doc/images/web_app.png)
-
 ## Supported Kanban Boards
 
 - [LeanKit](http://leankit.com/)
@@ -68,6 +62,27 @@ _Lorem ipsum web app amaze._
 - [Lotus Framework](http://lotusrb.org/)
 - [Parslet](http://kschiess.github.io/parslet/) for [PEG](http://en.wikipedia.org/wiki/Parsing_expression_grammar)
 
+## How to Use
+
+### Run Metrics in CLI
+
+```
+bundle install
+lotus c
+```
+
+```ruby
+# in lotus repl
+Workflow.new(strategy: Strategies::LeanKit, files: Dir["#{__dir__}/db/cards/*.txt"]).metrics
+```
+
+### Run Metrics in Local Web App
+
+```
+bundle install
+lotus s
+```
+
 ## Credits
 
 - [Fred Wu](http://fredwu.me/) - author.
@@ -76,3 +91,5 @@ _Lorem ipsum web app amaze._
 ## License
 
 Licensed under [MIT](http://fredwu.mit-license.org/)
+
+![](doc/images/wow_amaze_hands.jpg)
