@@ -9,7 +9,12 @@ module Web::Presenters
 
       {
         type: 'bar',
+        xs: {
+          'Cycle Time' => 'Week',
+          'Wait Time'  => 'Week'
+        },
         columns: [
+          ['Week'] + original_metrics.cycle_time.keys,
           ['Cycle Time'] + original_metrics.cycle_time.map { |_, stats| stats[:combined][:average] },
           ['Wait Time'] + original_metrics.wait_time.map { |_, stats| stats[:combined][:average] }
         ]
