@@ -19,13 +19,15 @@ RSpec.describe Producer do
         'QA'                => { sum: 2.0, count: 2, average: 1.0 },
         'Deploying'         => { sum: 0.5, count: 1, average: 0.5 },
         'BAT'               => { sum: 0.5, count: 1, average: 0.5 },
-        :combined           => { sum: 22.0, count: 2, average: 11.0 }
+        :combined           => { sum: 22.0, count: 2, average: 11.0 },
+        :combined_rolling   => { sum: 22.0, count: 2, average: 11.0 }
       },
       '2015-6' => {
         'Doing: Capability' => { sum: 2.5, count: 1, average: 2.5 },
         'QA'                => { sum: 1.5, count: 1, average: 1.5 },
         'BAT'               => { sum: 0.5, count: 1, average: 0.5 },
-        :combined           => { sum: 4.5, count: 1, average: 4.5 }
+        :combined           => { sum: 4.5, count: 1, average: 4.5 },
+        :combined_rolling   => { sum: 26.5, count: 3, average: 8.8 }
       }
     )
   end
@@ -37,13 +39,15 @@ RSpec.describe Producer do
         'QA'                => { sum: 1.0, count: 2, average: 0.5 },
         'Deploying'         => { sum: 0.0, count: 1, average: 0.0 },
         'BAT'               => { sum: 0.0, count: 1, average: 0.0 },
-        :combined           => { sum: 2.0, count: 2, average: 1.0 }
+        :combined           => { sum: 2.0, count: 2, average: 1.0 },
+        :combined_rolling   => { sum: 2.0, count: 2, average: 1.0 }
       },
       '2015-6' => {
         'Doing: Capability' => { sum: 1.0, count: 1, average: 1.0 },
         'QA'                => { sum: 1.0, count: 1, average: 1.0 },
         'BAT'               => { sum: 0.0, count: 1, average: 0.0 },
-        :combined           => { sum: 2.0, count: 1, average: 2.0 }
+        :combined           => { sum: 2.0, count: 1, average: 2.0 },
+        :combined_rolling   => { sum: 4.0, count: 3, average: 1.3 }
       }
     )
   end

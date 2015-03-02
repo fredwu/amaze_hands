@@ -101,7 +101,7 @@ module Producers
       def apply_average!(metric)
         metric.each do |year_and_week, metric|
           metric.each do |_, calculated_metric|
-            calculated_metric[:average] = (calculated_metric[:sum] / calculated_metric[:count]).round(1)
+            AverageMaths.new(calculated_metric).apply!
           end
         end
       end
@@ -110,6 +110,18 @@ module Producers
 
       def increase_counter!(metric_hash)
         metric_hash[:count] = metric_hash.fetch(:count, 0) + 1
+      end
+    end
+
+    class AverageMaths
+      attr_reader :metrics
+
+      def initialize(metrics)
+        @metrics = metrics
+      end
+
+      def apply!
+        metrics[:average] = (metrics[:sum] / metrics[:count]).round(1)
       end
     end
   end

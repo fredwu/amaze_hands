@@ -67,3 +67,13 @@ RSpec.describe Producers::MetricsProducer::MetricProducer do
   its([:sum])     { is_expected.to eq(5.5) }
   its([:average]) { is_expected.to eq(2.8) }
 end
+
+RSpec.describe Producers::MetricsProducer::AverageMaths do
+  subject { { sum: 88, count: 42 } }
+
+  before do
+    described_class.new(subject).apply!
+  end
+
+  its([:average]) { is_expected.to eq(2.0) }
+end

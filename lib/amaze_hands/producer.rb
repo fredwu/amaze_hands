@@ -12,6 +12,7 @@ class Producer
   def metrics
     Producers::CardLaneProducer.new(@intel, *@options).apply
     Producers::CardProducer.new(@intel, *@options).apply
+    Producers::RollingAverageProducer.new(@intel).apply
 
     @intel
   end
