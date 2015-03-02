@@ -10,11 +10,19 @@ Developed exclusively for the amazing Pricing squad in Group Platform at [REA](h
 
 _Lorem ipsum spreadsheet amaze._
 
+Previously, as a [Delivery Lead](https://www.google.com.au/search?tbm=isch&q=spreadsheet+slave) I spent a significant portion of my time manually recording card dates and working out the cycle time and wait time. LeanKit unfortunately does not help much - its reporting tool is very basic and somewhat inaccurate.
+
+Below is the spreadsheet I used - Excel formulas are helpful, but punching in dates is an extremely tedious process.
+
 ![](doc/images/spreadsheet.png)
 
 ## How?
 
 _Lorem ipsum copy paste amaze._
+
+Even though LeanKit does offer an XML export function for exporting card history, the function is broken therefore Amaze Hands relies on copy-pasted card history text from each card to process the data and generate metrics.
+
+Below is a high level system architecture diagram that shows how Amaze Hands handles data.
 
         +---------------------+
         |        Text         | <- Raw text input.
@@ -54,13 +62,18 @@ _Lorem ipsum copy paste amaze._
 
 ## Supported Kanban Boards
 
+Amaze Hands out of the box has parser and transformer strategies for the following tools:
+
 - [LeanKit](http://leankit.com/)
 
 ## Stack
 
+Amaze Hands is proudly built with:
+
 - Ruby 2.1+
 - [Lotus Framework](http://lotusrb.org/)
 - [Parslet](http://kschiess.github.io/parslet/) for [PEG](http://en.wikipedia.org/wiki/Parsing_expression_grammar)
+- [C3.js](http://c3js.org/)
 
 ## How to Use
 
