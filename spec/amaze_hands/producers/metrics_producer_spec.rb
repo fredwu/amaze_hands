@@ -3,7 +3,7 @@ RSpec.describe Producers::MetricsProducer do
     described_class.new(
       Intelligence.new,
       measure_every: 2.week,
-      start_date:    DateTime.parse('19-01-2015')
+      start_date:    DateTime.parse('08-01-2015')
     )
   end
 
@@ -14,7 +14,7 @@ RSpec.describe Producers::MetricsProducer do
       config.metric_key = -> (_) { :combined }
     end
 
-    CardRepository.create(FactoryGirl.build(:card, year: 2015, week: 3))
+    CardRepository.create(FactoryGirl.build(:card, year: 2015, week: 1))
     CardRepository.create(FactoryGirl.build(:card, year: 2015, week: 4))
     CardRepository.create(FactoryGirl.build(:card, year: 2015, week: 6))
     CardRepository.create(FactoryGirl.build(:card, year: 2015, week: 6))
@@ -24,6 +24,8 @@ RSpec.describe Producers::MetricsProducer do
     producer.apply
   end
 
+  its(:catalog_pre_frequency) { is_expected.to_not have_key('2015-1') }
+  its(:catalog_pre_frequency) { is_expected.to_not have_key('2015-2') }
   its(:catalog_pre_frequency) { is_expected.to_not have_key('2015-3') }
   its(:catalog_pre_frequency) { is_expected.to     have_key('2015-5') }
 

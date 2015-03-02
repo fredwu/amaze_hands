@@ -36,9 +36,11 @@ module Producers
     end
 
     def catalog_pre_frequency
-      prefill_catalog_keys.merge(
-        collection.group_by { |item| "#{item.year}-#{item.week}" }
-      )
+      Hash[
+        prefill_catalog_keys.merge(
+          collection.group_by { |item| "#{item.year}-#{item.week}" }
+        ).drop_while { |_, v| v.empty? }
+      ]
     end
 
     def prefill_catalog_keys
