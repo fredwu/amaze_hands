@@ -8,16 +8,10 @@ module Web::Presenters
       original_metrics = @intel.metrics(*args)
 
       {
-        labels: original_metrics.cycle_time.keys,
-        series: [
-          {
-            name: 'Cycle Time',
-            data: original_metrics.cycle_time.map { |_, stats| stats[:combined][:average] }
-          },
-          {
-            name: 'Wait Time',
-            data: original_metrics.wait_time.map { |_, stats| stats[:combined][:average] }
-          }
+        type: 'bar',
+        columns: [
+          ['Cycle Time'] + original_metrics.cycle_time.map { |_, stats| stats[:combined][:average] },
+          ['Wait Time'] + original_metrics.wait_time.map { |_, stats| stats[:combined][:average] }
         ]
       }.to_json
     end

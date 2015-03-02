@@ -1,17 +1,23 @@
-#chart.ct-chart
+h1 Amaze Hands for Pricing
+h2 Metrics for Every #{Web::Views::Home::Metrics::WEEK_FREQUENCY} Weeks
+
+#chart
 
 coffee:
   $ ->
     $('#chart').spin()
 
     $.get '/metrics', (metrics) ->
-
-      chartOptions =
-        width:  600
-        height: 400
-
-      data = metrics
-
       $('#chart').spin(false)
 
-      new Chartist.Bar '#chart', data, chartOptions
+      c3.generate
+        bindTo: '#chart'
+        data: metrics
+        bar:
+          width:
+            ratio: 0.5
+        axis:
+          y:
+            label:
+              text: 'Days'
+              position: 'outer-middle'

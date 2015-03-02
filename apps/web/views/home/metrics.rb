@@ -2,6 +2,8 @@ module Web::Views::Home
   class Metrics
     include Web::View
 
+    WEEK_FREQUENCY = 2
+
     def render
       Web::Presenters::JSONPresenter.new(
         Workflow.new(
@@ -9,7 +11,7 @@ module Web::Views::Home
           files: Dir["#{Web::Application.configuration.root}/../../db/cards/*.txt"]
         )
       ).metrics(
-        measure_every: 2.weeks
+        measure_every: WEEK_FREQUENCY.weeks
       )
     end
   end
