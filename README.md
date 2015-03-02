@@ -73,7 +73,10 @@ lotus c
 
 ```ruby
 # in lotus repl
-Workflow.new(strategy: Strategies::LeanKit, files: Dir["#{__dir__}/db/cards/*.txt"]).metrics
+Workflow.new(
+  strategy: Strategies::LeanKit,
+  files:    Dir["#{__dir__}/db/cards/*.txt"]
+).metrics
 ```
 
 ### Run Metrics in Local Web App
