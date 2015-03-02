@@ -36,12 +36,12 @@ module Producers
     end
 
     def catalog_pre_frequency
-      prefill_catalog_keys(collection).merge(
+      prefill_catalog_keys.merge(
         collection.group_by { |item| "#{item.year}-#{item.week}" }
       )
     end
 
-    def prefill_catalog_keys(collection)
+    def prefill_catalog_keys
       return {} if collection.empty?
 
       last_item = collection.last
