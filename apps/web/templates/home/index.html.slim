@@ -5,11 +5,13 @@ h1.rui-icon.rui-icon-left.rui-icon-calculator
 
 coffee:
   $ ->
-    $('#chart').spin()
+    $(document).ajaxStart ->
+      $('#chart').spin()
 
-    $.get '/metrics', (metrics) ->
+    $(document).ajaxStop ->
       $('#chart').spin(false)
 
+    $.get '/metrics', (metrics) ->
       chart = c3.generate
         bindTo: '#chart'
         data: metrics
