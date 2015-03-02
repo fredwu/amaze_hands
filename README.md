@@ -52,6 +52,12 @@ _Lorem ipsum copy paste amaze._
         |      Presenter      | <- Presents metrics.
         +---------------------+
 
+## Look!
+
+_Lorem ipsum web app amaze._
+
+![](doc/images/web_app.png)
+
 ## Supported Kanban Boards
 
 - [LeanKit](http://leankit.com/)

@@ -10,6 +10,8 @@ html
     link rel="icon" type="image/png" href="/favicon.ico"
     link rel="shortcut icon" href="/favicon.ico"
 
+    link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    link rel="stylesheet" href="//s1.rui.au.reastatic.net/rui-1.7.0/css/rui-all.min.css"
     link rel="stylesheet" href="//rawgit.com/masayuki0812/c3/0.4.9/c3.min.css"
 
     script src="//rawgit.com/mbostock/d3/v3.5.5/d3.min.js"
@@ -18,5 +20,68 @@ html
     script src="//fgnass.github.io/spin.js/spin.min.js"
     script src="//fgnass.github.io/spin.js/jquery.spin.js"
 
+    sass:
+      body
+        padding: 0
+        background: #f8f8f8
+      hr
+        border-color: #e7e7e7
+      header
+        .navbar
+          border-bottom: 1px solid #e7e7e7
+        h1
+          font-size: 20px
+          margin: 0
+          cursor: pointer
+        .rui-icon-navdeck:hover
+          cursor: pointer
+      .navbar, hr
+        margin: 0
+      footer
+        text-align: center
+        color: #666
+        padding: 30px 0
+        background: #f8f8f8
+        p
+          font-size: 13px
+          margin: 0
+        p#source-code
+          font-size: 11px
+          margin: 10px 0 0 0
+        p, p#source-code
+          a
+            color: #666
+      .wrapper
+        width: 100%
+        background: #fff
+        padding: 20px 0
+      #chart
+        height: 450px
+
   body
-    == yield
+    header
+      .navbar.navbar-default.navbar-static-top
+        .container
+          .row-fluid
+            .navbar-header
+              h1.navbar-brand.rui-icon.rui-icon-left.rui-icon-home Amaze Hands
+            .navbar-collapse
+              .navbar-nav.navbar-right
+                .navbar-brand.rui-icon.rui-icon-navdeck
+
+    .wrapper
+      .container
+        .row-fluid
+          == yield
+
+    hr
+
+    footer
+      p
+        | Copyright &copy; Fred Wu (
+        a href="mailto:fred.wu@rea-group.com" fred.wu@rea-group.com
+        | ), REA Group
+
+      p#source-code.rui-icon.rui-icon-left.rui-icon-github
+        a href="https://github.com/fredwu/amaze_hands" target="_blank"
+          | Source Code

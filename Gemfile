@@ -10,6 +10,7 @@ gem 'activesupport'
 gem 'parslet'
 gem 'biz'
 gem 'slim'
+gem 'sass'
 gem 'coffee-script'
 
 group :development do
