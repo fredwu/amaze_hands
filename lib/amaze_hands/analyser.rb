@@ -1,6 +1,9 @@
 Dir["#{__dir__}/analysers/**/*.rb"].each { |f| require f }
 
 class Analyser
+  include Debuggers::Benchmark
+  benchmark_on :initialize, :analyse
+
   attr_reader :card, :card_actions
 
   def initialize(card)

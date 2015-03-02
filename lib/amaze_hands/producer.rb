@@ -1,6 +1,9 @@
 Dir["#{__dir__}/producers/**/*.rb"].each { |f| require f }
 
 class Producer
+  include Debuggers::Benchmark
+  benchmark_on :metrics
+
   def initialize(*options)
     @intel   = Intelligence.new
     @options = options

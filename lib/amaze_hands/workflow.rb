@@ -1,4 +1,4 @@
-Dir["#{__dir__}/strategies/**/*.rb"].each { |f| require f }
+Dir["#{__dir__}/{strategies}/**/*.rb"].each { |f| require f }
 
 require_relative 'builder'
 require_relative 'reducer'
@@ -6,6 +6,9 @@ require_relative 'analyser'
 require_relative 'producer'
 
 class Workflow
+  include Debuggers::Benchmark
+  benchmark_on :initialize, :metrics, :clean_up_db
+
   def initialize(strategy:, files:)
     clean_up_db
 

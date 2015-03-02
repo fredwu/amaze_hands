@@ -7,6 +7,7 @@ require 'lotus/model'
 
 require_relative 'config/work_days'
 
+Dir["#{__dir__}/amaze_hands/debuggers/**/*.rb"].each { |f| require f }
 Dir["#{__dir__}/amaze_hands/**/*.rb"].each { |f| require f }
 
 Lotus::Model.configure do

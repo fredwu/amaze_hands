@@ -1,6 +1,9 @@
 Dir["#{__dir__}/builders/**/*.rb"].each { |f| require f }
 
 class Builder
+  include Debuggers::Benchmark
+  benchmark_on :build
+
   attr_reader :ast, :card
 
   def initialize(ast)

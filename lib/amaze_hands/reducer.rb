@@ -1,6 +1,9 @@
 Dir["#{__dir__}/reducers/**/*.rb"].each { |f| require f }
 
 class Reducer
+  include Debuggers::Benchmark
+  benchmark_on :initialize, :tag
+
   attr_reader :card, :card_actions
 
   def initialize(card, lanes:)
