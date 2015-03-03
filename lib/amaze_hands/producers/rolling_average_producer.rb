@@ -34,7 +34,7 @@ module Producers
         unless v.key?(:combined_rolling)
           top_rolling_with_current!(v, last_value)
 
-          MetricsProducer::AverageMaths.new(v[:combined_rolling]).apply!
+          MetricsProducer::AverageMaths.new(v[:combined_rolling]).apply_mean!
         end
 
         last_value = v

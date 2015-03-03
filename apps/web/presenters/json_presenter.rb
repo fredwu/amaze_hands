@@ -32,10 +32,10 @@ module Web::Presenters
         },
         columns: [
           ['Week'] + m.cycle_time.keys,
-          ['Cycle Time'] + m.cycle_time.map { |_, stats| stats[:combined][:average] },
-          ['Cycle Time Rolling'] + m.cycle_time.map { |_, stats| stats[:combined_rolling][:average] },
-          ['Wait Time'] + m.wait_time.map { |_, stats| stats[:combined][:average] },
-          ['Wait Time Rolling'] + m.wait_time.map { |_, stats| stats[:combined_rolling][:average] },
+          ['Cycle Time'] + m.cycle_time.map { |_, stats| stats[:combined][:mean] },
+          ['Cycle Time Rolling'] + m.cycle_time.map { |_, stats| stats[:combined_rolling][:mean] },
+          ['Wait Time'] + m.wait_time.map { |_, stats| stats[:combined][:mean] },
+          ['Wait Time Rolling'] + m.wait_time.map { |_, stats| stats[:combined_rolling][:mean] },
           ['Standard Deviation Rolling'] + m.wait_time.map { |_, stats| stats[:combined_rolling][:standard_deviation] }
         ]
       }.to_json

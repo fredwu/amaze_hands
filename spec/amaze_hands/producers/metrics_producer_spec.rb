@@ -65,15 +65,15 @@ RSpec.describe Producers::MetricsProducer::MetricProducer do
 
   its([:item_values]) { is_expected.to eq([2.0, 3.5]) }
   its([:sum])         { is_expected.to eq(5.5) }
-  its([:average])     { is_expected.to eq(2.8) }
+  its([:mean])        { is_expected.to eq(2.8) }
 end
 
 RSpec.describe Producers::MetricsProducer::AverageMaths do
-  subject { { sum: 88, count: 42 } }
+  subject { { item_values: [[2] * 40, [4, 4]].flatten, sum: 88, count: 42 } }
 
   before do
-    described_class.new(subject).apply!
+    described_class.new(subject).apply_mean!
   end
 
-  its([:average]) { is_expected.to eq(2.0) }
+  its([:mean]) { is_expected.to eq(2.1) }
 end

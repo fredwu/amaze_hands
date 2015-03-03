@@ -87,7 +87,7 @@ module Producers
       def apply!(metric)
         add_item_values!(metric)
         apply_sum!(metric)
-        apply_average!(metric)
+        apply_averages!(metric)
       end
 
       private
@@ -114,10 +114,10 @@ module Producers
         end
       end
 
-      def apply_average!(metric)
+      def apply_averages!(metric)
         metric.each do |year_and_week, metric|
           metric.each do |_, calculated_metric|
-            AverageMaths.new(calculated_metric).apply!
+            AverageMaths.new(calculated_metric).apply_mean!
           end
         end
       end
@@ -128,14 +128,15 @@ module Producers
     end
 
     class AverageMaths
-      attr_reader :metrics
+      attr_reader :metrics, :stats
 
       def initialize(metrics)
         @metrics = metrics
+        @stats   = DescriptiveStatistics::Stats.new(metrics[:item_values])
       end
 
-      def apply!
-        metrics[:average] = (metrics[:sum] / metrics[:count]).round(1)
+      def apply_mean!
+        metrics[:mean] = stats.mean.round(1)
       end
     end
   end

@@ -24,10 +24,10 @@ RSpec.describe Producers::StandardDeviationProducer do
       its(:wait_time) do
         is_expected.to eq(
           '2015-4' => {
-            combined: { item_values: [1.0], sum: 1.0, count: 1, average: 1.0, standard_deviation: 0.0 }
+            combined: { item_values: [1.0], sum: 1.0, count: 1, mean: 1.0, standard_deviation: 0.0 }
           },
           '2015-5' => {
-            combined: { item_values: [2.0, 3.0], sum: 5.0, count: 2, average: 2.5, standard_deviation: 0.71 }
+            combined: { item_values: [2.0, 3.0], sum: 5.0, count: 2, mean: 2.5, standard_deviation: 0.71 }
           }
         )
       end
