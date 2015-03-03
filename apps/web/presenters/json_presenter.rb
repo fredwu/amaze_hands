@@ -34,8 +34,8 @@ module Web::Presenters
         colors: {
           'Cycle Time (Mean)'           => '#1F77B4',
           'Cycle Time (Mean) Rolling'   => '#16547F',
-          'Cycle Time (Median)'         => '#307DB2',
-          'Cycle Time (Median) Rolling' => '#45B3FF',
+          'Cycle Time (Median)'         => '#2CA9FF',
+          'Cycle Time (Median) Rolling' => '#1E75B0',
           'Wait Time (Mean)'            => '#FF7F0E',
           'Wait Time (Mean) Rolling'    => '#7F3F07',
           'Wait Time (Median)'          => '#B25A0C',
