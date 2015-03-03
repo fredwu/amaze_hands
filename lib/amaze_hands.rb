@@ -1,6 +1,7 @@
 require 'active_support/all'
 require 'parslet'
 require 'parslet/convenience'
+require 'descriptive-statistics'
 require 'biz'
 require 'biz/core_ext'
 require 'lotus/model'

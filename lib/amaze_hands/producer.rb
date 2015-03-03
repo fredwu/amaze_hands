@@ -13,6 +13,7 @@ class Producer
     Producers::CardLaneProducer.new(@intel, *@options).apply
     Producers::CardProducer.new(@intel, *@options).apply
     Producers::RollingAverageProducer.new(@intel).apply
+    Producers::StandardDeviationProducer.new(@intel).apply
 
     @intel
   end
