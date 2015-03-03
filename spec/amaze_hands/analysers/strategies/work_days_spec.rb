@@ -25,6 +25,6 @@ RSpec.describe Analysers::Strategies::WorkDays do
     let(:from) { '2015-02-17' }
     let(:to)   { '2015-02-20' }
 
-    it { is_expected.to eq(1.0) }
+    it { is_expected.to eq(2.0) }
   end
 end
