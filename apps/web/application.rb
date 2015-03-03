@@ -160,8 +160,6 @@ module Web
 
       # Serve static assets during development
       serve_assets      true
-
-      Slim::Engine.set_options pretty: true
     end
 
     ##
@@ -183,5 +181,7 @@ module Web
       # host   'example.org'
       # port   443
     end
+
+    Slim::Engine.set_options pretty: true
   end
 end
