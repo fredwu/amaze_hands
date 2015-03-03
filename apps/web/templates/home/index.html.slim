@@ -31,12 +31,16 @@ coffee:
               text: 'Days'
               position: 'outer-bottom'
 
-      chart.toggle ['Cycle Time', 'Wait Time']
+      chart.hide()
 
       setTimeout ->
         chart.toggle 'Cycle Time'
 
         setTimeout ->
           chart.toggle 'Wait Time'
+
+          setTimeout ->
+            chart.toggle 'Cycle Time Rolling'
+          , 500
         , 500
       , 500

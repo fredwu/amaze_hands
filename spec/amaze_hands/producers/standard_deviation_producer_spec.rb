@@ -27,7 +27,7 @@ RSpec.describe Producers::StandardDeviationProducer do
             combined: { item_values: [1.0], sum: 1.0, count: 1, average: 1.0, standard_deviation: 0.0 }
           },
           '2015-5' => {
-            combined: { item_values: [2.0, 3.0], sum: 5.0, count: 2, average: 2.5, standard_deviation: 0.7 }
+            combined: { item_values: [2.0, 3.0], sum: 5.0, count: 2, average: 2.5, standard_deviation: 0.71 }
           }
         )
       end

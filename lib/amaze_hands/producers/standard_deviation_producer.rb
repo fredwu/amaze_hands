@@ -21,7 +21,7 @@ module Producers
         metric_values.each do |_, metric_value|
           metric_value[:standard_deviation] = (
             DescriptiveStatistics::Stats.new(metric_value[:item_values]).standard_deviation || 0
-          ).round(1)
+          ).round(2)
         end
       end
     end
