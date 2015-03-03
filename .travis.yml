@@ -8,5 +8,7 @@ addons:
   code_climate:
     repo_token:
       secure: "S4TtRnOP5YopgPKdX3olZS4+8ULx18lYUCGVmvddryJT1cBG1jvZ7ZxRlanRYEg60dRooASHZkqSS8sT+se526GiuUwOy5TzfZhb3f+tP8tIkDHYj856cFDJ421uLjgI6lansuj9NYlpjJgExaqjeOEkaixXXUGfF0MiGaXQFSc="
+before_install:
+  - sed -i '1d' Gemfile
 script:
   - bundle exec rake --trace
