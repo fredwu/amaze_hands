@@ -60,12 +60,12 @@ RSpec.describe Producers::MetricsProducer::MetricProducer do
   subject { metric['2015-42'][:amaze] }
 
   before do
-    producer.apply_sum!(metric)
-    producer.apply_average!(metric)
+    producer.apply!(metric)
   end
 
-  its([:sum])     { is_expected.to eq(5.5) }
-  its([:average]) { is_expected.to eq(2.8) }
+  its([:item_values]) { is_expected.to eq([2.0, 3.5]) }
+  its([:sum])         { is_expected.to eq(5.5) }
+  its([:average])     { is_expected.to eq(2.8) }
 end
 
 RSpec.describe Producers::MetricsProducer::AverageMaths do

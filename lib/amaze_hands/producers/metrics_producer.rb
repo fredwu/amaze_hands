@@ -69,9 +69,7 @@ module Producers
     def produce_metric_for(metric_name, **args)
       metric = intel.send(metric_name)
 
-      producer = MetricProducer.new(metric_name, metric_key: metric_key, **args)
-      producer.apply_sum!(metric)
-      producer.apply_average!(metric)
+      MetricProducer.new(metric_name, metric_key: metric_key, **args).apply!(metric)
 
       intel.send("#{metric_name}=", metric)
     end
@@ -86,15 +84,33 @@ module Producers
         @year_and_week = year_and_week
       end
 
-      def apply_sum!(metric)
-        items.each do |item|
-          key            = instance_exec(item, &metric_key)
-          existing_value = metric.fetch(year_and_week, {}).fetch(key, {}).fetch(:sum, 0)
-          value          = item.send(metric_name) + existing_value
+      def apply!(metric)
+        add_item_values!(metric)
+        apply_sum!(metric)
+        apply_average!(metric)
+      end
 
-          metric.deep_merge!(year_and_week => { key => { sum: value } })
+      private
+
+      def add_item_values!(metric)
+        items.each do |item|
+          key         = instance_exec(item, &metric_key)
+          item_values = metric.fetch(year_and_week, {}).fetch(key, {}).fetch(:item_values, [])
+          item_value  = item.send(metric_name)
+
+          item_values << item_value
+
+          metric.deep_merge!(year_and_week => { key => { item_values: item_values } })
 
           increase_counter!(metric[year_and_week][key])
+        end
+      end
+
+      def apply_sum!(metric)
+        metric.each do |_, metric_values|
+          metric_values.each do |_, metric_value|
+            metric_value[:sum] = metric_value[:item_values].sum
+          end
         end
       end
 
@@ -105,8 +121,6 @@ module Producers
           end
         end
       end
-
-      private
 
       def increase_counter!(metric_hash)
         metric_hash[:count] = metric_hash.fetch(:count, 0) + 1

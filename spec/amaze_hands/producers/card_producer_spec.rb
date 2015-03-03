@@ -22,8 +22,8 @@ RSpec.describe Producers::CardProducer do
 
       its(:wait_time) do
         is_expected.to eq(
-          '2015-4' => { combined: { sum: 1.0, count: 1, average: 1.0 } },
-          '2015-5' => { combined: { sum: 5.0, count: 2, average: 2.5 } }
+          '2015-4' => { combined: { item_values: [1.0], sum: 1.0, count: 1, average: 1.0 } },
+          '2015-5' => { combined: { item_values: [2.0, 3.0], sum: 5.0, count: 2, average: 2.5 } }
         )
       end
     end
