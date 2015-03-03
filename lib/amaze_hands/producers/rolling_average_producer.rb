@@ -35,6 +35,7 @@ module Producers
           top_rolling_with_current!(v, last_value)
 
           MetricsProducer::AverageMaths.new(v[:combined_rolling]).apply_mean!
+          MetricsProducer::AverageMaths.new(v[:combined_rolling]).apply_median!
         end
 
         last_value = v

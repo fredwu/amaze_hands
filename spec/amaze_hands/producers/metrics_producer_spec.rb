@@ -73,7 +73,9 @@ RSpec.describe Producers::MetricsProducer::AverageMaths do
 
   before do
     described_class.new(subject).apply_mean!
+    described_class.new(subject).apply_median!
   end
 
-  its([:mean]) { is_expected.to eq(2.1) }
+  its([:mean])   { is_expected.to eq(2.1) }
+  its([:median]) { is_expected.to eq(2.0) }
 end

@@ -10,32 +10,48 @@ module Web::Presenters
 
       {
         types: {
-          'Cycle Time'                 => 'bar',
-          'Cycle Time Rolling'         => 'spline',
-          'Wait Time'                  => 'bar',
-          'Wait Time Rolling'          => 'spline',
-          'Standard Deviation Rolling' => 'spline'
+          'Cycle Time (Mean)'           => 'bar',
+          'Cycle Time (Mean) Rolling'   => 'spline',
+          'Cycle Time (Median)'         => 'bar',
+          'Cycle Time (Median) Rolling' => 'spline',
+          'Wait Time (Mean)'            => 'bar',
+          'Wait Time (Mean) Rolling'    => 'spline',
+          'Wait Time (Median)'          => 'bar',
+          'Wait Time (Median) Rolling'  => 'spline',
+          'Standard Deviation Rolling'  => 'spline'
         },
         xs: {
-          'Cycle Time'                 => 'Week',
-          'Cycle Time Rolling'         => 'Week',
-          'Wait Time'                  => 'Week',
-          'Wait Time Rolling'          => 'Week',
-          'Standard Deviation Rolling' => 'Week'
+          'Cycle Time (Mean)'           => 'Week',
+          'Cycle Time (Mean) Rolling'   => 'Week',
+          'Cycle Time (Median)'         => 'Week',
+          'Cycle Time (Median) Rolling' => 'Week',
+          'Wait Time (Mean)'            => 'Week',
+          'Wait Time (Mean) Rolling'    => 'Week',
+          'Wait Time (Median)'          => 'Week',
+          'Wait Time (Median) Rolling'  => 'Week',
+          'Standard Deviation Rolling'  => 'Week'
         },
         colors: {
-          'Cycle Time'                 => '#1F77B4',
-          'Cycle Time Rolling'         => '#16547F',
-          'Wait Time'                  => '#FF7F0E',
-          'Wait Time Rolling'          => '#7F3F07',
-          'Standard Deviation Rolling' => '#007F05'
+          'Cycle Time (Mean)'           => '#1F77B4',
+          'Cycle Time (Mean) Rolling'   => '#16547F',
+          'Cycle Time (Median)'         => '#307DB2',
+          'Cycle Time (Median) Rolling' => '#45B3FF',
+          'Wait Time (Mean)'            => '#FF7F0E',
+          'Wait Time (Mean) Rolling'    => '#7F3F07',
+          'Wait Time (Median)'          => '#B25A0C',
+          'Wait Time (Median) Rolling'  => '#7F4009',
+          'Standard Deviation Rolling'  => '#007F05'
         },
         columns: [
           ['Week'] + m.cycle_time.keys,
-          ['Cycle Time'] + m.cycle_time.map { |_, stats| stats[:combined][:mean] },
-          ['Cycle Time Rolling'] + m.cycle_time.map { |_, stats| stats[:combined_rolling][:mean] },
-          ['Wait Time'] + m.wait_time.map { |_, stats| stats[:combined][:mean] },
-          ['Wait Time Rolling'] + m.wait_time.map { |_, stats| stats[:combined_rolling][:mean] },
+          ['Cycle Time (Mean)'] + m.cycle_time.map { |_, stats| stats[:combined][:mean] },
+          ['Cycle Time (Mean) Rolling'] + m.cycle_time.map { |_, stats| stats[:combined_rolling][:mean] },
+          ['Cycle Time (Median)'] + m.cycle_time.map { |_, stats| stats[:combined][:median] },
+          ['Cycle Time (Median) Rolling'] + m.cycle_time.map { |_, stats| stats[:combined_rolling][:median] },
+          ['Wait Time (Mean)'] + m.wait_time.map { |_, stats| stats[:combined][:mean] },
+          ['Wait Time (Mean) Rolling'] + m.wait_time.map { |_, stats| stats[:combined_rolling][:mean] },
+          ['Wait Time (Median)'] + m.wait_time.map { |_, stats| stats[:combined][:median] },
+          ['Wait Time (Median) Rolling'] + m.wait_time.map { |_, stats| stats[:combined_rolling][:median] },
           ['Standard Deviation Rolling'] + m.wait_time.map { |_, stats| stats[:combined_rolling][:standard_deviation] }
         ]
       }.to_json

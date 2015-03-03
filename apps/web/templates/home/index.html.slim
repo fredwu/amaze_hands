@@ -34,13 +34,13 @@ coffee:
       chart.hide()
 
       setTimeout ->
-        chart.toggle 'Cycle Time'
+        chart.toggle 'Cycle Time (Mean)'
 
         setTimeout ->
-          chart.toggle 'Wait Time'
+          chart.toggle 'Wait Time (Mean)'
 
           setTimeout ->
-            chart.toggle 'Cycle Time Rolling'
+            chart.toggle 'Cycle Time (Mean) Rolling'
           , 500
         , 500
       , 500

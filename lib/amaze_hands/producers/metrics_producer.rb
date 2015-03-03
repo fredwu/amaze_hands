@@ -117,7 +117,9 @@ module Producers
       def apply_averages!(metric)
         metric.each do |year_and_week, metric|
           metric.each do |_, calculated_metric|
-            AverageMaths.new(calculated_metric).apply_mean!
+            maths = AverageMaths.new(calculated_metric)
+            maths.apply_mean!
+            maths.apply_median!
           end
         end
       end
@@ -137,6 +139,10 @@ module Producers
 
       def apply_mean!
         metrics[:mean] = stats.mean.round(1)
+      end
+
+      def apply_median!
+        metrics[:median] = stats.median.round(1)
       end
     end
   end
