@@ -1,3 +1,5 @@
+require_relative '../lanes'
+
 module Strategies
   module LeanKit
     class Lanes < Strategies::Lanes
