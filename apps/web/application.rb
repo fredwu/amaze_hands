@@ -180,6 +180,7 @@ module Web
       # scheme 'https'
       # host   'example.org'
       # port   443
+      serve_assets      true
     end
 
     Slim::Engine.set_options pretty: true
