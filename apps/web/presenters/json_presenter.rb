@@ -44,7 +44,7 @@ module Web::Presenters
           'Wait Time (Median)'          => '#B25A0C',
           'Wait Time (Median) Rolling'  => '#7F4009',
           'Standard Deviation Rolling'  => '#007F05',
-          'Cycle Time Scatter'          => '#00700E'
+          'Cycle Time Scatter'          => '#561B7F'
         },
         columns: [
           ['Week']                        + m.cycle_time.keys,
