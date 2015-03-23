@@ -68,9 +68,9 @@ module Web::Presenters
           ['Wait Time (Median)']          + m.wait_time.map  { |_, v| v[:combined][:median] },
           ['Wait Time (Median) Rolling']  + m.wait_time.map  { |_, v| v[:combined_rolling][:median] },
           ['Standard Deviation']          + m.wait_time.map  { |_, v| v[:combined][:standard_deviation] },
-          ['UCL']                         + m.cycle_time.map  { |_, v| v[:combined][:ucl] },
-          ['CL']                          + m.cycle_time.map  { |_, v| v[:combined][:cl] },
-          ['LCL']                         + m.cycle_time.map  { |_, v| v[:combined][:lcl] },
+          ['UCL']                         + m.cycle_time.map { |_, v| v[:combined][:ucl] },
+          ['CL']                          + m.cycle_time.map { |_, v| v[:combined][:cl] },
+          ['LCL']                         + m.cycle_time.map { |_, v| v[:combined][:lcl] },
           ['Cycle Time Scatter X']        + m.cycle_time.map { |k, v| [k] * v[:combined][:count] }.flatten,
           ['Cycle Time Scatter']          + m.cycle_time.map { |_, v| v[:combined][:item_values] }.flatten
         ]
