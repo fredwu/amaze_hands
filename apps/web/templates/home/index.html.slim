@@ -41,6 +41,10 @@ coffee:
 
           setTimeout ->
             chart.toggle 'Cycle Time (Mean) Rolling'
+
+            setTimeout ->
+              chart.toggle ['UCL', 'CL', 'LCL']
+            , 500
           , 500
         , 500
       , 500

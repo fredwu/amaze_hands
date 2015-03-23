@@ -14,6 +14,7 @@ class Producer
     Producers::CardProducer.new(@intel, *@options).apply
     Producers::RollingAverageProducer.new(@intel).apply
     Producers::StandardDeviationProducer.new(@intel).apply
+    Producers::ControllLimitsProducer.new(@intel).apply
 
     @intel
   end

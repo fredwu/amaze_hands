@@ -19,8 +19,16 @@ module Web::Presenters
           'Wait Time (Median)'          => 'bar',
           'Wait Time (Median) Rolling'  => 'spline',
           'Standard Deviation'          => 'spline',
+          'UCL'                         => 'line',
+          'CL'                          => 'line',
+          'LCL'                         => 'line',
           'Cycle Time Scatter'          => 'scatter',
           'Cycle Time Scatter X'        => 'scatter'
+        },
+        regions: {
+          'UCL' => [style: 'dashed'],
+          'CL'  => [style: 'dashed'],
+          'LCL' => [style: 'dashed']
         },
         xs: {
           'Cycle Time (Mean)'           => 'Week',
@@ -32,6 +40,9 @@ module Web::Presenters
           'Wait Time (Median)'          => 'Week',
           'Wait Time (Median) Rolling'  => 'Week',
           'Standard Deviation'          => 'Week',
+          'UCL'                         => 'Week',
+          'CL'                          => 'Week',
+          'LCL'                         => 'Week',
           'Cycle Time Scatter'          => 'Cycle Time Scatter X'
         },
         colors: {
@@ -57,6 +68,9 @@ module Web::Presenters
           ['Wait Time (Median)']          + m.wait_time.map  { |_, v| v[:combined][:median] },
           ['Wait Time (Median) Rolling']  + m.wait_time.map  { |_, v| v[:combined_rolling][:median] },
           ['Standard Deviation']          + m.wait_time.map  { |_, v| v[:combined][:standard_deviation] },
+          ['UCL']                         + m.cycle_time.map  { |_, v| v[:combined][:ucl] },
+          ['CL']                          + m.cycle_time.map  { |_, v| v[:combined][:cl] },
+          ['LCL']                         + m.cycle_time.map  { |_, v| v[:combined][:lcl] },
           ['Cycle Time Scatter X']        + m.cycle_time.map { |k, v| [k] * v[:combined][:count] }.flatten,
           ['Cycle Time Scatter']          + m.cycle_time.map { |_, v| v[:combined][:item_values] }.flatten
         ]

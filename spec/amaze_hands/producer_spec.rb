@@ -19,14 +19,14 @@ RSpec.describe Producer do
         'QA'                => { item_values: [0.5, 1.5],  sum:  2.0, count: 2, mean:  1.0, median:  1.0, standard_deviation: 0.71 },
         'Deploying'         => { item_values: [0.5],       sum:  0.5, count: 1, mean:  0.5, median:  0.5, standard_deviation: 0.0 },
         'BAT'               => { item_values: [0.5],       sum:  0.5, count: 1, mean:  0.5, median:  0.5, standard_deviation: 0.0 },
-        :combined           => { item_values: [6.5, 15.5], sum: 22.0, count: 2, mean: 11.0, median: 11.0, standard_deviation: 6.36 },
-        :combined_rolling   => { item_values: [6.5, 15.5], sum: 22.0, count: 2, mean: 11.0, median: 11.0, standard_deviation: 6.36 }
+        :combined           => { item_values: [6.5, 15.5], sum: 22.0, count: 2, mean: 11.0, median: 11.0, standard_deviation: 6.36, ucl: 23.43, cl: 8.8, lcl: -5.83 },
+        :combined_rolling   => { item_values: [6.5, 15.5], sum: 22.0, count: 2, mean: 11.0, median: 11.0, standard_deviation: 6.36, ucl: 23.43, cl: 8.8, lcl: -5.83 }
       },
       '2015-6' => {
         'Doing: Capability' => { item_values: [2.5],            sum:  2.5, count: 1, mean: 2.5, median: 2.5, standard_deviation: 0.0 },
         'QA'                => { item_values: [1.5],            sum:  1.5, count: 1, mean: 1.5, median: 1.5, standard_deviation: 0.0 },
         'BAT'               => { item_values: [0.5],            sum:  0.5, count: 1, mean: 0.5, median: 0.5, standard_deviation: 0.0 },
-        :combined           => { item_values: [4.5],            sum:  4.5, count: 1, mean: 4.5, median: 4.5, standard_deviation: 0.0 },
+        :combined           => { item_values: [4.5],            sum:  4.5, count: 1, mean: 4.5, median: 4.5, standard_deviation: 0.0, ucl: 23.43, cl: 8.8, lcl: -5.83 },
         :combined_rolling   => { item_values: [6.5, 15.5, 4.5], sum: 26.5, count: 3, mean: 8.8, median: 6.5, standard_deviation: 5.86 }
       }
     )
