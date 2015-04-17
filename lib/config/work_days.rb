@@ -10,13 +10,9 @@ Biz.configure do |config|
   }
 
   config.holidays = [
-    # Chinese New Year
-    # commented out two days to compensate for the two working weekend days
-
-    # Date.new(2015, 02, 18),
     Date.new(2015, 02, 19),
     Date.new(2015, 02, 20),
     Date.new(2015, 02, 23),
-    # Date.new(2015, 02, 24)
+    Date.new(2015, 04, 01)
   ]
 end
