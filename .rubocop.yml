@@ -107,6 +107,9 @@ SingleLineBlockParams:
 SingleSpaceBeforeFirstArg:
   Enabled: false
 
+SpaceAroundOperators:
+  Enabled: false
+
 SpaceInsideBrackets:
   Enabled: false
 

@@ -50,7 +50,8 @@ RSpec.describe Producers::MetricsProducer::MetricProducer do
   let(:metric) { {} }
 
   let(:producer) do
-    described_class.new(:cycle_time,
+    described_class.new(
+      :cycle_time,
       metric_key:    -> (_) { :amaze },
       items:         [Card.new(cycle_time: 2.0), Card.new(cycle_time: 3.5)],
       year_and_week: "2015-42"
