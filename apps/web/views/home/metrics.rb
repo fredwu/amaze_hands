@@ -2,7 +2,7 @@ module Web::Views::Home
   class Metrics
     include Web::View
 
-    WEEK_FREQUENCY = 2
+    WEEK_FREQUENCY = 1
 
     def render
       Web::Presenters::JSONPresenter.new(
