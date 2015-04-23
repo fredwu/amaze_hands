@@ -104,7 +104,7 @@ lotus c
 Workflow.new(
   strategy: Strategies::LeanKit,
   lanes:    Strategies::LeanKit::PricingLanes,
-  files:    Dir["#{__dir__}/db/cards/*.txt"]
+  files:    Dir["#{__dir__}/db/pricing/*.txt"]
 ).metrics
 ```
 
