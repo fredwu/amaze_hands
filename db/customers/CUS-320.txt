@@ -1,0 +1,19 @@
+CUS-320 Update gems to lastest version for Customer-Store
+
+04/20/2015 at 05:49:59 PM
+Yongmin Xia moved this Card from Capability: Doing to Capability: Done
+04/20/2015 at 05:49:52 PM
+Yongmin Xia was Unassigned from this Card by Yongmin Xia
+04/20/2015 at 05:35:58 PM
+Yongmin Xia was Assigned to this Card by Yongmin Xia
+04/20/2015 at 05:35:45 PM
+Yongmin Xia moved this Card from Capability: Doing to Capability: Doing
+04/20/2015 at 05:35:45 PM
+Yongmin Xia changed this Card:
+
+    Title: from "Update gems to lastest version" to "Update gems to lastest version for Customer-Store"
+
+04/20/2015 at 05:35:21 PM
+Yongmin Xia moved this Card from Backlog: Team Section to Capability: Doing
+04/20/2015 at 05:35:15 PM
+Yongmin Xia created this Card within the Backlog: Team Section Lane.

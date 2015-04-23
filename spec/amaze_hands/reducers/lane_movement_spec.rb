@@ -3,7 +3,7 @@ RSpec.describe Reducers::LaneMovement do
   include_context 'LeanKit P-217 actions'
   include_context 'Card actions service class'
 
-  let(:service_class) { described_class.new(card_actions, lanes: Strategies::LeanKit::Lanes) }
+  let(:service_class) { described_class.new(card_actions, lanes: Strategies::LeanKit::PricingLanes) }
 
   describe '#tag_created_in' do
     let(:method_name) { :tag_created_in }

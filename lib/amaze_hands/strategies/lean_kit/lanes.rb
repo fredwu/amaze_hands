@@ -2,7 +2,7 @@ require_relative '../lanes'
 
 module Strategies
   module LeanKit
-    class Lanes < Strategies::Lanes
+    class PricingLanes < Strategies::Lanes
       def self.lanes
         {
           'Triage: Triage'                  => [:initial, :non_analysable],
@@ -16,6 +16,19 @@ module Strategies
           'Deploying'                       => [:analysable],
           'Done'                            => [:non_analysable],
           'Archive: Pricing'                => [:final, :non_analysable]
+        }
+      end
+    end
+
+    class CustomersLanes < Strategies::Lanes
+      def self.lanes
+        {
+          'Capability: Analysis' => [:initial, :non_analysable],
+          'Capability: Next'     => [:initial, :non_analysable],
+          'Capability: Doing'    => [:initial, :analysable],
+          'Capability: QA'       => [:analysable],
+          'Capability: BAT'      => [:analysable],
+          'Capability: Done'     => [:non_analysable]
         }
       end
     end

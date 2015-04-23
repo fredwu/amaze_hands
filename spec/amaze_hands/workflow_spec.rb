@@ -2,6 +2,7 @@ RSpec.describe Workflow do
   subject(:workflow) do
     Workflow.new(
       strategy: Strategies::LeanKit,
+      lanes:    Strategies::LeanKit::PricingLanes,
       files:    Dir["#{__dir__}/../fixtures/lean_kit/*.txt"]
     )
   end

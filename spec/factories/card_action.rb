@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  lanes = Strategies::LeanKit::Lanes.with_traits(:analysable)
+  lanes = Strategies::LeanKit::PricingLanes.with_traits(:analysable)
 
   factory :card_action do
     date_time   { DateTime.now + rand }

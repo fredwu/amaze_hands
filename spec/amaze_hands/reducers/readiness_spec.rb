@@ -7,7 +7,7 @@ RSpec.describe Reducers::Readiness do
     let(:method_name) { :tag_card_action }
 
     before do
-      Reducers::LaneMovement.new(card_actions, lanes: Strategies::LeanKit::Lanes).tag
+      Reducers::LaneMovement.new(card_actions, lanes: Strategies::LeanKit::PricingLanes).tag
     end
 
     context 'before the first analysable movement action' do

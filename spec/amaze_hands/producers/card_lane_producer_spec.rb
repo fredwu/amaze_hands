@@ -40,6 +40,7 @@ RSpec.describe Producers::CardLaneProducer do
     before do
       Workflow.new(
         strategy: Strategies::LeanKit,
+        lanes:    Strategies::LeanKit::PricingLanes,
         files:    Dir["#{__dir__}/../../fixtures/lean_kit/*.txt"]
       ).metrics(
         measure_every: measure_every,

@@ -3,7 +3,7 @@ require_relative '../base_parser'
 module Strategies
   module LeanKit
     class Parser < Strategies::BaseParser
-      rule(:card_number)    { (str('P-') >> digit.repeat(3)).as(:card_number) }
+      rule(:card_number)    { ((str('P-') | str('CUS-')) >> digit.repeat(3)).as(:card_number) }
       rule(:no_value)       { str('<no value>') }
 
       rule(:created_by)     { ((created_text | newline).absent? >> any).repeat(1) }

@@ -13,6 +13,6 @@ RSpec.shared_context 'LeanKit P-217 analysable actions' do
   let(:card_actions) { CardActionRepository.analysable_by_card(card) }
 
   before do
-    Reducer.new(card, lanes: Strategies::LeanKit::Lanes).tag
+    Reducer.new(card, lanes: Strategies::LeanKit::PricingLanes).tag
   end
 end

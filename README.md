@@ -103,6 +103,7 @@ lotus c
 # in lotus repl
 Workflow.new(
   strategy: Strategies::LeanKit,
+  lanes:    Strategies::LeanKit::PricingLanes,
   files:    Dir["#{__dir__}/db/cards/*.txt"]
 ).metrics
 ```
