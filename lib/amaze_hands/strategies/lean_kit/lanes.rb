@@ -11,6 +11,7 @@ module Strategies
           'In Analysis'                     => [:initial, :non_analysable],
           'Doing: Capability'               => [:initial, :analysable],
           'Doing: BAU'                      => [:initial, :analysable],
+          'Doing: Non-dev Tasks'            => [:initial, :analysable],
           'QA'                              => [:analysable],
           'BAT'                             => [:analysable],
           'Deploying'                       => [:analysable],

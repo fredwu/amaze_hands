@@ -1,0 +1,53 @@
+CUS-321 Config logging for Customer-Store [?]
+
+04/29/2015 at 12:01:41 PM
+Adam Boas moved this Card from Capability: QA to Capability: Done
+04/29/2015 at 12:01:41 PM
+Adam Boas changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+04/27/2015 at 05:38:11 PM
+Xi Chen moved this Card from Capability: Doing to Capability: QA
+04/27/2015 at 11:27:56 AM
+Feng Zhichao changed this Card:
+
+    Title: from "Config logging for Customer-Store" to "Config logging for Customer-Store [?]"
+
+04/26/2015 at 03:34:20 PM
+Kaihang An was Unassigned from this Card by Jian Lv
+04/26/2015 at 03:34:17 PM
+Jian Lv was Unassigned from this Card by Jian Lv
+04/26/2015 at 03:33:26 PM
+Kaihang An was Assigned to this Card by Jian Lv
+04/26/2015 at 12:38:05 PM
+Jian Lv changed this Card:
+
+    Class of Service: from "Regulatory" to "Expedite"
+
+04/26/2015 at 12:37:53 PM
+Jian Lv changed this Card:
+
+    Class of Service: from <no value> to "Regulatory"
+
+04/26/2015 at 12:07:01 PM
+Jian Lv was Assigned to this Card by Jian Lv
+04/26/2015 at 12:06:58 PM
+Jian Lv moved this Card from Capability: Next to Capability: Doing
+04/24/2015 at 11:30:58 AM
+Yongmin Xia moved this Card from Capability: Next to Capability: Next
+04/24/2015 at 11:26:54 AM
+Feng Zhichao moved this Card from Backlog: Capability to Capability: Next
+04/21/2015 at 01:22:02 PM
+Yongmin Xia moved this Card from Backlog: Team Section to Backlog: Capability
+04/21/2015 at 01:21:57 PM
+Yongmin Xia changed this Card:
+
+    Description: from <no value> to
+
+    Log to file for test
+
+    Log to standout for production
+
+04/21/2015 at 01:20:49 PM
+Yongmin Xia created this Card within the Backlog: Team Section Lane.

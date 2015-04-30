@@ -1,0 +1,158 @@
+P-281 [C] Update location information in Agent Admin
+
+04/23/2015 at 04:22:26 PM
+Yaowei Du moved this Card from BAT to Done
+04/23/2015 at 04:22:21 PM
+Yaowei Du set the status of this Card to Unblocked
+Comment:
+BAT: Jay & Yaowei
+04/23/2015 at 04:21:59 PM
+Yaowei Du changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+04/23/2015 at 04:21:51 PM
+Yaowei Du moved this Card from QA to BAT
+04/22/2015 at 01:14:40 PM
+Fred Wu set the status of this Card to Blocked
+Comment:
+Jay's away
+04/21/2015 at 11:31:00 AM
+Yaowei Du was Unassigned from this Card by Feng Zhichao
+04/20/2015 at 07:43:51 PM
+Yaowei Du was Assigned to this Card by Yaowei Du
+04/20/2015 at 06:31:19 PM
+Yaowei Du moved this Card from Doing: Capability to QA
+04/20/2015 at 02:21:43 PM
+Yaowei Du was Unassigned from this Card by Adam Tohovitis
+04/20/2015 at 02:21:40 PM
+Adam Tohovitis was Unassigned from this Card by Adam Tohovitis
+04/20/2015 at 02:17:01 PM
+Adam Tohovitis changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+04/20/2015 at 11:35:05 AM
+Yaowei Du was Assigned to this Card by Feng Zhichao
+04/20/2015 at 11:34:40 AM
+Adam Tohovitis was Assigned to this Card by Feng Zhichao
+04/20/2015 at 11:34:34 AM
+Tong Zhang was Unassigned from this Card by Feng Zhichao
+04/20/2015 at 11:34:33 AM
+Yaowei Du was Unassigned from this Card by Feng Zhichao
+04/13/2015 at 04:27:45 PM
+Yaowei Du moved this Card from In Analysis to Doing: Capability
+04/09/2015 at 11:57:54 AM
+Yaowei Du was Assigned to this Card by Tong Zhang
+04/09/2015 at 11:57:54 AM
+Tong Zhang was Assigned to this Card by Tong Zhang
+04/09/2015 at 11:57:36 AM
+Tong Zhang set the status of this Card to Unblocked
+Comment:
+04/09/2015 at 11:57:28 AM
+wang lei was Unassigned from this Card by Tong Zhang
+04/07/2015 at 02:30:16 PM
+wang lei set the status of this Card to Blocked
+Comment:
+Work P-280 first
+04/03/2015 at 01:26:02 PM
+wang lei was Assigned to this Card by wang lei
+04/03/2015 at 01:25:58 PM
+wang lei moved this Card from Prioritised Backlog: Capability to In Analysis
+04/02/2015 at 05:37:39 PM
+Adam Tohovitis changed this Card:
+
+    Description: from
+
+    Provide a method to perform a location update (any of suburb, state or postcode) in AgentAdmin because pricing is not yet aligned to location identifiers and Mercury is not able to trigger the change.
+
+    Scenarios:
+        change suburb name: { "Cann River", "VIC", [ "3890" ] } => { "Cannon River", "VIC", [ "3890" ] }
+        change state name: { "Gibson Desert North", "WA", [ "0872" ] } => { "Gibson Desert North", "NT", [ "0872" ] }
+        change postcode:  { "Kilgariff", "NT", [ "872" ] } => { "Kigariff", "NT", [ "0872" ] }
+        add postcode: { "Katherine", "NT", [ "0850" ] } => { "Katherine", "NT", [ "0850", "0852" ] }
+        remove postcode: { "Melbourne", "VIC", [ "3000", "3004" ] } => { "Melbourne", "VIC", [ "3000" ] }
+
+    Exceptions:
+        new suburb, state, postcode combination already exists which could cause clobbering of correct pricing
+
+    - Separate New Application
+
+    - Rake task with command line agruments for 1 change
+    to
+
+    Provide a method to perform a location update (any of suburb, state or postcode) in AgentAdmin because pricing is not yet aligned to location identifiers and Mercury is not able to trigger the change.
+
+    Scenarios:
+        change suburb name: { "Cann River", "VIC", [ "3890" ] } => { "Cannon River", "VIC", [ "3890" ] }
+        change state name: { "Gibson Desert North", "WA", [ "0872" ] } => { "Gibson Desert North", "NT", [ "0872" ] }
+        change postcode:  { "Kilgariff", "NT", [ "872" ] } => { "Kigariff", "NT", [ "0872" ] }
+        add postcode: { "Katherine", "NT", [ "0850" ] } => { "Katherine", "NT", [ "0850", "0852" ] }
+        remove postcode: { "Melbourne", "VIC", [ "3000", "3004" ] } => { "Melbourne", "VIC", [ "3000" ] }
+
+    Exceptions:
+        new suburb, state, postcode combination already exists which could cause clobbering of correct pricing
+
+    Implementation:
+
+    - Separate New Application
+
+    - Rake task with command line agruments for 1 change
+
+    - Needs a copy_from_date
+
+04/02/2015 at 05:33:51 PM
+Adam Tohovitis changed this Card:
+
+    Description: from
+
+    Provide a method to perform a location update (any of suburb, state or postcode) in AgentAdmin because pricing is not yet aligned to location identifiers and Mercury is not able to trigger the change.
+
+    Scenarios:
+        change suburb name: { "Cann River", "VIC", [ "3890" ] } => { "Cannon River", "VIC", [ "3890" ] }
+        change state name: { "Gibson Desert North", "WA", [ "0872" ] } => { "Gibson Desert North", "NT", [ "0872" ] }
+        change postcode:  { "Kilgariff", "NT", [ "872" ] } => { "Kigariff", "NT", [ "0872" ] }
+        add postcode: { "Katherine", "NT", [ "0850" ] } => { "Katherine", "NT", [ "0850", "0852" ] }
+        remove postcode: { "Melbourne", "VIC", [ "3000", "3004" ] } => { "Melbourne", "VIC", [ "3000" ] }
+
+    Exceptions:
+        new suburb, state, postcode combination already exists which could cause clobbering of correct pricing
+    to
+
+    Provide a method to perform a location update (any of suburb, state or postcode) in AgentAdmin because pricing is not yet aligned to location identifiers and Mercury is not able to trigger the change.
+
+    Scenarios:
+        change suburb name: { "Cann River", "VIC", [ "3890" ] } => { "Cannon River", "VIC", [ "3890" ] }
+        change state name: { "Gibson Desert North", "WA", [ "0872" ] } => { "Gibson Desert North", "NT", [ "0872" ] }
+        change postcode:  { "Kilgariff", "NT", [ "872" ] } => { "Kigariff", "NT", [ "0872" ] }
+        add postcode: { "Katherine", "NT", [ "0850" ] } => { "Katherine", "NT", [ "0850", "0852" ] }
+        remove postcode: { "Melbourne", "VIC", [ "3000", "3004" ] } => { "Melbourne", "VIC", [ "3000" ] }
+
+    Exceptions:
+        new suburb, state, postcode combination already exists which could cause clobbering of correct pricing
+
+    - Separate New Application
+
+    - Rake task with command line agruments for 1 change
+
+03/27/2015 at 03:42:53 PM
+Aaron Wolski changed this Card:
+
+    Description: from <no value> to
+
+    Provide a method to perform a location update (any of suburb, state or postcode) in AgentAdmin because pricing is not yet aligned to location identifiers and Mercury is not able to trigger the change.
+
+    Scenarios:
+        change suburb name: { "Cann River", "VIC", [ "3890" ] } => { "Cannon River", "VIC", [ "3890" ] }
+        change state name: { "Gibson Desert North", "WA", [ "0872" ] } => { "Gibson Desert North", "NT", [ "0872" ] }
+        change postcode:  { "Kilgariff", "NT", [ "872" ] } => { "Kigariff", "NT", [ "0872" ] }
+        add postcode: { "Katherine", "NT", [ "0850" ] } => { "Katherine", "NT", [ "0850", "0852" ] }
+        remove postcode: { "Melbourne", "VIC", [ "3000", "3004" ] } => { "Melbourne", "VIC", [ "3000" ] }
+
+    Exceptions:
+        new suburb, state, postcode combination already exists which could cause clobbering of correct pricing
+
+03/10/2015 at 02:48:30 PM
+Aaron Wolski moved this Card from Triage: Triage to Prioritised Backlog: Capability
+03/05/2015 at 12:06:18 PM
+Aaron Wolski created this Card within the Triage: Triage Lane.

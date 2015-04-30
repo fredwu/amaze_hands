@@ -1,0 +1,165 @@
+CUS-307 Add Pact test to Customer-Store (XX)
+
+04/23/2015 at 06:04:39 PM
+Yongmin Xia moved this Card from Capability: QA to Capability: Done
+04/23/2015 at 06:04:34 PM
+Yongmin Xia was Unassigned from this Card by Yongmin Xia
+04/23/2015 at 11:01:45 AM
+Feng Zhichao changed this Card:
+
+    Title: from "Add Pact test to Customer-Store (X)" to "Add Pact test to Customer-Store (XX)"
+
+04/22/2015 at 05:31:31 PM
+Yongmin Xia changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+04/22/2015 at 05:31:24 PM
+Yongmin Xia was Assigned to this Card by Yongmin Xia
+04/22/2015 at 05:31:20 PM
+Yongmin Xia moved this Card from Capability: Doing to Capability: QA
+04/22/2015 at 01:31:07 PM
+Guoqing Zhao was Unassigned from this Card by Yongmin Xia
+04/22/2015 at 01:31:07 PM
+Jian Lv was Unassigned from this Card by Yongmin Xia
+04/22/2015 at 12:59:39 PM
+Guoqing Zhao changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+04/22/2015 at 11:37:24 AM
+Jian Lv changed this Card:
+
+    Description: from
+
+    AC:
+
+    create a Pact contract for create customer api between ETL and Customer-Store on Pact broker.
+
+    write Pact test on provider(customer-store)
+
+    Task:
+
+    install Pact to provider
+
+    write json contract and publish to Pact broker.
+
+    write test according to contract
+
+    - create a customer with a new billing entity created.
+
+    - return 400 bad request reponse status if parameters invalided.
+    to
+
+    AC:
+
+    create a Pact contract for create customer api between ETL and Customer-Store on Pact broker.
+
+    write Pact test on provider(customer-store)
+
+    Task:
+
+    install Pact to provider
+
+    write json contract and publish to Pact broker.
+
+    write test according to contract
+
+    - create a customer with a new billing entity.
+
+    - return 400 bad request reponse status if parameters invalided.
+
+04/22/2015 at 11:14:54 AM
+Jian Lv changed this Card:
+
+    Description: from
+
+    AC:
+
+    create a Pact contract for create customer api between ETL and Customer-Store on Pact broker.
+
+    write Pact test on provider(customer-store)
+
+    Task:
+
+    install Pact to provider
+
+    write json contract and publish to Pact broker.
+
+    write test according to contract
+
+    - create a customer without billing entity
+
+    - create a customer with existed billing entity.
+
+    - create a customer with a new billing entity created.
+
+    - return 400 bad request reponse status if parameters invalided.
+
+
+    to
+
+    AC:
+
+    create a Pact contract for create customer api between ETL and Customer-Store on Pact broker.
+
+    write Pact test on provider(customer-store)
+
+    Task:
+
+    install Pact to provider
+
+    write json contract and publish to Pact broker.
+
+    write test according to contract
+
+    - create a customer with a new billing entity created.
+
+    - return 400 bad request reponse status if parameters invalided.
+
+04/22/2015 at 11:08:21 AM
+Guoqing Zhao changed this Card:
+
+    Title: from "Add Pact test to Customer-Store" to "Add Pact test to Customer-Store (X)"
+
+04/21/2015 at 04:27:53 PM
+Guoqing Zhao was Assigned to this Card by Jian Lv
+04/21/2015 at 04:27:15 PM
+Jian Lv moved this Card from Capability: Next to Capability: Doing
+04/21/2015 at 04:26:54 PM
+Jian Lv was Assigned to this Card by Jian Lv
+04/21/2015 at 04:26:40 PM
+Jian Lv changed this Card:
+
+    Description: from <no value> to
+
+    AC:
+
+    create a Pact contract for create customer api between ETL and Customer-Store on Pact broker.
+
+    write Pact test on provider(customer-store)
+
+    Task:
+
+    install Pact to provider
+
+    write json contract and publish to Pact broker.
+
+    write test according to contract
+
+    - create a customer without billing entity
+
+    - create a customer with existed billing entity.
+
+    - create a customer with a new billing entity created.
+
+    - return 400 bad request reponse status if parameters invalided.
+
+
+
+04/21/2015 at 04:02:16 PM
+Yongmin Xia moved this Card from Backlog: Capability to Capability: Next
+04/14/2015 at 12:11:06 PM
+Yongmin Xia moved this Card from Backlog: Team Section to Backlog: Capability
+04/14/2015 at 12:11:00 PM
+Yongmin Xia created this Card within the Backlog: Team Section Lane.
