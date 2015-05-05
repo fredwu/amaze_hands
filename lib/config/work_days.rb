@@ -13,6 +13,8 @@ Biz.configure do |config|
     Date.new(2015, 02, 19),
     Date.new(2015, 02, 20),
     Date.new(2015, 02, 23),
-    Date.new(2015, 04, 01)
+    Date.new(2015, 04, 01),
+    Date.new(2015, 05, 01),
+    Date.new(2015, 05, 04)
   ]
 end
