@@ -1,0 +1,93 @@
+P-230 [C] Draft summary: max price changes
+
+02/05/2015 at 03:45:28 PM
+Aaron Wolski moved this Card from BAT to Done
+02/05/2015 at 03:45:22 PM
+Aaron Wolski changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+02/05/2015 at 03:45:01 PM
+Aaron Wolski moved this Card from QA to BAT
+02/04/2015 at 04:21:48 PM
+Xi Chen was Unassigned from this Card by Xi Chen
+02/04/2015 at 04:21:47 PM
+Xi Chen changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+02/04/2015 at 01:52:47 PM
+Xi Chen was Assigned to this Card by Xi Chen
+02/04/2015 at 01:45:55 PM
+Xi Chen changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+02/04/2015 at 01:45:44 PM
+Xi Chen moved this Card from Doing: Capability to QA
+02/04/2015 at 12:30:38 PM
+Xi Chen was Unassigned from this Card by Xi Chen
+02/04/2015 at 12:30:38 PM
+Ni Wang was Unassigned from this Card by Xi Chen
+02/04/2015 at 12:30:37 PM
+Xi Chen changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+02/03/2015 at 02:46:39 PM
+Aaron Wolski changed this Card:
+
+    Tags: from "draft-summary" to "draft-summary,capability"
+
+02/02/2015 at 04:30:30 PM
+Ni Wang was Assigned to this Card by Ni Wang
+02/02/2015 at 04:30:04 PM
+Wen Luo was Unassigned from this Card by Ni Wang
+02/02/2015 at 04:29:24 PM
+Aaron Wolski changed this Card:
+
+    Title: from "[C] Preview summary: max price changes" to "[C] Draft summary: max price changes"
+    Tags: from <no value> to "draft-summary"
+
+01/29/2015 at 04:28:48 PM
+Tong Zhang was Unassigned from this Card by Xi Chen
+01/29/2015 at 04:28:48 PM
+Wen Luo was Assigned to this Card by Xi Chen
+01/27/2015 at 02:38:33 PM
+Tong Zhang was Assigned to this Card by Tong Zhang
+01/27/2015 at 02:38:33 PM
+Xi Chen was Assigned to this Card by Tong Zhang
+01/27/2015 at 02:38:19 PM
+Tong Zhang moved this Card from In Analysis to Doing: Capability
+01/23/2015 at 06:17:35 PM
+Ni Wang moved this Card from Prioritised Backlog: Capability to In Analysis
+01/21/2015 at 02:29:42 PM
+Fred Wu changed this Card:
+
+    Title: from "[C] Preview summary of changes for PriceListSet update - Max price changes" to "[C] Preview summary: max price changes"
+
+01/21/2015 at 02:28:52 PM
+Fred Wu changed this Card:
+
+    Title: from "[C] P-195-alike" to "[C] Preview summary of changes for PriceListSet update - Max price changes"
+    Description: from
+
+    As a Pricing Analyst, I want a summary of the changes that will be applied by a file of list prices to the target set
+
+    Summary metrics:
+    1. Max price increase (just one, in $ value of difference)
+    2. Max price decrease (same as above)
+    to
+
+    Similar to P-195
+
+    As a Pricing Analyst, I want a summary of the changes that will be applied by a file of list prices to the target set
+
+    Summary metrics:
+    1. Max price increase (just one, in $ value of difference)
+    2. Max price decrease (same as above)
+
+01/21/2015 at 02:26:52 PM
+Fred Wu moved this Card from Prioritised Backlog: Capability to Prioritised Backlog: Capability
+01/21/2015 at 02:26:40 PM
+Fred Wu created this Card within the Prioritised Backlog: Capability Lane.

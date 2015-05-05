@@ -1,0 +1,39 @@
+CUS-322 Add new relic monitoring for Customer-Store[?]
+
+04/29/2015 at 11:54:23 AM
+Adam Boas moved this Card from Capability: QA to Capability: Done
+04/29/2015 at 11:54:19 AM
+Adam Boas changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+04/27/2015 at 06:08:07 PM
+Xi Chen moved this Card from Capability: Doing to Capability: QA
+04/27/2015 at 11:27:41 AM
+Feng Zhichao changed this Card:
+
+    Title: from "Add new relic monitoring for Customer-Store" to "Add new relic monitoring for Customer-Store[?]"
+
+04/26/2015 at 03:34:48 PM
+Jian Lv changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+04/26/2015 at 03:34:32 PM
+Jian Lv was Unassigned from this Card by Jian Lv
+04/26/2015 at 03:34:32 PM
+Kaihang An was Unassigned from this Card by Jian Lv
+04/26/2015 at 03:25:35 PM
+Kaihang An was Assigned to this Card by Jian Lv
+04/26/2015 at 03:25:21 PM
+Jian Lv was Assigned to this Card by Jian Lv
+04/26/2015 at 03:25:17 PM
+Jian Lv moved this Card from Capability: Next to Capability: Doing
+04/24/2015 at 11:30:59 AM
+Yongmin Xia moved this Card from Capability: Next to Capability: Next
+04/24/2015 at 11:26:59 AM
+Feng Zhichao moved this Card from Backlog: Capability to Capability: Next
+04/21/2015 at 01:22:03 PM
+Yongmin Xia moved this Card from Backlog: Team Section to Backlog: Capability
+04/21/2015 at 01:21:16 PM
+Yongmin Xia created this Card within the Backlog: Team Section Lane.

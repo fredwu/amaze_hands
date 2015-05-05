@@ -1,0 +1,119 @@
+P-274 [C] Publish list price changes
+
+03/18/2015 at 06:31:51 PM
+Adam Tohovitis changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+03/18/2015 at 06:31:21 PM
+Adam Tohovitis moved this Card from QA to Done
+03/17/2015 at 01:09:30 PM
+Kaihang An was Unassigned from this Card by Ni Wang
+03/17/2015 at 01:09:30 PM
+Ni Wang was Unassigned from this Card by Ni Wang
+03/17/2015 at 01:09:29 PM
+Ni Wang changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+03/16/2015 at 06:30:23 PM
+Kaihang An was Assigned to this Card by Ni Wang
+03/16/2015 at 06:30:23 PM
+Ni Wang was Assigned to this Card by Ni Wang
+03/16/2015 at 06:30:22 PM
+Ni Wang changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+03/16/2015 at 06:30:00 PM
+Ni Wang moved this Card from Doing: Capability to QA
+03/16/2015 at 05:08:07 PM
+Yaowei Du changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+03/16/2015 at 05:08:03 PM
+Tong Zhang was Unassigned from this Card by Yaowei Du
+03/16/2015 at 05:08:03 PM
+Yaowei Du was Unassigned from this Card by Yaowei Du
+03/16/2015 at 01:18:58 PM
+Yaowei Du was Assigned to this Card by Yaowei Du
+03/16/2015 at 01:18:53 PM
+Kaihang An was Unassigned from this Card by Yaowei Du
+03/11/2015 at 06:36:39 PM
+Adam Tohovitis attached file list_price_changes_feed (3).json to this Card
+03/10/2015 at 05:54:12 PM
+Tong Zhang moved this Card from In Analysis to Doing: Capability
+03/10/2015 at 04:11:32 PM
+Kaihang An was Assigned to this Card by Tong Zhang
+03/10/2015 at 09:52:16 AM
+Aaron Wolski changed this Card:
+
+    Description: from
+
+    This story will expose a feed of changes that are made to list price sets in Mercury that can be consumed by any interested party but, for now, the consumer will be the mercury-pseeker-adapter. It is expected that the feed will conform to the HAL specification. This will become more of a factor in later stages when the feed is paginated but will also provide a structure to represent the data.
+
+    The complete set of changes will consist of an entry for every list price that has ever been entered into Mercury. Each entry will contain the following data:
+        timestamp
+        list price set id
+        location uuid
+        price
+
+    To avoid having to integrate with Locations to resolve a location uuid to a suburb, state and postcode and because
+    to
+
+    This story will expose a feed of changes that are made to list price sets in Mercury that can be consumed by any interested party but, for now, the consumer will be the mercury-pseeker-adapter. It is expected that the feed will conform to the HAL specification. This will become more of a factor in later stages when the feed is paginated but will also provide a structure to represent the data.
+
+    The complete set of changes will consist of an entry for every list price that has ever been entered into Mercury. Each entry will contain the following data:
+        timestamp
+        list price set id
+        location uuid
+        price
+
+    To avoid having to integrate with Locations to resolve a location uuid to a suburb, state and postcode, the feed will embed the location details that Mercury has in its cache. This is also necessary because it is likely that Mercury will be privy to location changes before they are published by the Locations API.
+
+03/09/2015 at 06:13:55 PM
+Tong Zhang was Assigned to this Card by Tong Zhang
+03/09/2015 at 06:13:49 PM
+Tong Zhang moved this Card from Prioritised Backlog: Capability to In Analysis
+03/09/2015 at 05:29:47 PM
+Tong Zhang changed this Card:
+
+    Title: from "[C] Publish list price set changes" to "[C] Publish list price changes"
+
+03/06/2015 at 06:00:12 PM
+Aaron Wolski attached file list_price_changes_feed.json to this Card
+03/06/2015 at 04:50:39 PM
+Aaron Wolski changed this Card:
+
+    Description: from <no value> to
+
+    This story will expose a feed of changes that are made to list price sets in Mercury that can be consumed by any interested party but, for now, the consumer will be the mercury-pseeker-adapter. It is expected that the feed will conform to the HAL specification. This will become more of a factor in later stages when the feed is paginated but will also provide a structure to represent the data.
+
+    The complete set of changes will consist of an entry for every list price that has ever been entered into Mercury. Each entry will contain the following data:
+        timestamp
+        list price set id
+        location uuid
+        price
+
+    To avoid having to integrate with Locations to resolve a location uuid to a suburb, state and postcode and because
+
+03/06/2015 at 10:39:19 AM
+Aaron Wolski moved this Card from Triage: Triage to Prioritised Backlog: Capability
+03/05/2015 at 11:54:27 AM
+Aaron Wolski changed this Card:
+
+    Title: from "[C] Publish list of changes" to "[C] Publish list price set changes"
+
+03/05/2015 at 11:49:23 AM
+Aaron Wolski changed this Card:
+
+    Tags: from "capability,agentadmin,integration" to "capability,list-price-set,publish-changes"
+
+03/05/2015 at 11:48:29 AM
+Aaron Wolski changed this Card:
+
+    Tags: from <no value> to "capability,agentadmin,integration"
+
+03/05/2015 at 11:47:53 AM
+Aaron Wolski created this Card within the Triage: Triage Lane.

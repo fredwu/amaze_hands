@@ -1,0 +1,65 @@
+P-232 [C] Discard 'draft' prices
+
+02/03/2015 at 02:48:13 PM
+Aaron Wolski changed this Card:
+
+    Tags: from <no value> to "capability"
+
+01/30/2015 at 11:42:14 AM
+Fred Wu was Unassigned from this Card by Fred Wu
+01/30/2015 at 11:42:09 AM
+Fred Wu moved this Card from Done to Done
+01/30/2015 at 11:41:56 AM
+Fred Wu moved this Card from QA to Done
+01/30/2015 at 10:59:50 AM
+Fred Wu changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+01/30/2015 at 10:59:46 AM
+Fred Wu was Assigned to this Card by Fred Wu
+01/30/2015 at 10:59:41 AM
+Fred Wu moved this Card from Doing: Capability to QA
+01/29/2015 at 07:56:42 PM
+Yaowei Du changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+01/29/2015 at 07:56:35 PM
+Yaowei Du was Unassigned from this Card by Yaowei Du
+01/27/2015 at 12:44:56 PM
+Tong Zhang was Unassigned from this Card by Tong Zhang
+01/27/2015 at 12:20:23 PM
+Tong Zhang was Assigned to this Card by Tong Zhang
+01/26/2015 at 12:42:21 PM
+Tong Zhang was Unassigned from this Card by wang lei
+01/22/2015 at 07:34:10 PM
+Tong Zhang moved this Card from In Analysis to Doing: Capability
+01/22/2015 at 02:40:54 PM
+Yaowei Du moved this Card from Prioritised Backlog: Capability to In Analysis
+01/22/2015 at 02:40:34 PM
+Yaowei Du was Assigned to this Card by Yaowei Du
+01/22/2015 at 02:40:34 PM
+Tong Zhang was Assigned to this Card by Yaowei Du
+01/22/2015 at 02:40:33 PM
+Yaowei Du moved this Card from In Analysis to Prioritised Backlog: Capability
+01/22/2015 at 02:40:18 PM
+Yaowei Du moved this Card from Prioritised Backlog: Capability to In Analysis
+01/21/2015 at 04:46:42 PM
+Fred Wu changed this Card:
+
+    Title: from "[C]Discard 'draft' prices" to "[C] Discard 'draft' prices"
+
+01/21/2015 at 04:34:03 PM
+wang lei moved this Card from Triage: Triage to Prioritised Backlog: Capability
+01/21/2015 at 04:33:46 PM
+wang lei moved this Card from Prioritised Backlog: Capability to Triage: Triage
+01/21/2015 at 04:33:46 PM
+wang lei changed this Card:
+
+    Title: from "Discard 'draft' prices" to "[C]Discard 'draft' prices"
+
+01/21/2015 at 04:33:40 PM
+wang lei moved this Card from Triage: Triage to Prioritised Backlog: Capability
+01/21/2015 at 04:33:31 PM
+wang lei created this Card within the Triage: Triage Lane.

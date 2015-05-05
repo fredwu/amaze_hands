@@ -1,0 +1,124 @@
+P-332 Update pricing for suburb postcode changes in AgentAdmin
+
+04/30/2015 at 05:12:53 PM
+wang lei changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+04/30/2015 at 05:12:46 PM
+wang lei moved this Card from QA to Done
+04/28/2015 at 11:22:30 AM
+wang lei was Unassigned from this Card by wang lei
+04/28/2015 at 11:22:26 AM
+wang lei changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+04/27/2015 at 11:50:05 AM
+wang lei was Assigned to this Card by wang lei
+04/27/2015 at 11:50:01 AM
+wang lei changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+04/27/2015 at 11:44:01 AM
+wang lei moved this Card from Doing: Capability to QA
+04/26/2015 at 11:53:20 AM
+Wei Guangcheng was Unassigned from this Card by jiaji wang
+04/26/2015 at 11:53:20 AM
+jiaji wang was Unassigned from this Card by jiaji wang
+04/24/2015 at 08:00:06 PM
+Wei Guangcheng changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+04/23/2015 at 11:53:22 AM
+jiaji wang was Assigned to this Card by jiaji wang
+04/23/2015 at 11:53:17 AM
+wang lei was Unassigned from this Card by jiaji wang
+04/22/2015 at 07:14:31 PM
+Wei Guangcheng was Assigned to this Card by Wei Guangcheng
+04/21/2015 at 08:05:20 PM
+wang lei attached file pricing_postcode_correct.sql to this Card
+04/21/2015 at 05:30:28 PM
+wang lei moved this Card from In Analysis to Doing: Capability
+04/21/2015 at 01:44:59 PM
+wang lei attached file raketasks.sh to this Card
+04/21/2015 at 01:44:21 PM
+wang lei attached file location_update.txt to this Card
+04/21/2015 at 01:43:48 PM
+wang lei attached file Postcodes to Correct v2.xlsx to this Card
+04/21/2015 at 12:47:06 PM
+Ni Wang was Unassigned from this Card by wang lei
+04/20/2015 at 03:47:27 PM
+Aaron Wolski changed this Card:
+
+    Description: from
+        This involves putting pricing in place where an existing location is recognised with a new postcode, e.g. Kilgariff NT 870 to Kilgariff NT 0873
+        Postcodes to correct - https://rea-group.box.com/s/0jzfjhpwwz0jx2m1ljt0huqx45y75zz3
+        This card is restricted to AgentAdmin, i.e. PSeeker.price_configurations
+        Should include historical pricing that may still be valid for customers on locked contracts, with effective_from on or after 01/07/2013
+        Could be achieved using pseeker-pricing-updater if it is ready
+    to
+        This involves putting pricing in place where an existing location is recognised with a new postcode, e.g. Kilgariff NT 870 to Kilgariff NT 0873
+        Postcodes to correct -
+        data
+        This card is restricted to AgentAdmin, i.e. PSeeker.price_configurations
+        Should include historical pricing that may still be valid for customers on locked contracts, with effective_from on or after 01/07/2013
+        Could be achieved using pseeker-pricing-updater if it is ready
+
+04/20/2015 at 12:57:21 PM
+Ni Wang moved this Card from Prioritised Backlog: Capability to In Analysis
+04/20/2015 at 12:57:17 PM
+Ni Wang was Assigned to this Card by Ni Wang
+04/20/2015 at 12:57:17 PM
+wang lei was Assigned to this Card by Ni Wang
+04/20/2015 at 12:57:16 PM
+Ni Wang moved this Card from In Analysis to Prioritised Backlog: Capability
+04/20/2015 at 12:57:05 PM
+Ni Wang moved this Card from Prioritised Backlog: Capability to In Analysis
+04/16/2015 at 06:09:12 PM
+Aaron Wolski changed this Card:
+
+    Tags: from "bau,agentadmin,price-configurations" to "bau,agentadmin,price-configurations,locations,locations-release-6"
+
+04/16/2015 at 11:28:29 AM
+Aaron Wolski moved this Card from Prioritised Backlog: BAU to Prioritised Backlog: Capability
+04/15/2015 at 05:33:05 PM
+Aaron Wolski moved this Card from Prioritised Backlog: BAU to Prioritised Backlog: BAU
+04/15/2015 at 05:33:01 PM
+Aaron Wolski moved this Card from Prioritised Backlog: Capability to Prioritised Backlog: BAU
+04/15/2015 at 05:29:59 PM
+Aaron Wolski moved this Card from Prioritised Backlog: Capability to Prioritised Backlog: Capability
+04/15/2015 at 05:29:57 PM
+Aaron Wolski moved this Card from Triage: Triage to Prioritised Backlog: Capability
+04/15/2015 at 05:23:38 PM
+Aaron Wolski changed this Card:
+
+    Description: from
+        This involves putting pricing in place where an existing location is recognised with a new postcode, e.g. Kilgariff NT 870 to Kilgariff NT 0873
+        This card is restricted to AgentAdmin, i.e. PSeeker.price_configurations
+        Should include historical pricing that may still be valid for customers on locked contracts, with effective_from on or after 01/07/2013
+        Could be achieved using pseeker-pricing-updater if it is ready
+    to
+        This involves putting pricing in place where an existing location is recognised with a new postcode, e.g. Kilgariff NT 870 to Kilgariff NT 0873
+        Postcodes to correct - https://rea-group.box.com/s/0jzfjhpwwz0jx2m1ljt0huqx45y75zz3
+        This card is restricted to AgentAdmin, i.e. PSeeker.price_configurations
+        Should include historical pricing that may still be valid for customers on locked contracts, with effective_from on or after 01/07/2013
+        Could be achieved using pseeker-pricing-updater if it is ready
+
+04/15/2015 at 05:12:28 PM
+Aaron Wolski changed this Card:
+
+    Title: from "Update pricing for suburb postcode changes" to "Update pricing for suburb postcode changes in AgentAdmin"
+    Description: from <no value> to
+        This involves putting pricing in place where an existing location is recognised with a new postcode, e.g. Kilgariff NT 870 to Kilgariff NT 0873
+        This card is restricted to AgentAdmin, i.e. PSeeker.price_configurations
+        Should include historical pricing that may still be valid for customers on locked contracts, with effective_from on or after 01/07/2013
+        Could be achieved using pseeker-pricing-updater if it is ready
+    Tags: from <no value> to "bau,agentadmin,price-configurations"
+
+04/15/2015 at 04:52:25 PM
+Aaron Wolski moved this Card from Triage: Triage to Triage: Triage
+04/15/2015 at 04:52:19 PM
+Aaron Wolski created this Card within the Triage: Triage Lane.

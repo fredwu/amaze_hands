@@ -1,0 +1,116 @@
+P-279 [C] Determine deal attributes for list price set
+
+04/07/2015 at 12:11:00 PM
+Fred Wu moved this Card from BAT to Done
+04/07/2015 at 12:10:58 PM
+Jay Nawaz was Unassigned from this Card by Fred Wu
+04/01/2015 at 12:35:12 PM
+Fred Wu moved this Card from QA to BAT
+04/01/2015 at 12:35:10 PM
+Fred Wu changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+04/01/2015 at 12:34:59 PM
+Jay Nawaz was Assigned to this Card by Fred Wu
+03/30/2015 at 05:27:57 PM
+wang lei changed this Card:
+
+    Class of Service: from "Standard" to "Expedite"
+
+03/30/2015 at 05:27:49 PM
+wang lei was Unassigned from this Card by wang lei
+03/27/2015 at 02:00:15 PM
+wang lei was Assigned to this Card by wang lei
+03/27/2015 at 02:00:11 PM
+wang lei changed this Card:
+
+    Class of Service: from "Regulatory" to "Standard"
+
+03/27/2015 at 02:00:05 PM
+wang lei changed this Card:
+
+    Class of Service: from "Expedite" to "Regulatory"
+
+03/27/2015 at 01:59:59 PM
+wang lei moved this Card from Doing: Capability to QA
+03/27/2015 at 12:07:50 PM
+Tong Zhang was Unassigned from this Card by Adam Tohovitis
+03/27/2015 at 12:07:50 PM
+wang lei was Unassigned from this Card by Adam Tohovitis
+03/27/2015 at 12:07:38 PM
+Adam Tohovitis changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+03/20/2015 at 12:19:59 PM
+wang lei moved this Card from In Analysis to Doing: Capability
+03/20/2015 at 12:19:59 PM
+wang lei overrode the WIP Limit for Doing: Capability
+Reason:
+finished mindmap
+03/19/2015 at 04:02:29 PM
+Tong Zhang was Assigned to this Card by Tong Zhang
+03/19/2015 at 04:02:25 PM
+jiaji wang was Unassigned from this Card by Tong Zhang
+03/18/2015 at 06:07:14 PM
+Adam Tohovitis attached file mercury-pseeker-etl-deals.yml to this Card
+03/18/2015 at 06:04:14 PM
+Adam Tohovitis changed this Card:
+
+    Description: from
+
+    Translate price_change to price_configuration rows in etl.
+
+    https://community.rea-group.com/docs/DOC-42956
+    to
+
+    Translate price_change to price_configuration rows in etl.
+
+    https://community.rea-group.com/docs/DOC-42956
+
+    - create a mapping configuration file based on the rules
+
+    - price_change models converted to price_configuration models using mapping configuration file
+
+03/18/2015 at 05:46:03 PM
+jiaji wang changed this Card:
+
+    Description: from
+
+    Translate price_change to price_configuration rows in etl.
+    to
+
+    Translate price_change to price_configuration rows in etl.
+
+    https://community.rea-group.com/docs/DOC-42956
+
+03/18/2015 at 05:45:16 PM
+jiaji wang changed this Card:
+
+    Description: from <no value> to
+
+    Translate price_change to price_configuration rows in etl.
+
+03/18/2015 at 01:54:10 PM
+wang lei was Assigned to this Card by jiaji wang
+03/18/2015 at 01:54:01 PM
+jiaji wang was Assigned to this Card by jiaji wang
+03/18/2015 at 01:53:58 PM
+jiaji wang moved this Card from Prioritised Backlog: Capability to In Analysis
+03/10/2015 at 02:48:19 PM
+Aaron Wolski moved this Card from Triage: Triage to Prioritised Backlog: Capability
+03/05/2015 at 12:11:20 PM
+Aaron Wolski moved this Card from Triage: Triage to Triage: Triage
+03/05/2015 at 12:02:25 PM
+Aaron Wolski changed this Card:
+
+    Tags: from "capability" to "capability,mercury-pseeker-adapter"
+
+03/05/2015 at 12:01:18 PM
+Aaron Wolski changed this Card:
+
+    Tags: from <no value> to "capability"
+
+03/05/2015 at 12:01:11 PM
+Aaron Wolski created this Card within the Triage: Triage Lane.

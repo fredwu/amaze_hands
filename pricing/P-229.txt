@@ -1,0 +1,62 @@
+P-229 [C] Refactor, move the data retrieving logic out of representer class, and move to another separated service.
+
+02/11/2015 at 11:57:38 AM
+Fred Wu changed this Card:
+
+    Title: from "Refactor, move the data retrieving logic out of representer class, and move to another separated service." to "[C] Refactor, move the data retrieving logic out of representer class, and move to another separated service."
+
+02/05/2015 at 02:43:36 PM
+Tong Zhang moved this Card from QA to Done
+02/05/2015 at 02:43:30 PM
+Yongmin Xia was Unassigned from this Card by Tong Zhang
+02/05/2015 at 01:29:35 PM
+Tong Zhang changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+02/05/2015 at 01:29:28 PM
+Yongmin Xia was Assigned to this Card by Tong Zhang
+02/05/2015 at 01:29:15 PM
+Tong Zhang moved this Card from Doing: Capability to QA
+02/05/2015 at 02:10:10 AM
+Yaowei Du changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+02/05/2015 at 02:10:01 AM
+Yaowei Du was Unassigned from this Card by Yaowei Du
+02/05/2015 at 02:10:01 AM
+Tong Zhang was Unassigned from this Card by Yaowei Du
+02/03/2015 at 02:47:49 PM
+Aaron Wolski changed this Card:
+
+    Tags: from <no value> to "capability"
+
+02/03/2015 at 01:04:36 PM
+Fred Wu moved this Card from Prioritised Backlog: Capability to Doing: Capability
+02/03/2015 at 01:04:07 PM
+Fred Wu moved this Card from In Analysis to Prioritised Backlog: Capability
+02/02/2015 at 01:51:16 PM
+Yaowei Du was Assigned to this Card by Yaowei Du
+02/02/2015 at 01:51:16 PM
+Tong Zhang was Assigned to this Card by Yaowei Du
+02/02/2015 at 01:41:37 PM
+Yaowei Du moved this Card from Prioritised Backlog: Capability to In Analysis
+01/28/2015 at 11:00:04 AM
+Fred Wu moved this Card from Triage: Triage to Prioritised Backlog: Capability
+01/27/2015 at 01:42:02 PM
+Ni Wang moved this Card from Doing: Capability to Triage: Triage
+01/27/2015 at 01:41:44 PM
+Ni Wang moved this Card from Taskboard [[C] The ability to support large files]:[160588495] Lane ToDo to Parent Board Lane [Doing: Capability]
+01/27/2015 at 01:41:15 PM
+Ni Wang changed this Card:
+
+    Type: from "Task" to "Tech Task"
+
+01/20/2015 at 01:38:17 PM
+Tong Zhang changed this Card:
+
+    Title: from "Refactor, move the data retrieving out of representer class, and move to another separated service." to "Refactor, move the data retrieving logic out of representer class, and move to another separated service."
+
+01/20/2015 at 01:37:54 PM
+Tong Zhang created this Card within the ToDo Lane.

@@ -1,0 +1,197 @@
+CUS-314 Setup project shell for ETL (XXXX?)
+
+05/05/2015 at 01:06:42 PM
+Adam Boas was Unassigned from this Card by Adam Boas
+05/05/2015 at 01:06:41 PM
+Adam Boas moved this Card from Capability: QA to Capability: Done
+04/30/2015 at 11:18:12 AM
+Adam Boas changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+04/30/2015 at 11:18:06 AM
+Adam Boas was Assigned to this Card by Adam Boas
+04/27/2015 at 05:14:16 PM
+Xi Chen moved this Card from Capability: Doing to Capability: QA
+04/27/2015 at 11:02:55 AM
+Kaihang An was Unassigned from this Card by Xi Chen
+04/27/2015 at 11:02:55 AM
+Guoqing Zhao was Unassigned from this Card by Xi Chen
+04/24/2015 at 07:41:03 PM
+Guoqing Zhao changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+04/24/2015 at 05:12:44 PM
+Guoqing Zhao was Assigned to this Card by Yongmin Xia
+04/24/2015 at 05:12:44 PM
+Kaihang An was Assigned to this Card by Yongmin Xia
+04/24/2015 at 05:08:45 PM
+Yongmin Xia moved this Card from Capability: QA to Capability: Doing
+04/24/2015 at 05:08:34 PM
+Xi Chen was Unassigned from this Card by Yongmin Xia
+04/24/2015 at 05:08:34 PM
+Yongmin Xia was Unassigned from this Card by Yongmin Xia
+04/24/2015 at 11:12:08 AM
+Feng Zhichao changed this Card:
+
+    Title: from "Setup project shell for ETL (XXXX)" to "Setup project shell for ETL (XXXX?)"
+
+04/23/2015 at 06:13:54 PM
+Yongmin Xia moved this Card from Capability: Doing to Capability: QA
+04/23/2015 at 06:13:48 PM
+Yongmin Xia changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+04/23/2015 at 06:08:48 PM
+Xi Chen was Assigned to this Card by Yongmin Xia
+04/23/2015 at 06:08:38 PM
+Yongmin Xia was Assigned to this Card by Yongmin Xia
+04/23/2015 at 06:08:30 PM
+Jian Lv was Unassigned from this Card by Yongmin Xia
+04/23/2015 at 06:08:30 PM
+Guoqing Zhao was Unassigned from this Card by Yongmin Xia
+04/23/2015 at 05:59:36 PM
+Jian Lv changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+04/23/2015 at 05:58:52 PM
+Guoqing Zhao changed this Card:
+
+    Description: from
+
+    Setup a git repo based on the Grape/ROM pattern
+
+    Setup a build pipeline
+
+    Setup a staging build and deploy to it from the build pipeline
+    to
+
+    Setup a git repo based on the Grape/ROM pattern
+
+    Setup a build pipeline
+
+    Setup a staging build and deploy to it from the build pipeline
+
+     Add docker_logger, new relic and health check
+
+04/23/2015 at 11:02:23 AM
+Feng Zhichao changed this Card:
+
+    Title: from "Setup project shell for ETL (XXX)" to "Setup project shell for ETL (XXXX)"
+
+04/22/2015 at 01:24:45 PM
+Yongmin Xia was Unassigned from this Card by Jian Lv
+04/22/2015 at 01:24:45 PM
+Guoqing Zhao was Assigned to this Card by Jian Lv
+04/22/2015 at 01:24:45 PM
+Jian Lv was Assigned to this Card by Jian Lv
+04/22/2015 at 01:24:44 PM
+Jian Lv changed this Card:
+
+    Description: from
+
+    Setup a git repo based on the Grape/ROM pattern
+
+    Setup a build pipeline
+
+    Setup a staging build and deploy to it from the build pipeline
+
+    Configure docker logger
+
+    Add new relic
+
+    Add health check
+    to
+
+    Setup a git repo based on the Grape/ROM pattern
+
+    Setup a build pipeline
+
+    Setup a staging build and deploy to it from the build pipeline
+
+04/22/2015 at 01:24:44 PM
+Jian Lv moved this Card from Capability: BAT to Capability: Doing
+04/22/2015 at 01:24:39 PM
+Jian Lv was Unassigned from this Card by Yongmin Xia
+04/22/2015 at 01:24:39 PM
+Yongmin Xia was Assigned to this Card by Yongmin Xia
+04/22/2015 at 01:24:38 PM
+Yongmin Xia changed this Card:
+
+    Description: from
+
+    Setup a git repo based on the Grape/ROM pattern
+
+    Setup a build pipeline
+
+    Setup a staging build and deploy to it from the build pipeline
+    to
+
+    Setup a git repo based on the Grape/ROM pattern
+
+    Setup a build pipeline
+
+    Setup a staging build and deploy to it from the build pipeline
+
+    Configure docker logger
+
+    Add new relic
+
+    Add health check
+
+04/22/2015 at 01:24:38 PM
+Yongmin Xia moved this Card from Capability: Doing to Capability: BAT
+04/22/2015 at 01:24:28 PM
+Yongmin Xia was Unassigned from this Card by Jian Lv
+04/22/2015 at 01:24:23 PM
+Jian Lv was Assigned to this Card by Jian Lv
+04/22/2015 at 01:24:16 PM
+Jian Lv moved this Card from Capability: BAT to Capability: Doing
+04/22/2015 at 11:09:13 AM
+Guoqing Zhao changed this Card:
+
+    Title: from "Setup project shell for ETL (XX)" to "Setup project shell for ETL (XXX)"
+
+04/21/2015 at 04:35:30 PM
+Yongmin Xia moved this Card from Capability: QA to Capability: BAT
+04/21/2015 at 03:45:29 PM
+Yongmin Xia was Assigned to this Card by Yongmin Xia
+04/21/2015 at 03:45:26 PM
+Yongmin Xia moved this Card from Capability: Doing to Capability: QA
+04/21/2015 at 03:45:23 PM
+Yongmin Xia changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+04/21/2015 at 03:45:14 PM
+Jian Lv was Unassigned from this Card by Yongmin Xia
+04/21/2015 at 03:45:14 PM
+Guoqing Zhao was Unassigned from this Card by Yongmin Xia
+04/21/2015 at 01:54:48 PM
+Guoqing Zhao changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+04/21/2015 at 11:09:35 AM
+Feng Zhichao changed this Card:
+
+    Title: from "Setup project shell for ETL (X)" to "Setup project shell for ETL (XX)"
+
+04/20/2015 at 04:00:30 PM
+Guoqing Zhao changed this Card:
+
+    Title: from "Setup project shell for ETL" to "Setup project shell for ETL (X)"
+
+04/20/2015 at 11:31:43 AM
+Jian Lv was Assigned to this Card by Yongmin Xia
+04/20/2015 at 11:31:42 AM
+Guoqing Zhao was Assigned to this Card by Yongmin Xia
+04/20/2015 at 11:29:29 AM
+Feng Zhichao moved this Card from Capability: Next to Capability: Doing
+04/17/2015 at 11:35:19 AM
+Adam Boas moved this Card from Backlog: Capability to Capability: Next
+04/17/2015 at 11:34:46 AM
+Adam Boas created this Card within the Backlog: Capability Lane.

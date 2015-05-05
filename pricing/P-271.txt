@@ -1,0 +1,70 @@
+P-271 [C] Cleanup list price set detail page <UI>
+
+03/13/2015 at 12:33:10 PM
+Ni Wang changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+03/13/2015 at 12:32:57 PM
+Ni Wang moved this Card from QA to Done
+03/11/2015 at 01:08:46 PM
+Ni Wang was Unassigned from this Card by Ni Wang
+03/11/2015 at 01:08:45 PM
+Ni Wang changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+03/11/2015 at 01:03:17 PM
+Ni Wang overrode the WIP Limit for QA
+Reason:
+start qa
+03/11/2015 at 01:03:17 PM
+Ni Wang moved this Card from Doing: Capability to QA
+03/11/2015 at 01:01:36 PM
+Ni Wang was Assigned to this Card by Ni Wang
+03/11/2015 at 01:01:35 PM
+Ni Wang changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+03/11/2015 at 01:01:35 PM
+Ni Wang moved this Card from QA to Doing: Capability
+03/11/2015 at 01:01:28 PM
+Ni Wang moved this Card from Doing: Capability to QA
+03/11/2015 at 02:21:27 AM
+Yaowei Du changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+03/11/2015 at 02:21:20 AM
+Yaowei Du was Unassigned from this Card by Yaowei Du
+03/10/2015 at 06:32:05 PM
+Yaowei Du changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+03/10/2015 at 06:31:59 PM
+Yaowei Du was Assigned to this Card by Yaowei Du
+03/10/2015 at 04:56:40 PM
+Fred Wu changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+03/10/2015 at 04:56:33 PM
+Fred Wu was Unassigned from this Card by Fred Wu
+03/10/2015 at 02:52:49 PM
+Aaron Wolski changed this Card:
+
+    Tags: from "capability,list-price-set-detail" to "capability,list-price-set-detail,ui"
+
+03/06/2015 at 01:35:01 PM
+Fred Wu moved this Card from Triage: Triage to Doing: Capability
+03/04/2015 at 05:10:47 PM
+Fred Wu was Assigned to this Card by Fred Wu
+03/04/2015 at 05:10:31 PM
+Fred Wu changed this Card:
+
+    Title: from "[C] Cleanup list price set detail page" to "[C] Cleanup list price set detail page <UI>"
+
+02/26/2015 at 05:03:13 PM
+Aaron Wolski created this Card within the Triage: Triage Lane.

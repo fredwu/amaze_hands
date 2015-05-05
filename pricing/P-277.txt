@@ -1,0 +1,58 @@
+P-277 [C] Publish list price set changes in digestible chunks
+
+03/24/2015 at 12:17:55 PM
+Fred Wu moved this Card from QA to Done
+03/24/2015 at 12:17:52 PM
+Fred Wu changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+03/23/2015 at 01:13:05 PM
+Ni Wang was Unassigned from this Card by Ni Wang
+03/23/2015 at 01:13:04 PM
+Ni Wang changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+03/23/2015 at 12:37:18 PM
+Ni Wang changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+03/23/2015 at 12:37:13 PM
+Ni Wang was Assigned to this Card by Ni Wang
+03/23/2015 at 12:37:08 PM
+Ni Wang moved this Card from Doing: Capability to QA
+03/20/2015 at 05:59:47 PM
+Yaowei Du changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+03/20/2015 at 05:59:38 PM
+Yaowei Du was Unassigned from this Card by Yaowei Du
+03/20/2015 at 12:15:21 PM
+Tong Zhang was Unassigned from this Card by Tong Zhang
+03/17/2015 at 08:22:58 PM
+Tong Zhang moved this Card from In Analysis to Doing: Capability
+03/17/2015 at 03:02:23 PM
+Adam Tohovitis attached file 177643968.json to this Card
+03/17/2015 at 12:55:55 PM
+Tong Zhang was Assigned to this Card by Tong Zhang
+03/17/2015 at 12:55:55 PM
+Yaowei Du was Assigned to this Card by Tong Zhang
+03/17/2015 at 12:55:40 PM
+Tong Zhang moved this Card from Prioritised Backlog: Capability to In Analysis
+03/17/2015 at 12:52:28 PM
+Adam Tohovitis changed this Card:
+
+    Title: from "[C] Read list price set changes in digestible chunks" to "[C] Publish list price set changes in digestible chunks"
+
+03/10/2015 at 02:48:12 PM
+Aaron Wolski moved this Card from Triage: Triage to Prioritised Backlog: Capability
+03/05/2015 at 12:02:25 PM
+Aaron Wolski changed this Card:
+
+    Tags: from "capability" to "capability,mercury-pseeker-adapter"
+
+03/05/2015 at 11:57:53 AM
+Aaron Wolski created this Card within the Triage: Triage Lane.
