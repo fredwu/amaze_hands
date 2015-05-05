@@ -1,0 +1,3 @@
+[submodule "db"]
+	path = db
+	url = git@git.realestate.com.au:fredwu/amaze_hands-db.git
