@@ -9,7 +9,7 @@ module Web::Views::Home
         Workflow.new(
           strategy: Strategies::LeanKit,
           lanes:    Strategies::LeanKit::PricingLanes,
-          files: Dir["#{Web::Application.configuration.root}/../../db/pricing/*.txt"]
+          files:    Dir["#{Web::Application.configuration.root}/../../db/pricing/*.txt"]
         )
       ).metrics(
         measure_every: WEEK_FREQUENCY.weeks
