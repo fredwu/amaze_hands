@@ -1,0 +1,74 @@
+P-235 [C] Refactor ListPriceSetsController
+
+02/16/2015 at 02:29:30 PM
+Fred Wu changed this Card:
+
+    Title: from "Refactor ListPriceSetsController" to "[C] Refactor ListPriceSetsController"
+    DateArchived: from "01/28/2015 04:56:19" to "02/16/2015 03:29:30"
+
+01/28/2015 at 03:56:19 PM
+Fred Wu moved this Card from Done to Archive: Pricing
+01/27/2015 at 03:33:35 PM
+jiaji wang moved this Card from QA to Done
+01/27/2015 at 03:33:32 PM
+wang lei was Unassigned from this Card by jiaji wang
+01/27/2015 at 03:33:32 PM
+jiaji wang was Unassigned from this Card by jiaji wang
+01/27/2015 at 09:40:47 AM
+jiaji wang changed this Card:
+
+    Class of Service: from "Expedite" to "Standard"
+
+01/27/2015 at 09:40:38 AM
+wang lei was Assigned to this Card by jiaji wang
+01/27/2015 at 09:40:29 AM
+jiaji wang was Assigned to this Card by jiaji wang
+01/27/2015 at 09:40:11 AM
+jiaji wang moved this Card from Doing: Capability to QA
+01/23/2015 at 03:26:41 PM
+Fred Wu was Unassigned from this Card by Fred Wu
+01/23/2015 at 03:26:30 PM
+Fred Wu changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+01/23/2015 at 11:35:17 AM
+Fred Wu was Assigned to this Card by Fred Wu
+01/23/2015 at 11:35:12 AM
+Fred Wu overrode the WIP Limit for Doing: Capability
+Reason:
+REFACTOR ALL THE THINGS
+01/23/2015 at 11:35:12 AM
+Fred Wu moved this Card from Prioritised Backlog: Capability to Doing: Capability
+01/23/2015 at 09:02:31 AM
+Fred Wu moved this Card from Prioritised Backlog: Capability to Prioritised Backlog: Capability
+01/23/2015 at 09:02:25 AM
+Fred Wu moved this Card from Prioritised Backlog: Capability to Prioritised Backlog: Capability
+01/23/2015 at 09:02:18 AM
+Fred Wu moved this Card from Triage: Triage to Prioritised Backlog: Capability
+01/22/2015 at 06:10:19 PM
+Adam Tohovitis changed this Card:
+
+    Description: from
+
+    Hotspots:
+
+    - file_path and potentially effective_from should be handled elsewhere (in a service object)
+
+    In general, cut down the "noise" in a controller. Try zoom out on the file and look at it from a bird's eye view.
+    to
+
+    Hotspots:
+
+    - file_path and potentially effective_from should be handled elsewhere (in a service object)
+
+    - extract exception handling
+
+    -
+
+    In general, cut down the "noise" in a controller. Try zoom out on the file and look at it from a bird's eye view.
+
+01/22/2015 at 09:17:27 AM
+Fred Wu attached file example_controllers.zip to this Card
+01/22/2015 at 09:15:22 AM
+Fred Wu created this Card within the Triage: Triage Lane.

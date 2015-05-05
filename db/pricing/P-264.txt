@@ -1,0 +1,78 @@
+P-264 [C] Remove deprecated locations
+
+03/11/2015 at 05:34:49 PM
+Aaron Wolski moved this Card from BAT to Done
+03/11/2015 at 05:34:43 PM
+Aaron Wolski was Unassigned from this Card by Aaron Wolski
+03/11/2015 at 12:20:57 PM
+Fred Wu changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+03/11/2015 at 12:20:38 PM
+Aaron Wolski was Assigned to this Card by Fred Wu
+03/11/2015 at 12:20:15 PM
+Fred Wu moved this Card from QA to BAT
+03/10/2015 at 05:43:48 PM
+wang lei was Unassigned from this Card by wang lei
+03/10/2015 at 05:43:44 PM
+wang lei overrode the WIP Limit for QA
+Reason:
+Verified the functionality
+03/10/2015 at 05:43:44 PM
+wang lei moved this Card from Doing: Capability to QA
+03/10/2015 at 05:43:18 PM
+wang lei was Assigned to this Card by wang lei
+03/10/2015 at 12:47:19 PM
+Tong Zhang was Unassigned from this Card by Adam Tohovitis
+03/10/2015 at 12:47:14 PM
+Adam Tohovitis changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+03/09/2015 at 02:33:19 PM
+wang lei was Unassigned from this Card by Tong Zhang
+03/06/2015 at 07:00:34 PM
+wang lei moved this Card from In Analysis to Doing: Capability
+03/06/2015 at 12:45:12 PM
+Tong Zhang was Assigned to this Card by wang lei
+03/06/2015 at 12:45:02 PM
+wang lei was Assigned to this Card by wang lei
+03/06/2015 at 12:44:58 PM
+wang lei moved this Card from Prioritised Backlog: Capability to In Analysis
+02/26/2015 at 10:45:31 AM
+Fred Wu moved this Card from Triage: Triage to Prioritised Backlog: Capability
+02/25/2015 at 10:52:32 AM
+Fred Wu changed this Card:
+
+    Title: from "Remove deprecated locations" to "[C] Remove deprecated locations"
+
+02/23/2015 at 12:11:38 PM
+Aaron Wolski changed this Card:
+
+    Description: from
+
+    As a Pricer I want deprecated locations to be removed from the LPS download so I no longer need to price them
+    to
+
+    As a Pricer I want deprecated locations to be removed from the LPS download so I no longer need to price them
+
+    This story would not include any sort of interface beyond a task that can process an input file. The focus is on the import logic that assesses the contents of the file and removes any locations known to Mercury but no longer appearing in the file. Considerations must be given to:
+        what data must be retained when a location is "removed"
+        what information needs to be recorded about the "removal"
+
+    What we know is that:
+        it should still be possible to search for deprecated suburbs in Mercury to lookup historical pricing
+
+02/23/2015 at 11:56:28 AM
+Aaron Wolski changed this Card:
+
+    Description: from
+
+    As a Pricer I want deprecated locations to be removed the LPS download so I no longer need to price them
+    to
+
+    As a Pricer I want deprecated locations to be removed from the LPS download so I no longer need to price them
+
+02/23/2015 at 11:49:34 AM
+Aaron Wolski created this Card within the Triage: Triage Lane.

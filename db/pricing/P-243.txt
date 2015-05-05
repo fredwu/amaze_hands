@@ -1,0 +1,41 @@
+P-243 Exception handling in/out of the controllers
+
+02/12/2015 at 12:06:43 PM
+Adam Tohovitis moved this Card from Doing: BAU to Done
+02/12/2015 at 12:06:41 PM
+Adam Tohovitis was Unassigned from this Card by Adam Tohovitis
+02/10/2015 at 01:02:46 PM
+Adam Tohovitis was Assigned to this Card by Adam Tohovitis
+02/10/2015 at 01:02:33 PM
+Adam Tohovitis moved this Card from Triage: Triage to Doing: BAU
+01/29/2015 at 07:28:05 PM
+Adam Tohovitis changed this Card:
+
+    Description: from
+
+    - We have a few approaches to handling errors currently in the system. Lets choos an approach and refactor the system for consistency.
+
+    1. Service objects return success or failure to the controller. Controller decides where to route and to display an error message
+
+    2. We let exceptions bubble up to the controller and we catch them there then we route and display message
+
+    3. Potential option; we create a exception handler concern and mix it into the application controller. Exception handler rescues the particular exception and delegates to the private method. Exception handler would need to decide on the error message and route to the appropriate page.
+    to
+
+    - We have a few approaches to handling errors currently in the system. Lets choos an approach and refactor the system for consistency.
+
+    1. Service objects return success or failure to the controller. Controller decides where to route and to display an error message
+
+    2. We let exceptions bubble up to the controller and we catch them there then we route and display message
+
+    3. Potential option; we create a exception handler concern and mix it into the application controller. Exception handler rescues the particular exception and delegates to the private method. Exception handler would need to decide on the error message and route to the appropriate page.
+
+    Perform the refactor
+
+01/29/2015 at 06:32:21 PM
+Adam Tohovitis changed this Card:
+
+    Card Type: from "User Story" to "Tech Task"
+
+01/29/2015 at 06:30:39 PM
+Adam Tohovitis created this Card within the Triage: Triage Lane.

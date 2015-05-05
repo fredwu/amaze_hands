@@ -1,0 +1,193 @@
+CUS-280 Create Customer [Customer API] (XXX)
+
+04/24/2015 at 05:50:43 PM
+Yongmin Xia moved this Card from Capability: QA to Capability: Done
+04/24/2015 at 05:50:39 PM
+Xi Chen was Unassigned from this Card by Yongmin Xia
+04/24/2015 at 05:50:39 PM
+Yongmin Xia was Unassigned from this Card by Yongmin Xia
+04/24/2015 at 05:08:58 PM
+Xi Chen was Assigned to this Card by Yongmin Xia
+04/24/2015 at 05:08:47 PM
+Yongmin Xia changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+04/24/2015 at 05:08:42 PM
+Yongmin Xia was Assigned to this Card by Yongmin Xia
+04/24/2015 at 05:08:39 PM
+Yongmin Xia moved this Card from Capability: Doing to Capability: QA
+04/24/2015 at 11:12:24 AM
+Feng Zhichao changed this Card:
+
+    Title: from "Create Customer [Customer API] (XX)" to "Create Customer [Customer API] (XXX)"
+
+04/24/2015 at 11:00:25 AM
+Xi Chen changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+04/24/2015 at 11:00:17 AM
+Guoqing Zhao was Unassigned from this Card by Xi Chen
+04/24/2015 at 11:00:17 AM
+Kaihang An was Unassigned from this Card by Xi Chen
+04/23/2015 at 06:08:25 PM
+Guoqing Zhao was Assigned to this Card by Yongmin Xia
+04/23/2015 at 06:07:51 PM
+Xi Chen was Unassigned from this Card by Yongmin Xia
+04/23/2015 at 11:02:00 AM
+Feng Zhichao changed this Card:
+
+    Title: from "Create Customer [Customer API] (X)" to "Create Customer [Customer API] (XX)"
+
+04/22/2015 at 11:08:31 AM
+Guoqing Zhao changed this Card:
+
+    Title: from "Create Customer [Customer API]" to "Create Customer [Customer API] (X)"
+
+04/21/2015 at 09:29:20 PM
+Xi Chen moved this Card from Capability: Doing to Capability: Doing
+04/21/2015 at 06:01:54 PM
+Xi Chen was Assigned to this Card by Xi Chen
+04/21/2015 at 06:01:54 PM
+Kaihang An was Assigned to this Card by Xi Chen
+04/21/2015 at 06:01:37 PM
+Xi Chen changed this Card:
+
+    Class of Service: from "Expedite" to <no value>
+
+04/21/2015 at 05:58:36 PM
+Xi Chen moved this Card from Capability: QA to Capability: Doing
+04/20/2015 at 04:51:35 PM
+Kaihang An was Unassigned from this Card by Kaihang An
+04/20/2015 at 04:51:35 PM
+Zhijia Shi was Unassigned from this Card by Kaihang An
+04/20/2015 at 04:50:58 PM
+Kaihang An changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+04/20/2015 at 04:33:26 PM
+Zhijia Shi changed this Card:
+
+    Title: from "Create Customer [Customer API] - [XXXXXXX]" to "Create Customer [Customer API]"
+
+04/20/2015 at 04:22:19 PM
+Kaihang An was Assigned to this Card by Zhijia Shi
+04/20/2015 at 04:21:57 PM
+Yongmin Xia was Unassigned from this Card by Zhijia Shi
+04/20/2015 at 04:21:53 PM
+Zhijia Shi moved this Card from Capability: Doing to Capability: QA
+04/20/2015 at 11:28:53 AM
+Adam Boas changed this Card:
+
+    Title: from "Create Customer [Customer API] - [XXXXXX]" to "Create Customer [Customer API] - [XXXXXXX]"
+
+04/17/2015 at 12:09:21 PM
+Yongmin Xia was Assigned to this Card by Yongmin Xia
+04/17/2015 at 12:09:16 PM
+Jian Lv was Unassigned from this Card by Yongmin Xia
+04/17/2015 at 11:42:08 AM
+Xi Chen changed this Card:
+
+    Title: from "Create Customer [Customer API] - [XXXXX]" to "Create Customer [Customer API] - [XXXXXX]"
+
+04/17/2015 at 11:24:13 AM
+Feng Zhichao changed this Card:
+
+    Title: from "Create Customer [Customer API] - [XXXX]" to "Create Customer [Customer API] - [XXXXX]"
+
+04/16/2015 at 11:54:23 AM
+Adam Boas attached file As an API user I want to be able to create a new customer via the API v1.xmind to this Card
+04/16/2015 at 11:29:18 AM
+Adam Boas changed this Card:
+
+    Title: from "Create Customer [Customer API] - [XXX]" to "Create Customer [Customer API] - [XXXX]"
+
+04/15/2015 at 05:05:56 PM
+Yongmin Xia changed this Card:
+
+    Title: from "Create Customer [Customer API] - [XX]" to "Create Customer [Customer API] - [XXX]"
+
+04/15/2015 at 05:05:21 PM
+Yongmin Xia changed this Card:
+
+    Title: from "Create Customer [Customer API]" to "Create Customer [Customer API] - [XX]"
+
+04/14/2015 at 04:05:57 PM
+Kaihang An was Unassigned from this Card by Xi Chen
+04/14/2015 at 04:05:57 PM
+Jian Lv was Assigned to this Card by Xi Chen
+04/13/2015 at 01:11:03 PM
+Deanne Cassidy attached file As an API user I want to be able to create a new customer via the API v1.xmind to this Card
+04/10/2015 at 11:11:24 AM
+Kaihang An moved this Card from Capability: Next to Capability: Doing
+04/10/2015 at 11:11:17 AM
+Zhijia Shi was Assigned to this Card by Kaihang An
+04/09/2015 at 05:49:49 PM
+Adam Boas changed this Card:
+
+    Title: from "Create Customer [API]" to "Create Customer [Customer API]"
+
+04/09/2015 at 05:49:11 PM
+Adam Boas changed this Card:
+
+    Title: from "Create Customer" to "Create Customer [API]"
+
+04/09/2015 at 03:36:09 PM
+Kaihang An was Assigned to this Card by Kaihang An
+04/09/2015 at 11:23:43 AM
+Feng Zhichao moved this Card from Capability: Next to Capability: Next
+04/09/2015 at 11:23:38 AM
+Feng Zhichao set the status of this Card to Unblocked
+Comment:
+04/09/2015 at 11:20:43 AM
+Feng Zhichao moved this Card from Capability: Next to Capability: Next
+04/09/2015 at 11:20:39 AM
+Feng Zhichao moved this Card from Capability: Next to Capability: Next
+04/09/2015 at 11:20:36 AM
+Feng Zhichao moved this Card from Capability: Doing to Capability: Next
+04/08/2015 at 10:02:03 AM
+Adam Boas changed this Card:
+
+    Title: from "As an API user I want to be able to create a new customer via the API" to "Create Customer"
+    Description: from
+
+    Create a POST endpoint to create a new Customer as per the rules in the mind map
+    to
+
+    As an API user I want to be able to create a new customer via the API
+
+    Create a POST endpoint to create a new Customer as per the rules in the mind map
+
+04/07/2015 at 05:27:56 PM
+Guoqing Zhao was Unassigned from this Card by Guoqing Zhao
+04/07/2015 at 05:16:09 PM
+Guoqing Zhao set the status of this Card to Blocked
+Comment:
+Waiting for format from CUS-279
+04/07/2015 at 04:09:20 PM
+Guoqing Zhao was Assigned to this Card by Yongmin Xia
+04/07/2015 at 04:09:08 PM
+Yongmin Xia moved this Card from Capability: Next to Capability: Doing
+04/07/2015 at 09:19:44 AM
+Adam Boas changed this Card:
+
+    Description: from <no value> to
+
+    Create a POST endpoint to create a new Customer as per the rules in the mind map
+
+04/06/2015 at 08:54:27 AM
+Deanne Cassidy attached file As an API user I want to be able to create a new customer via the API.xmind to this Card
+04/06/2015 at 08:54:00 AM
+Deanne Cassidy removed attached file As an API user I want to be able to create a new customer via the API.xmind from this Card
+04/03/2015 at 02:25:10 PM
+Deanne Cassidy attached file As an API user I want to be able to create a new customer via the API.xmind to this Card
+04/03/2015 at 02:24:29 PM
+Deanne Cassidy moved this Card from Backlog: Capability to Capability: Next
+04/02/2015 at 02:14:45 PM
+Deanne Cassidy moved this Card from Capability: Next to Backlog: Capability
+04/02/2015 at 02:14:13 PM
+Deanne Cassidy moved this Card from Backlog: Team Section to Capability: Next
+04/02/2015 at 02:13:44 PM
+Deanne Cassidy created this Card within the Backlog: Team Section Lane.

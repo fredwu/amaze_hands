@@ -1,0 +1,298 @@
+P-312 [C] Record 'publish', 'upload', 'discard' events. Location change events.
+
+04/22/2015 at 01:13:13 PM
+Fred Wu was Unassigned from this Card by Fred Wu
+04/22/2015 at 01:13:09 PM
+Fred Wu moved this Card from BAT to Done
+04/22/2015 at 01:12:54 PM
+Fred Wu was Assigned to this Card by Fred Wu
+04/22/2015 at 01:12:48 PM
+Yaowei Du was Unassigned from this Card by Fred Wu
+04/22/2015 at 01:12:42 PM
+Fred Wu moved this Card from QA to BAT
+04/22/2015 at 01:12:38 PM
+Fred Wu changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+04/21/2015 at 05:16:15 PM
+Yaowei Du was Assigned to this Card by Yaowei Du
+04/21/2015 at 11:30:58 AM
+Yaowei Du was Unassigned from this Card by Feng Zhichao
+04/20/2015 at 07:43:53 PM
+Yaowei Du was Assigned to this Card by Yaowei Du
+04/20/2015 at 04:33:58 PM
+Yaowei Du was Unassigned from this Card by Yaowei Du
+04/20/2015 at 04:33:52 PM
+Yaowei Du changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+04/17/2015 at 01:13:07 PM
+Yaowei Du changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+04/17/2015 at 01:12:58 PM
+Yaowei Du moved this Card from Doing: Capability to QA
+04/17/2015 at 01:08:14 PM
+Adam Tohovitis changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+04/16/2015 at 12:53:36 PM
+jiaji wang was Unassigned from this Card by wang lei
+04/16/2015 at 12:12:32 PM
+Yaowei Du was Assigned to this Card by Yaowei Du
+04/10/2015 at 08:28:13 PM
+wang lei was Unassigned from this Card by wang lei
+04/10/2015 at 05:54:15 PM
+jiaji wang was Assigned to this Card by wang lei
+04/10/2015 at 01:00:25 PM
+wang lei was Assigned to this Card by wang lei
+04/10/2015 at 01:00:22 PM
+jiaji wang was Unassigned from this Card by wang lei
+04/07/2015 at 11:50:31 AM
+Yaowei Du was Unassigned from this Card by Tong Zhang
+04/07/2015 at 11:41:47 AM
+jiaji wang moved this Card from In Analysis to Doing: Capability
+04/03/2015 at 06:05:54 PM
+jiaji wang was Assigned to this Card by jiaji wang
+04/03/2015 at 05:49:42 PM
+Tong Zhang was Unassigned from this Card by Tong Zhang
+04/02/2015 at 06:38:53 PM
+Yaowei Du was Assigned to this Card by Tong Zhang
+04/02/2015 at 06:38:52 PM
+Tong Zhang changed this Card:
+
+    Description: from
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+
+    Publish event - include number of list prices published
+
+    - logs written after data has changed. If data failed to change, we shouldn't log the event.
+
+    - We want to have splunk friendly log format.
+    http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6
+
+    - categorize the logs to help splunk searching.
+    to
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+
+    Publish event - include number of list prices published
+
+    - logs written after data has changed. If data failed to change, we shouldn't log the event.
+
+    - We want to have splunk friendly log format.
+    http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6
+
+    - categorize the logs to help splunk searching.
+
+04/02/2015 at 06:38:43 PM
+Tong Zhang was Assigned to this Card by Tong Zhang
+04/02/2015 at 06:38:35 PM
+Tong Zhang moved this Card from Prioritised Backlog: Capability to In Analysis
+04/02/2015 at 05:21:51 PM
+Adam Tohovitis changed this Card:
+
+    Description: from
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+
+    Publish event - include number of list prices published
+
+    - logs written after data has changed. If data failed to change, we shouldn't log the event.
+
+    - We want to have splunk friendly log format.
+    http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6
+
+    - categorize the logs
+    to
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+
+    Publish event - include number of list prices published
+
+    - logs written after data has changed. If data failed to change, we shouldn't log the event.
+
+    - We want to have splunk friendly log format.
+    http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6
+
+    - categorize the logs to help splunk searching.
+
+04/02/2015 at 05:18:55 PM
+Adam Tohovitis changed this Card:
+
+    Description: from
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+
+    Publish event - include number of list prices published
+
+    - logs written after data has changed. If data failed to change, we shouldn't log the event.
+
+    - We want to have splunk friendly log format. http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6
+    to
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+
+    Publish event - include number of list prices published
+
+    - logs written after data has changed. If data failed to change, we shouldn't log the event.
+
+    - We want to have splunk friendly log format.
+    http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6
+
+    - categorize the logs
+
+04/02/2015 at 05:09:39 PM
+Adam Tohovitis changed this Card:
+
+    Description: from
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+
+    Publish event - include number of list prices published
+
+    - logs written after data has changed. If data failed to change, we shouldn't log the event.
+
+    http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6
+    to
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+
+    Publish event - include number of list prices published
+
+    - logs written after data has changed. If data failed to change, we shouldn't log the event.
+
+    - We want to have splunk friendly log format. http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6
+
+04/02/2015 at 05:08:53 PM
+Adam Tohovitis changed this Card:
+
+    Description: from
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+
+    Publish event - include number of list prices published
+
+
+
+    http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6
+    to
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+
+    Publish event - include number of list prices published
+
+    - logs written after data has changed. If data failed to change, we shouldn't log the event.
+
+    http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6
+
+04/02/2015 at 05:06:18 PM
+Adam Tohovitis changed this Card:
+
+    Description: from
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+
+    Publish event - include number of list prices published
+    to
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+
+    Publish event - include number of list prices published
+
+
+
+    http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6
+
+04/02/2015 at 05:03:17 PM
+Fred Wu changed this Card:
+
+    Description: from
+
+    - log the event
+
+    - username, timestamp, listpriceset name, listpriceset id, effective_date
+    to
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+
+    Publish event - include number of list prices published
+
+04/02/2015 at 05:00:39 PM
+Adam Tohovitis changed this Card:
+
+    Description: from
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+    to
+
+    - log the event
+
+    - username, timestamp, listpriceset name, listpriceset id, effective_date
+
+04/02/2015 at 03:24:54 PM
+Adam Tohovitis changed this Card:
+
+    Title: from "[C] Record 'publish', 'upload', 'discard' events" to "[C] Record 'publish', 'upload', 'discard' events. Location change events."
+
+04/02/2015 at 03:12:22 PM
+Adam Tohovitis changed this Card:
+
+    Title: from "[C] Record 'publish' event" to "[C] Record 'publish', 'upload', 'discard' events"
+
+04/02/2015 at 02:48:31 PM
+Adam Tohovitis changed this Card:
+
+    Description: from <no value> to
+
+    - log the event
+
+    - username, timestamp, listpriceset(name, id), effective_date
+
+04/02/2015 at 10:38:53 AM
+Aaron Wolski changed this Card:
+
+    Tags: from "capability,mercury,auditing" to "capability,mercury,audit"
+
+04/02/2015 at 10:38:38 AM
+Aaron Wolski changed this Card:
+
+    Tags: from <no value> to "capability,mercury,auditing"
+
+04/02/2015 at 10:38:22 AM
+Aaron Wolski moved this Card from Triage: Triage to Prioritised Backlog: Capability
+04/02/2015 at 10:38:18 AM
+Aaron Wolski created this Card within the Triage: Triage Lane.

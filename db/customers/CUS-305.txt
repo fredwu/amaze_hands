@@ -1,0 +1,47 @@
+CUS-305 Add health check for Customer-Store[?]
+
+04/29/2015 at 12:03:20 PM
+Adam Boas moved this Card from Capability: QA to Capability: Done
+04/29/2015 at 12:03:20 PM
+Adam Boas changed this Card:
+
+    Class of Service: from "Expedite" to ""
+
+04/27/2015 at 05:38:15 PM
+Xi Chen moved this Card from Capability: Doing to Capability: QA
+04/27/2015 at 11:28:06 AM
+Feng Zhichao changed this Card:
+
+    Title: from "Add health check for Customer-Store" to "Add health check for Customer-Store[?]"
+
+04/26/2015 at 03:34:28 PM
+Kaihang An was Unassigned from this Card by Jian Lv
+04/26/2015 at 03:34:24 PM
+Jian Lv was Unassigned from this Card by Jian Lv
+04/26/2015 at 03:34:01 PM
+Kaihang An was Assigned to this Card by Jian Lv
+04/26/2015 at 03:33:47 PM
+Jian Lv was Assigned to this Card by Jian Lv
+04/26/2015 at 03:31:34 PM
+Kaihang An was Unassigned from this Card by Kaihang An
+04/26/2015 at 03:31:34 PM
+Jian Lv was Unassigned from this Card by Kaihang An
+04/26/2015 at 01:31:31 PM
+Jian Lv changed this Card:
+
+    Class of Service: from <no value> to "Expedite"
+
+04/26/2015 at 01:21:46 PM
+Kaihang An was Assigned to this Card by Jian Lv
+04/26/2015 at 01:18:08 PM
+Jian Lv was Assigned to this Card by Jian Lv
+04/26/2015 at 01:18:04 PM
+Jian Lv moved this Card from Capability: Next to Capability: Doing
+04/24/2015 at 11:31:01 AM
+Yongmin Xia moved this Card from Capability: Next to Capability: Next
+04/24/2015 at 11:27:04 AM
+Feng Zhichao moved this Card from Backlog: Capability to Capability: Next
+04/13/2015 at 05:25:05 PM
+Yongmin Xia moved this Card from Backlog: Team Section to Backlog: Capability
+04/13/2015 at 05:24:58 PM
+Yongmin Xia created this Card within the Backlog: Team Section Lane.
