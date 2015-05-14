@@ -5,7 +5,7 @@ module Web::Views::Home
     WEEK_FREQUENCY = 2
 
     def render
-      Web::Presenters::JSONPresenter.new(
+      raw Web::Presenters::JSONPresenter.new(
         Workflow.new(
           strategy: Strategies::LeanKit,
           lanes:    Strategies::LeanKit::PricingLanes,

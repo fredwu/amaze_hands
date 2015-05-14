@@ -10,7 +10,7 @@ module Analysers
       private
 
       def non_working_days(card_action, next_card_action)
-        (card_action.date_time..next_card_action.date_time).reject(&:business_day?).length
+        (card_action.date_time..next_card_action.date_time).count { |date| !date.business_day? }
       end
     end
   end

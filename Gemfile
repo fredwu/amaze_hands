@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 gem 'bundler'
 gem 'rake'
 
-gem 'lotusrb',     '0.2.1'
-gem 'lotus-model', '~> 0.2.2'
+gem 'lotusrb',     '~> 0.3.0'
+gem 'lotus-model', '~> 0.3.0'
 
 gem 'activesupport'
 gem 'parslet'

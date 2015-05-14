@@ -1,3 +1,4 @@
+require 'lotus/helpers'
 require 'slim'
 
 module Web
@@ -111,7 +112,7 @@ module Web
 
       # The relative path where to find the templates
       #
-      # templates 'templates'
+      templates 'templates'
 
       ##
       # ASSETS
@@ -147,7 +148,7 @@ module Web
       #
       # See: http://www.rubydoc.info/gems/lotus-view#Configuration
       view.prepare do
-        # include MyRoutingHelpers # included in all the views
+        include Lotus::Helpers
       end
     end
 
