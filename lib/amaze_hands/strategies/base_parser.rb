@@ -1,6 +1,7 @@
 module Strategies
   class BaseParser < Parslet::Parser
     rule(:digit)        { match('\\d') }
+    rule(:alpha)        { match('[A-Za-z ]') }
     rule(:fs)           { str('/') }
     rule(:colon)        { str(':') }
     rule(:quote)        { str('"') }
