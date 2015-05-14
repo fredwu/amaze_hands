@@ -2,7 +2,7 @@
 
 Amaze Hands is an amazing tool developed for analysing Kanban board cards, in a similar fashion to poker [hands](http://en.wikipedia.org/wiki/Glossary_of_poker_terms#hand) analysis.
 
-Developed exclusively for the amazing Pricing squad in Group Platform at [REA](http://www.rea-group.com/).
+Developed initially for the amazing Pricing squad in Group Platform at [REA](http://www.rea-group.com/), and now being used by the Pricing, Customers and Products squads.
 
 ## Why?
 
@@ -45,6 +45,10 @@ Below is a high level system architecture diagram that shows how Amaze Hands han
     |         Strategies          |
     +-----------------------------+
     |   +---------------------+   |
+    |   |    Preprocessor     |   | <- Normalises text input for parsing.
+    |   +----------+----------+   |
+    |              |              |
+    |   +----------v----------+   |
     |   |       Parser        |   | <- Parses text into an AST.
     |   +----------+----------+   |
     |              |              |
@@ -78,6 +82,7 @@ Below is a high level system architecture diagram that shows how Amaze Hands han
 Amaze Hands out of the box has parser and transformer strategies for the following tools:
 
 - [LeanKit](http://leankit.com/)
+- CSV
 
 ## Stack
 
