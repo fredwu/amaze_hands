@@ -12,9 +12,12 @@ class Workflow
   def initialize(strategy:, lanes:, files:)
     clean_up_db
 
+    files = strategy::PreProcessor.new.process(files)
+
     files.each do |file|
-      ast        = strategy::Parser.new.parse(File.new(file).read)
+      ast        = strategy::Parser.new.parse(File.read(file))
       common_ast = strategy::Transformer.new.apply(ast)
+      binding.pry
       card       = Builder.new(common_ast).build
 
       Reducer.new(card, lanes: lanes).tag

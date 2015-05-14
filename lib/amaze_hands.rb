@@ -8,6 +8,12 @@ require 'lotus/model'
 
 require_relative 'config/work_days'
 
+module AmazeHands
+  def self.root
+    File.join(__dir__, '..')
+  end
+end
+
 Dir["#{__dir__}/amaze_hands/debuggers/**/*.rb"].each { |f| require f }
 Dir["#{__dir__}/amaze_hands/**/*.rb"].each { |f| require f }
 

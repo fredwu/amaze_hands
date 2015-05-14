@@ -27,7 +27,7 @@ module Analysers
       def analyse
         CardRepository.all.each do |card|
           first_card_lane = CardLaneRepository.all_by_card_number(card.number).first
-
+          binding.pry
           card.year = first_card_lane.year
           card.week = first_card_lane.week
 

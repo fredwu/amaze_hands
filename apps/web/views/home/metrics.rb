@@ -7,9 +7,12 @@ module Web::Views::Home
     def render
       Web::Presenters::JSONPresenter.new(
         Workflow.new(
-          strategy: Strategies::LeanKit,
-          lanes:    Strategies::LeanKit::PricingLanes,
-          files:    Dir["#{Web::Application.configuration.root}/../../db/pricing/*.txt"]
+          # strategy: Strategies::LeanKit,
+          # lanes:    Strategies::LeanKit::PricingLanes,
+          # files:    Dir["#{Web::Application.configuration.root}/../../db/pricing/*.txt"]
+          strategy: Strategies::CSV,
+          lanes:    Strategies::CSV::Lanes,
+          files:    Dir["#{Web::Application.configuration.root}/../../db/products/*"]
         )
       ).metrics(
         measure_every: WEEK_FREQUENCY.weeks
