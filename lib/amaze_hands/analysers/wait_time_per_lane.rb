@@ -2,11 +2,19 @@ require_relative 'base'
 
 module Analysers
   class WaitTimePerLane < Base
+    attr_reader :time_maths
+
+    def initialize(card_actions, time_maths: time_maths)
+      super
+
+      @time_maths = time_maths
+    end
+
     def analyse
       Strategies::TimeUntilNextMovement.new(
         type:         :wait_time,
         card_actions: card_actions,
-        time_maths:   TimeMaths.new
+        time_maths:   (time_maths || TimeMaths.new)
       ).apply_on(
         ready_for_pulling_card_actions
       )

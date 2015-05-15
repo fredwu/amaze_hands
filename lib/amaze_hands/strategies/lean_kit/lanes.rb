@@ -29,7 +29,7 @@ module Strategies
           'Capability: Doing'    => [:initial, :analysable],
           'Capability: QA'       => [:analysable],
           'Capability: BAT'      => [:analysable],
-          'Capability: Done'     => [:non_analysable]
+          'Capability: Done'     => [:final, :non_analysable]
         }
       end
     end

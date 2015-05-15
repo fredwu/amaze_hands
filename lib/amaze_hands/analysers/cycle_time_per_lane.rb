@@ -2,11 +2,19 @@ require_relative 'base'
 
 module Analysers
   class CycleTimePerLane < Base
+    attr_reader :time_maths
+
+    def initialize(card_actions, time_maths: time_maths)
+      super
+
+      @time_maths = time_maths
+    end
+
     def analyse
       Strategies::TimeUntilNextMovement.new(
         type:         :cycle_time,
         card_actions: card_actions,
-        time_maths:   TimeMaths.new
+        time_maths:   (time_maths || TimeMaths.new)
       ).apply_on(
         movement_card_actions
       )
@@ -36,9 +44,10 @@ module Analysers
       private
 
       def duration_multi_day(card_action, next_card_action, full_days)
-        partial_day_head = card_action.date_time.strftime('%p') == 'AM' ? 1.0 : 0.5
+        partial_day_head = card_action.date_time.strftime('%p')      == 'AM' ? 1.0 : 0.5
+        partial_day_tail = next_card_action.date_time.strftime('%p') == 'PM' ? 1.0 : 0.5
 
-        partial_day_head + full_days
+        partial_day_head + (full_days - 1) + partial_day_tail
       end
 
       def duration_same_day(card_action, next_card_action)

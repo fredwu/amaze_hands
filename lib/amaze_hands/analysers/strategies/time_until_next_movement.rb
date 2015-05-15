@@ -26,7 +26,6 @@ module Analysers
         )
 
         time = time_maths.formula(card_action, next_card_action)
-        time = time < 0 ? 0 : time
 
         entity.send("#{type}=", entity.send(type) + time)
 

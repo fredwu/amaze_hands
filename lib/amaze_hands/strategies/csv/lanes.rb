@@ -9,7 +9,8 @@ module Strategies
           'In Dev'        => [:initial, :analysable],
           'In QA'         => [:analysable],
           'In BAT'        => [:analysable],
-          'In Deployment' => [:final, :analysable]
+          'In Deployment' => [:analysable],
+          'In Archive'    => [:final, :non_analysable]
         }
       end
     end

@@ -37,6 +37,7 @@ In BAT: #{item['In BAT']}
 In BAT Blocked: #{item['In BAT Blocked']}
 In Deployment: #{item['In Deployment']}
 In Deployment Blocked: #{item['In Deployment Blocked']}
+In Archive: 0
         INPUT
       end
     end

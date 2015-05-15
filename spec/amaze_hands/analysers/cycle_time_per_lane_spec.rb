@@ -44,7 +44,7 @@ RSpec.describe Analysers::CycleTimePerLane::TimeMaths do
     context '1 day' do
       let(:next_card_action) { CardAction.new(date_time: DateTime.parse('2015-01-02 11:00:00 AM')) }
 
-      it { is_expected.to eq(1.5) }
+      it { is_expected.to eq(1.0) }
     end
 
     context '1.5 days' do
@@ -56,7 +56,7 @@ RSpec.describe Analysers::CycleTimePerLane::TimeMaths do
     context '2 days' do
       let(:next_card_action) { CardAction.new(date_time: DateTime.parse('2015-01-03 11:00:00 AM')) }
 
-      it { is_expected.to eq(2.5) }
+      it { is_expected.to eq(2.0) }
     end
   end
 end

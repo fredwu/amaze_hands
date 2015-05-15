@@ -20,7 +20,7 @@ class Workflow
       card       = Builder.new(common_ast).build
 
       Reducer.new(card, lanes: lanes).tag
-      Analyser.new(card).analyse
+      Analyser.new(card, time_maths: time_maths_for(strategy)).analyse
     end
   end
 
@@ -32,6 +32,10 @@ class Workflow
   end
 
   private
+
+  def time_maths_for(strategy)
+    strategy.const_defined?(:TimeMaths) ? strategy::TimeMaths.new : nil
+  end
 
   def clean_up_db
     CardRepository.clear
