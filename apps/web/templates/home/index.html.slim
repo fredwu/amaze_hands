@@ -1,19 +1,37 @@
 h1.rui-icon.rui-icon-left.rui-icon-calculator
   | Metrics for Every #{frequency} #{'Week'.pluralize(frequency)}
 
-#chart
+#charts role="tabpanel"
+  ul.nav.nav-tabs role="tablist"
+    li.active role="presentation": a href="#pricing"   role="tab" data-toggle="tab" Pricing
+    li        role="presentation": a href="#products"  role="tab" data-toggle="tab" Products
+    li        role="presentation": a href="#customers" role="tab" data-toggle="tab" Customers
+  .tab-content
+    #pricing.tab-pane.active
+      #chart-for-pricing
+    #products.tab-pane
+      #chart-for-products
+    #customers.tab-pane
+      #chart-for-customers
 
 coffee:
   $ ->
-    $(document).ajaxStart ->
-      $('#chart').spin()
+    $('#charts a').click (e) ->
+      e.preventDefault()
+      $(this).tab('show')
 
-    $(document).ajaxStop ->
-      $('#chart').spin(false)
+    getMetrics 'pricing'
+    getMetrics 'products'
+    getMetrics 'customers'
 
-    $.get '/metrics', (metrics) ->
+  getMetrics = (name) ->
+    $("#chart-for-#{name}").spin()
+
+    $.get "/metrics?name=#{name}", (metrics) ->
+      $("#chart-for-#{name}").spin(false)
+
       chart = c3.generate
-        bindTo: '#chart'
+        bindto: "#chart-for-#{name}"
         data: metrics
         bar:
           width: 20
