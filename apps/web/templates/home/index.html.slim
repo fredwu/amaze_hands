@@ -1,17 +1,38 @@
+scss:
+  #charts > ul > li {
+    a {
+      padding-right: 35px;
+    }
+
+    span {
+      display: inline-block;
+      width:   20px;
+    }
+  }
+
 h1.rui-icon.rui-icon-left.rui-icon-calculator
   | Metrics for Every #{frequency} #{'Week'.pluralize(frequency)}
 
 #charts role="tabpanel"
   ul.nav.nav-tabs role="tablist"
-    li.active role="presentation": a href="#pricing"   role="tab" data-toggle="tab" Pricing
-    li        role="presentation": a href="#products"  role="tab" data-toggle="tab" Products
-    li        role="presentation": a href="#customers" role="tab" data-toggle="tab" Customers
+    li.active role="presentation"
+      a href="#pricing" role="tab" data-toggle="tab"
+        span#pricing-tab
+        | Pricing
+    li role="presentation"
+      a href="#products" role="tab" data-toggle="tab"
+        span#products-tab
+        | Products
+    li role="presentation"
+      a href="#customers" role="tab" data-toggle="tab"
+        span#customers-tab
+        | Customers
   .tab-content
-    #pricing.tab-pane.active
+    #pricing.tab-pane.fade.active
       #chart-for-pricing
-    #products.tab-pane
+    #products.tab-pane.fade
       #chart-for-products
-    #customers.tab-pane
+    #customers.tab-pane.fade
       #chart-for-customers
 
 coffee:
@@ -25,10 +46,19 @@ coffee:
     getMetrics 'customers'
 
   getMetrics = (name) ->
+    tabSpinnerOpts =
+      lines:  9
+      length: 3
+      width:  3
+      radius: 4
+      left:   '18px'
+
     $("#chart-for-#{name}").spin()
+    $("##{name}-tab").spin(tabSpinnerOpts)
 
     $.get "/metrics?name=#{name}", (metrics) ->
       $("#chart-for-#{name}").spin(false)
+      $("##{name}-tab").spin(false)
 
       chart = c3.generate
         bindto: "#chart-for-#{name}"
