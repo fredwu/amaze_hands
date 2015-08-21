@@ -45,6 +45,10 @@ EmptyLineBetweenDefs:
 EndAlignment:
   Enabled: false
 
+ExtraSpacing:
+  Exclude:
+    - 'spec/amaze_hands/producer_spec.rb' # rubocop bug
+
 FormatString:
   Enabled: false
 

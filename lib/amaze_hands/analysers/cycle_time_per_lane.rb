@@ -4,7 +4,7 @@ module Analysers
   class CycleTimePerLane < Base
     attr_reader :time_maths
 
-    def initialize(card_actions, time_maths: time_maths)
+    def initialize(card_actions, time_maths: TimeMaths.new)
       super
 
       @time_maths = time_maths
