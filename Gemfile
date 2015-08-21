@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 gem 'bundler'
 gem 'rake'
 
-gem 'lotusrb',     '~> 0.3.0'
-gem 'lotus-model', '~> 0.3.0'
+gem 'lotusrb',     '~> 0.4.0'
+gem 'lotus-model', '~> 0.4.0'
 
 gem 'activesupport'
 gem 'parslet'
@@ -20,7 +20,6 @@ end
 
 group :development, :test do
   gem 'awesome_print'
-  gem 'byebug'
   gem 'pry'
   gem 'factory_girl'
 end
