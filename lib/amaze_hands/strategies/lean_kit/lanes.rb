@@ -21,18 +21,5 @@ module Strategies
         }
       end
     end
-
-    class CustomersLanes < Strategies::Lanes
-      def self.lanes
-        {
-          'Capability: Analysis' => [:initial, :non_analysable],
-          'Capability: Next'     => [:initial, :non_analysable],
-          'Capability: Doing'    => [:initial, :analysable],
-          'Capability: QA'       => [:analysable],
-          'Capability: BAT'      => [:analysable],
-          'Capability: Done'     => [:final, :non_analysable]
-        }
-      end
-    end
   end
 end

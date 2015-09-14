@@ -2,7 +2,7 @@
 
 Amaze Hands is an amazing tool developed for analysing Kanban board cards, in a similar fashion to poker [hands](http://en.wikipedia.org/wiki/Glossary_of_poker_terms#hand) analysis.
 
-Developed initially for the amazing Pricing squad in Group Platform at [REA](http://www.rea-group.com/), and now being used by the Pricing, Customers and Products squads.
+Developed initially for the amazing Pricing squad in Group Platform at [REA](http://www.rea-group.com/), and now being used by the Pricing and Products squads.
 
 ## Why?
 

@@ -23,17 +23,11 @@ h1.rui-icon.rui-icon-left.rui-icon-calculator
       a href="#products" role="tab" data-toggle="tab"
         span#products-tab
         | Products
-    li role="presentation"
-      a href="#customers" role="tab" data-toggle="tab"
-        span#customers-tab
-        | Customers
   .tab-content
     #pricing.tab-pane.fade.active
       #chart-for-pricing
     #products.tab-pane.fade
       #chart-for-products
-    #customers.tab-pane.fade
-      #chart-for-customers
 
 coffee:
   $ ->
@@ -43,7 +37,6 @@ coffee:
 
     getMetrics 'pricing'
     getMetrics 'products'
-    getMetrics 'customers'
 
   getMetrics = (name) ->
     tabSpinnerOpts =

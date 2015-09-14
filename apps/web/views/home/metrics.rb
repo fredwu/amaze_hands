@@ -18,14 +18,6 @@ module Web::Views::Home
       send :"workflow_params_for_#{params[:name]}"
     end
 
-    def workflow_params_for_customers
-      {
-        strategy: Strategies::LeanKit,
-        lanes:    Strategies::LeanKit::CustomersLanes,
-        files:    Dir["#{Web::Application.configuration.root}/../../db/customers/*.txt"]
-      }
-    end
-
     def workflow_params_for_pricing
       {
         strategy: Strategies::LeanKit,
