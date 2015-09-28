@@ -10,12 +10,17 @@ Biz.configure do |config|
   }
 
   config.holidays = [
-    Date.new(2015, 2, 19),
-    Date.new(2015, 2, 20),
-    Date.new(2015, 2, 23),
-    Date.new(2015, 4,  1),
-    Date.new(2015, 5,  1),
-    Date.new(2015, 5,  4),
-    Date.new(2015, 9,  4)
+    Date.new(2015,  2, 19),
+    Date.new(2015,  2, 20),
+    Date.new(2015,  2, 23),
+    Date.new(2015,  4,  1),
+    Date.new(2015,  5,  1),
+    Date.new(2015,  5,  4),
+    Date.new(2015,  9,  4),
+    Date.new(2015, 10,  1),
+    Date.new(2015, 10,  2),
+    Date.new(2015, 10,  5),
+    Date.new(2015, 10,  6),
+    Date.new(2015, 10,  7)
   ]
 end
