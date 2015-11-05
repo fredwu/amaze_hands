@@ -19,8 +19,6 @@ Biz.configure do |config|
     Date.new(2015,  9,  4),
     Date.new(2015, 10,  1),
     Date.new(2015, 10,  2),
-    Date.new(2015, 10,  5),
-    Date.new(2015, 10,  6),
-    Date.new(2015, 10,  7)
+    Date.new(2015, 10,  5)
   ]
 end
